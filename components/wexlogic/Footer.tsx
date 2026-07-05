@@ -2,11 +2,11 @@ import Link from 'next/link'
 import { LogoSmall } from './Logo'
 
 export function Footer() {
-  const colors = ['#6366f1', '#d946ef', '#06b6d4']
+  const colors = ['#dfb76c', '#c5a059', '#e5c185']
   const hrefs = [
     'https://instagram.com/wexlogic',
-    'https://wa.me/919876543210',
-    'mailto:hello@wexlogic.com'
+    'https://wa.me/917737297548',
+    'mailto:info@wexlogic.com'
   ]
 
   return (
@@ -22,9 +22,9 @@ export function Footer() {
       }}
     >
       <style dangerouslySetInnerHTML={{__html: `
-        .social-btn-0:hover { background: #6366f1 !important; color: #fff !important; box-shadow: 0 0 12px #6366f1; }
-        .social-btn-1:hover { background: #d946ef !important; color: #fff !important; box-shadow: 0 0 12px #d946ef; }
-        .social-btn-2:hover { background: #06b6d4 !important; color: #fff !important; box-shadow: 0 0 12px #06b6d4; }
+        .social-btn-0:hover { background: #dfb76c !important; color: #08070d !important; box-shadow: 0 0 12px #dfb76c; }
+        .social-btn-1:hover { background: #c5a059 !important; color: #08070d !important; box-shadow: 0 0 12px #c5a059; }
+        .social-btn-2:hover { background: #e5c185 !important; color: #08070d !important; box-shadow: 0 0 12px #e5c185; }
         .footer-link {
           font-size: 13px;
           color: #9ca3af;
@@ -141,8 +141,8 @@ export function Footer() {
             Contact & HQ
           </h3>
           <div style={{ fontSize: '13px', color: '#9ca3af', lineHeight: 1.6 }}>
-            <div>Email: <span style={{ color: '#fff', fontWeight: 600 }}>hello@wexlogic.com</span></div>
-            <div style={{ marginTop: '4px' }}>Phone: <span style={{ color: '#fff', fontWeight: 600 }}>+91 98765 43210</span></div>
+            <div>Email: <span style={{ color: '#fff', fontWeight: 600 }}>info@wexlogic.com</span></div>
+            <div style={{ marginTop: '4px' }}>Phone: <span style={{ color: '#fff', fontWeight: 600 }}>+91 77372 97548</span></div>
             <div style={{ marginTop: '4px' }}>Office: <span style={{ color: '#fff', fontWeight: 600 }}>Bangalore & Mumbai, India</span></div>
           </div>
           <div>

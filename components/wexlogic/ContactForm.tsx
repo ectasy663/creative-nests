@@ -118,18 +118,18 @@ export function ContactForm() {
             <div className="glass-card" style={{ padding: '36px', display: 'flex', flexDirection: 'column', gap: '28px', background: 'rgba(255, 255, 255, 0.02)' }}>
               <div>
                 <h2 className="cn-syne" style={{ fontSize: '24px', fontWeight: 800, color: '#fff', marginBottom: '8px' }}>Contact Details</h2>
-                <div style={{ width: '40px', height: '3px', background: '#6366f1', borderRadius: '99px' }} />
+                <div style={{ width: '40px', height: '3px', background: '#dfb76c', borderRadius: '99px' }} />
               </div>
               {[
-                { label: 'Email Address', value: 'hello@wexlogic.com', link: 'mailto:hello@wexlogic.com' },
-                { label: 'WhatsApp Chat', value: '+91 98765 43210', link: 'https://wa.me/919876543210' },
+                { label: 'Email Address', value: 'info@wexlogic.com', link: 'mailto:info@wexlogic.com' },
+                { label: 'WhatsApp Chat', value: '+91 77372 97548', link: 'https://wa.me/917737297548' },
                 { label: 'Social Channels', value: '@wexlogic', link: 'https://instagram.com/wexlogic' },
                 { label: 'Primary Office', value: 'Bangalore — Serving Global Accounts', link: null },
               ].map(({ label, value, link }) => (
                 <div key={label}>
-                  <div style={{ fontSize: '10px', letterSpacing: '2px', textTransform: 'uppercase', color: '#d946ef', fontWeight: 700, marginBottom: '4px' }}>{label}</div>
+                  <div style={{ fontSize: '10px', letterSpacing: '2px', textTransform: 'uppercase', color: '#dfb76c', fontWeight: 700, marginBottom: '4px' }}>{label}</div>
                   {link ? (
-                    <a href={link} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: '#fff', transition: 'color 0.2s' }} onMouseOver={(e) => (e.currentTarget.style.color = '#6366f1')} onMouseOut={(e) => (e.currentTarget.style.color = '#fff')}>
+                    <a href={link} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: '#fff', transition: 'color 0.2s' }} onMouseOver={(e) => (e.currentTarget.style.color = '#dfb76c')} onMouseOut={(e) => (e.currentTarget.style.color = '#fff')}>
                       <div className="cn-syne" style={{ fontSize: '17px', fontWeight: 700 }}>{value}</div>
                     </a>
                   ) : (
@@ -138,8 +138,8 @@ export function ContactForm() {
                 </div>
               ))}
               <div style={{ marginTop: 'auto' }}>
-                <div style={{ background: 'rgba(99, 102, 241, 0.1)', border: '1px solid rgba(99, 102, 241, 0.25)', padding: '8px 16px', borderRadius: '6px', display: 'inline-block' }}>
-                  <span style={{ fontSize: '9px', letterSpacing: '2px', textTransform: 'uppercase', color: '#6366f1', fontWeight: 700 }}>WexLogic Digital Studio</span>
+                <div style={{ background: 'rgba(223, 183, 108, 0.08)', border: '1px solid rgba(223, 183, 108, 0.25)', padding: '8px 16px', borderRadius: '6px', display: 'inline-block' }}>
+                  <span style={{ fontSize: '9px', letterSpacing: '2px', textTransform: 'uppercase', color: '#dfb76c', fontWeight: 700 }}>WexLogic Digital Studio</span>
                 </div>
               </div>
             </div>
@@ -250,7 +250,7 @@ export function ContactForm() {
                   <h3 className="cn-syne" style={{ fontSize: '15px', fontWeight: 700, color: '#fff', margin: 0 }}>
                     {faq.question}
                   </h3>
-                  <span style={{ fontSize: '18px', color: '#06b6d4', transition: 'transform 0.3s ease', transform: isOpen ? 'rotate(45deg)' : 'none' }}>
+                  <span style={{ fontSize: '18px', color: '#dfb76c', transition: 'transform 0.3s ease', transform: isOpen ? 'rotate(45deg)' : 'none' }}>
                     ＋
                   </span>
                 </div>

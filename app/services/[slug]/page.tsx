@@ -38,8 +38,8 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
             <Link href="/services" className="glass-btn-secondary" style={{ padding: '6px 16px', fontSize: '10px' }}>
               ← ALL SERVICES
             </Link>
-            <div style={{ background: 'rgba(99, 102, 241, 0.1)', border: '1px solid rgba(99, 102, 241, 0.3)', padding: '6px 16px', borderRadius: '99px' }}>
-              <span style={{ fontSize: '9px', letterSpacing: '4px', textTransform: 'uppercase', fontWeight: 700, color: '#6366f1' }}>
+            <div style={{ background: 'rgba(223, 183, 108, 0.08)', border: '1px solid rgba(223, 183, 108, 0.25)', padding: '6px 16px', borderRadius: '99px' }}>
+              <span style={{ fontSize: '9px', letterSpacing: '4px', textTransform: 'uppercase', fontWeight: 700, color: '#dfb76c' }}>
                 Service Overview
               </span>
             </div>
@@ -49,7 +49,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
           <h1 className="cn-bebas" style={{ fontSize: 'clamp(48px, 8vw, 84px)', lineHeight: 0.9, marginBottom: '8px', color: '#fff' }}>
             {data.title}
           </h1>
-          <p className="cn-syne" style={{ fontSize: 'clamp(18px, 3vw, 24px)', fontWeight: 700, color: '#d946ef', marginBottom: '44px' }}>
+          <p className="cn-syne" style={{ fontSize: 'clamp(18px, 3vw, 24px)', fontWeight: 700, color: '#dfb76c', marginBottom: '44px' }}>
             {data.subtitle}
           </p>
 
@@ -84,7 +84,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
               <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '14px' }}>
                 {data.features.map((feature, i) => (
                   <li key={i} style={{ display: 'flex', gap: '12px', alignItems: 'center', fontSize: '14px', color: '#f3f4f6' }}>
-                    <span style={{ color: '#06b6d4', fontSize: '18px' }}>✦</span>
+                    <span style={{ color: '#dfb76c', fontSize: '18px' }}>✦</span>
                     {feature}
                   </li>
                 ))}
@@ -99,7 +99,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
               <div style={{ display: 'flex', flexDirection: 'column', gap: '18px' }}>
                 {data.process.map((step, i) => (
                   <div key={i} style={{ background: 'rgba(255, 255, 255, 0.02)', border: '1px solid rgba(255, 255, 255, 0.08)', borderRadius: '12px', padding: '20px', display: 'flex', gap: '20px', alignItems: 'center' }}>
-                    <div className="cn-bebas" style={{ fontSize: '28px', color: '#6366f1' }}>0{i+1}</div>
+                    <div className="cn-bebas" style={{ fontSize: '28px', color: '#dfb76c' }}>0{i+1}</div>
                     <div style={{ fontSize: '14px', fontWeight: 600, color: '#fff' }}>{step}</div>
                   </div>
                 ))}

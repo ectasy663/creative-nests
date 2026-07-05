@@ -23,7 +23,7 @@ function TickerItem({ text, i }: { text: string; i: number }) {
       >
         {text}
       </span>
-      <span style={{ color: i % 2 === 0 ? '#d946ef' : '#06b6d4', padding: '0 8px', fontSize: '14px', textShadow: '0 0 8px rgba(217, 70, 239, 0.5)' }}>✦</span>
+      <span style={{ color: i % 2 === 0 ? '#dfb76c' : '#b89047', padding: '0 8px', fontSize: '14px', textShadow: '0 0 8px rgba(223, 183, 108, 0.5)' }}>✦</span>
     </>
   )
 }
@@ -35,7 +35,7 @@ export function Ticker() {
   return (
     <div
       style={{
-        background: 'rgba(8, 7, 13, 0.65)',
+        background: 'radial-gradient(circle at 50% 0%, rgba(223, 183, 108, 0.03) 0%, rgba(8, 7, 13, 0.85) 100%)',
         backdropFilter: 'blur(10px)',
         borderBottom: '1px solid rgba(255, 255, 255, 0.08)',
         borderTop: '1px solid rgba(255, 255, 255, 0.08)',

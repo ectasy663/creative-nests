@@ -13,10 +13,10 @@ function BgDecor() {
   return (
     <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%,-50%)', opacity: 0.1 }} aria-hidden="true">
       <svg width="340" height="340" viewBox="0 0 280 280" fill="none">
-        <circle cx="140" cy="140" r="120" stroke="#6366f1" strokeWidth="2" strokeDasharray="200 60" />
-        <circle cx="140" cy="140" r="70" stroke="#d946ef" strokeWidth="1" />
-        <line x1="56" y1="224" x2="140" y2="56" stroke="#06b6d4" strokeWidth="3" />
-        <line x1="140" y1="56" x2="224" y2="224" stroke="#06b6d4" strokeWidth="3" />
+        <circle cx="140" cy="140" r="120" stroke="#dfb76c" strokeWidth="2" strokeDasharray="200 60" />
+        <circle cx="140" cy="140" r="70" stroke="#b89047" strokeWidth="1" />
+        <line x1="56" y1="224" x2="140" y2="56" stroke="#e5c185" strokeWidth="3" />
+        <line x1="140" y1="56" x2="224" y2="224" stroke="#e5c185" strokeWidth="3" />
       </svg>
     </div>
   )

@@ -18,11 +18,11 @@ export function DirectCallWidget() {
       <style dangerouslySetInnerHTML={{__html: `
         @keyframes float-pulse {
           0%, 100% {
-            box-shadow: 0 0 15px rgba(99, 102, 241, 0.4);
+            box-shadow: 0 0 15px rgba(223, 183, 108, 0.4);
             transform: scale(1);
           }
           50% {
-            box-shadow: 0 0 25px rgba(217, 70, 239, 0.6);
+            box-shadow: 0 0 25px rgba(184, 144, 71, 0.6);
             transform: scale(1.05);
           }
         }
@@ -49,7 +49,7 @@ export function DirectCallWidget() {
         >
           {/* Header */}
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-            <span style={{ fontSize: '10px', letterSpacing: '2px', textTransform: 'uppercase', color: '#06b6d4', fontWeight: 700 }}>
+            <span style={{ fontSize: '10px', letterSpacing: '2px', textTransform: 'uppercase', color: '#dfb76c', fontWeight: 700 }}>
               Direct Line
             </span>
             <button 
@@ -76,7 +76,7 @@ export function DirectCallWidget() {
           {/* Action Buttons */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
             <a 
-              href="tel:+919876543210" 
+              href="tel:+917737297548" 
               className="gradient-btn-primary"
               style={{
                 display: 'flex',
@@ -98,7 +98,7 @@ export function DirectCallWidget() {
             </a>
 
             <a 
-              href="https://wa.me/919876543210" 
+              href="https://wa.me/917737297548" 
               target="_blank"
               rel="noopener noreferrer"
               className="glass-btn-secondary"
@@ -112,16 +112,16 @@ export function DirectCallWidget() {
                 fontSize: '11px',
                 textAlign: 'center',
                 textDecoration: 'none',
-                borderColor: 'rgba(16, 185, 129, 0.4)',
-                color: '#10b981'
+                borderColor: 'rgba(223, 183, 108, 0.4)',
+                color: '#dfb76c'
               }}
               onMouseOver={(e) => {
-                e.currentTarget.style.background = 'rgba(16, 185, 129, 0.1)'
-                e.currentTarget.style.borderColor = '#10b981'
+                e.currentTarget.style.background = 'rgba(223, 183, 108, 0.1)'
+                e.currentTarget.style.borderColor = '#dfb76c'
               }}
               onMouseOut={(e) => {
                 e.currentTarget.style.background = 'rgba(255, 255, 255, 0.05)'
-                e.currentTarget.style.borderColor = 'rgba(16, 185, 129, 0.4)'
+                e.currentTarget.style.borderColor = 'rgba(223, 183, 108, 0.4)'
               }}
             >
               {/* WhatsApp Icon */}
@@ -141,20 +141,20 @@ export function DirectCallWidget() {
             width: '56px',
             height: '56px',
             borderRadius: '50%',
-            background: 'linear-gradient(135deg, #6366f1 0%, #d946ef 100%)',
+            background: 'linear-gradient(135deg, #b89047 0%, #dfb76c 100%)',
             border: '1px solid rgba(255, 255, 255, 0.2)',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
             cursor: 'pointer',
-            boxShadow: '0 8px 24px rgba(99, 102, 241, 0.5)',
+            boxShadow: '0 8px 24px rgba(223, 183, 108, 0.4)',
             transition: 'transform 0.2s ease',
           }}
           onMouseOver={(e) => (e.currentTarget.style.transform = 'scale(1.08)')}
           onMouseOut={(e) => (e.currentTarget.style.transform = 'scale(1)')}
         >
           {/* Phone Icon */}
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#08070d" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
           </svg>
         </button>

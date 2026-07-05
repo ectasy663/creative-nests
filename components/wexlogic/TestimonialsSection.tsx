@@ -16,7 +16,7 @@ const testimonials = [
     role: "CMO, TechNova",
     metrics: "+340% Traffic Lift",
     avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&h=150&q=80",
-    glow: '#6366f1',
+    glow: '#dfb76c',
     rating: 5
   },
   {
@@ -25,7 +25,7 @@ const testimonials = [
     role: "Founder, Disrupt Corp",
     metrics: "-45% Bounce Rate",
     avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&h=150&q=80",
-    glow: '#d946ef',
+    glow: '#c5a059',
     rating: 5
   },
   {
@@ -34,7 +34,7 @@ const testimonials = [
     role: "Director of Ops, Solara",
     metrics: "+42% Conversion Speed",
     avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=150&h=150&q=80",
-    glow: '#06b6d4',
+    glow: '#e5c185',
     rating: 5
   },
   {
@@ -43,7 +43,7 @@ const testimonials = [
     role: "COO, Nova Logistics",
     metrics: "99.98% Inventory Sync",
     avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=150&h=150&q=80",
-    glow: '#10b981',
+    glow: '#a37f3d',
     rating: 5
   }
 ]
@@ -79,7 +79,7 @@ export function TestimonialsSection() {
             transition: all 0.3s ease;
           }
           .testimonials-swiper-container .swiper-pagination-bullet-active {
-            background: #06b6d4 !important;
+            background: #dfb76c !important;
             width: 24px;
             border-radius: 99px;
           }
@@ -122,7 +122,7 @@ export function TestimonialsSection() {
                         <span key={idx} style={{ color: '#fbbf24', fontSize: '14px' }}>★</span>
                       ))}
                     </div>
-                    <div style={{ fontSize: '42px', background: 'linear-gradient(135deg, #6366f1, #d946ef)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', lineHeight: 1, fontFamily: 'serif', fontWeight: 'bold' }}>“</div>
+                    <div style={{ fontSize: '42px', background: 'linear-gradient(135deg, #dfb76c, #b89047)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', lineHeight: 1, fontFamily: 'serif', fontWeight: 'bold' }}>“</div>
                   </div>
 
                   <p className="cn-syne" style={{ fontSize: '15px', fontWeight: 500, color: '#f3f4f6', marginBottom: '28px', lineHeight: 1.6 }}>
@@ -168,11 +168,11 @@ export function TestimonialsSection() {
           overflow: 'hidden'
         }}
       >
-        <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', width: '300px', height: '150px', background: 'linear-gradient(135deg, #6366f1, #d946ef)', opacity: 0.05, filter: 'blur(50px)', pointerEvents: 'none' }} />
+        <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', width: '300px', height: '150px', background: 'linear-gradient(135deg, #dfb76c, #b89047)', opacity: 0.05, filter: 'blur(50px)', pointerEvents: 'none' }} />
         
         <div className="cn-bebas" style={{ fontSize: 'clamp(28px, 5vw, 48px)', color: '#fff', letterSpacing: '2px', lineHeight: 1.2, position: 'relative', zIndex: 1 }}>
           “Design is not just what it looks like.<br/>
-          <span style={{ background: 'linear-gradient(135deg, #6366f1, #d946ef)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Design is how it works.</span>”
+          <span style={{ background: 'linear-gradient(135deg, #dfb76c, #b89047)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Design is how it works.</span>”
         </div>
       </div>
     </section>
