@@ -4,7 +4,7 @@ import { LogoSmall } from './Logo'
 export function Footer() {
   const colors = ['#dfb76c', '#c5a059', '#e5c185']
   const hrefs = [
-    'https://instagram.com/wexlogic',
+    'https://www.instagram.com/wexlogicofficial?utm_source=qr&igsh=cGo5dmxuaDJqejdy',
     'https://wa.me/917737297548',
     'mailto:info@wexlogic.com'
   ]
@@ -143,7 +143,7 @@ export function Footer() {
           <div style={{ fontSize: '13px', color: '#9ca3af', lineHeight: 1.6 }}>
             <div>Email: <span style={{ color: '#fff', fontWeight: 600 }}>info@wexlogic.com</span></div>
             <div style={{ marginTop: '4px' }}>Phone: <span style={{ color: '#fff', fontWeight: 600 }}>+91 77372 97548</span></div>
-            <div style={{ marginTop: '4px' }}>Office: <span style={{ color: '#fff', fontWeight: 600 }}>Bangalore & Mumbai, India</span></div>
+            <div style={{ marginTop: '4px' }}>Office: <span style={{ color: '#fff', fontWeight: 600 }}>Rajasthan, India</span></div>
           </div>
           <div>
             <div 

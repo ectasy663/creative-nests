@@ -123,8 +123,8 @@ export function ContactForm() {
               {[
                 { label: 'Email Address', value: 'info@wexlogic.com', link: 'mailto:info@wexlogic.com' },
                 { label: 'WhatsApp Chat', value: '+91 77372 97548', link: 'https://wa.me/917737297548' },
-                { label: 'Social Channels', value: '@wexlogic', link: 'https://instagram.com/wexlogic' },
-                { label: 'Primary Office', value: 'Bangalore — Serving Global Accounts', link: null },
+                { label: 'Social Channels', value: '@wexlogicofficial', link: 'https://www.instagram.com/wexlogicofficial?utm_source=qr&igsh=cGo5dmxuaDJqejdy' },
+                { label: 'Primary Office', value: 'Rajasthan — Serving Global Accounts', link: null },
               ].map(({ label, value, link }) => (
                 <div key={label}>
                   <div style={{ fontSize: '10px', letterSpacing: '2px', textTransform: 'uppercase', color: '#dfb76c', fontWeight: 700, marginBottom: '4px' }}>{label}</div>
