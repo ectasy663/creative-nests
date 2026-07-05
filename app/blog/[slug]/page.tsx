@@ -10,7 +10,13 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params
   const post = getBlogPostBySlug(slug)
   if (!post) return { title: 'Post Not Found — WSCLogic' }
-  return { title: `${post.title} — WSCLogic` }
+  return {
+    title: `${post.title} — WSCLogic`,
+    description: post.excerpt.slice(0, 155) + '...',
+    alternates: {
+      canonical: `https://wsclogic.com/blog/${slug}`
+    }
+  }
 }
 
 export default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {

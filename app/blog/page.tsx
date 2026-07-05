@@ -6,7 +6,13 @@ import { VideoBackground } from '@/components/wsclogic/VideoBackground'
 import { CTABanner } from '@/components/wsclogic/CTABanner'
 import { getBlogPosts } from '@/lib/db'
 
-export const metadata = { title: 'Blog — WSCLogic' }
+export const metadata = {
+  title: 'Insights & Technical Blog — WSCLogic',
+  description: 'Read the latest guides and engineering insights on CGI animation, Next.js setups, paid advertising, and bespoke database architectures from WSCLogic.',
+  alternates: {
+    canonical: 'https://wsclogic.com/blog'
+  }
+}
 
 export default function BlogListingPage() {
   const posts = getBlogPosts()

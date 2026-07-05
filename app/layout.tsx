@@ -4,20 +4,26 @@ import { DirectCallWidget } from '@/components/wsclogic/DirectCallWidget'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'WSCLogic — India\'s #1 Creative Agency',
-  description: 'CGI, VFX, Branding, Web & App Development, SEO, Paid Ads, Video Editing — all under one roof.',
-  generator: 'v0.app',
+  metadataBase: new URL('https://wsclogic.com'),
+  title: {
+    default: 'WSCLogic — India\'s #1 Creative Studio',
+    template: '%s | WSCLogic'
+  },
+  description: 'CGI & VFX Ads, Web & App Development, Branding, SEO & Marketing, Paid Ads, Video Editing, custom CRM/ERP integrations — premium digital solutions.',
+  alternates: {
+    canonical: '/'
+  },
   openGraph: {
-    title: 'WSCLogic — India\'s #1 Creative Agency',
-    description: 'CGI, VFX, Branding, Web & App Development, SEO, Paid Ads, Video Editing — all under one roof.',
+    title: 'WSCLogic — India\'s #1 Creative Studio',
+    description: 'CGI & VFX Ads, Web & App Development, Branding, SEO & Marketing, Paid Ads, Video Editing, custom CRM/ERP integrations — premium digital solutions.',
     url: 'https://wsclogic.com',
     siteName: 'WSCLogic',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'WSCLogic — India\'s #1 Creative Agency',
-    description: 'CGI, VFX, Branding, Web & App Development, SEO, Paid Ads, Video Editing — all under one roof.',
+    title: 'WSCLogic — India\'s #1 Creative Studio',
+    description: 'CGI & VFX Ads, Web & App Development, Branding, SEO & Marketing, Paid Ads, Video Editing, custom CRM/ERP integrations — premium digital solutions.',
   }
 }
 

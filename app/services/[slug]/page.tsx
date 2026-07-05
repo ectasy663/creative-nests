@@ -9,7 +9,13 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params
   const service = getServiceBySlug(slug)
   if (!service) return { title: 'Service Not Found — WSCLogic' }
-  return { title: `${service.title} — WSCLogic` }
+  return {
+    title: `${service.title} — WSCLogic`,
+    description: service.desc.slice(0, 155) + '...',
+    alternates: {
+      canonical: `https://wsclogic.com/services/${slug}`
+    }
+  }
 }
 
 export default async function ServicePage({ params }: { params: Promise<{ slug: string }> }) {

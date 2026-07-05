@@ -129,5 +129,115 @@
       "12.4x ROI across Search campaigns",
       "Generated 800+ enterprise leads"
     ]
+  },
+  {
+    "title": "Quantum Sneakers CGI Ad",
+    "slug": "quantum-sneakers-cgi",
+    "category": "CGI & Production",
+    "desc": "Futuristic footwear CGI campaign with dynamic fluid mechanics.",
+    "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=800&q=80",
+    "videoUrl": "https://assets.mixkit.co/videos/preview/mixkit-futuristic-subway-station-with-neon-lights-43958-large.mp4",
+    "tags": [
+      "CGI",
+      "VFX",
+      "3D"
+    ],
+    "featured": false,
+    "about": "A hyper-realistic 3D rendering project for a futurist shoe campaign.",
+    "challenge": "Simulating soft fabrics and complex liquid splashes around a fast-moving shoe.",
+    "solution": "Used Houdini fluid dynamics simulations combined with OctaneRender mapping inside a serverless asset delivery pipeline.",
+    "results": [
+      "+180% ad click-through rate",
+      "2.1M organic views",
+      "45% reduction in production cost"
+    ]
+  },
+  {
+    "title": "FinFlow Dashboard Dev",
+    "slug": "finflow-dashboard",
+    "category": "Web & Dev",
+    "desc": "High-performance analytics dashboard for B2B financial systems.",
+    "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80",
+    "videoUrl": "https://assets.mixkit.co/videos/preview/mixkit-screen-of-a-computer-with-running-code-42231-large.mp4",
+    "tags": [
+      "Web",
+      "React",
+      "NextJS"
+    ],
+    "featured": false,
+    "about": "A fast real-time analytics dashboard for B2B financial systems.",
+    "challenge": "Rendering thousands of financial data points per second with zero page lag.",
+    "solution": "Implemented Next.js Server Components, custom WebSockets connections, and canvas-based chart plotting.",
+    "results": [
+      "0.4s load speed",
+      "99.9% uptime",
+      "Used by 15 enterprise clients"
+    ]
+  },
+  {
+    "title": "Pulse Branding System",
+    "slug": "pulse-branding",
+    "category": "Branding",
+    "desc": "Cohesive visual identity system for health-tech ecosystems.",
+    "image": "https://images.unsplash.com/photo-1557200134-90327ee9fafa?auto=format&fit=crop&w=800&q=80",
+    "videoUrl": "https://assets.mixkit.co/videos/preview/mixkit-abstract-render-of-floating-colors-43224-large.mp4",
+    "tags": [
+      "Branding",
+      "Identity",
+      "Logo"
+    ],
+    "featured": false,
+    "about": "Brand identity guidelines, logos, and print layouts for a new health-tech platform.",
+    "challenge": "Creating a modern visual brand that bridges clinical trust and consumer accessibility.",
+    "solution": "Designed a clean, geometric logo mark accompanied by an interactive brand guidelines portal and assets generation tool.",
+    "results": [
+      "100% brand asset adoption",
+      "+40% user recognition rate",
+      "Complete brand assets delivered in 10 days"
+    ]
+  },
+  {
+    "title": "EduSphere SEO Campaign",
+    "slug": "edusphere-seo",
+    "category": "SEO & Marketing",
+    "desc": "Complete organic visibility scaling for online educational portals.",
+    "image": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80",
+    "videoUrl": "https://assets.mixkit.co/videos/preview/mixkit-financial-graphics-running-on-a-computer-screen-42229-large.mp4",
+    "tags": [
+      "SEO",
+      "Growth",
+      "Marketing"
+    ],
+    "featured": false,
+    "about": "Organic keyword optimization and content strategy for an online education hub.",
+    "challenge": "The site had stagnant search traffic and indexation errors across 1,000+ course pages.",
+    "solution": "Performed a complete technical SEO clean-up, automated schema injection, and built a targeted backlink pipeline.",
+    "results": [
+      "+250% search visibility",
+      "50k monthly organic visitors",
+      "#1 ranking for 12 commercial keywords"
+    ]
+  },
+  {
+    "title": "PrimeCut Video Reels",
+    "slug": "primecut-video",
+    "category": "Video Editing",
+    "desc": "Frame-accurate social cuts driving sub-second hook retention.",
+    "image": "https://images.unsplash.com/photo-1536240478700-b869070f9279?auto=format&fit=crop&w=800&q=80",
+    "videoUrl": "https://assets.mixkit.co/videos/preview/mixkit-timeline-of-a-video-editing-software-42352-large.mp4",
+    "tags": [
+      "Video",
+      "Reels",
+      "TikTok"
+    ],
+    "featured": false,
+    "about": "High-retention video cuts and sound designs for social media platforms.",
+    "challenge": "Establishing high-tempo visual hooks within the first 3 seconds of video playback.",
+    "solution": "Implemented high-impact motion text overlays, sound design triggers, and frame-accurate matching cuts.",
+    "results": [
+      "+300% average watch time",
+      "10M aggregate views",
+      "50+ content reels delivered"
+    ]
   }
 ]

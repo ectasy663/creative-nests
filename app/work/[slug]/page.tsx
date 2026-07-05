@@ -10,7 +10,13 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params
   const project = getProjectBySlug(slug)
   if (!project) return { title: 'Project Not Found — WSCLogic' }
-  return { title: `${project.title} — WSCLogic` }
+  return {
+    title: `${project.title} — WSCLogic`,
+    description: project.desc.slice(0, 155) + '...',
+    alternates: {
+      canonical: `https://wsclogic.com/work/${slug}`
+    }
+  }
 }
 
 export default async function WorkProjectPage({ params }: { params: Promise<{ slug: string }> }) {

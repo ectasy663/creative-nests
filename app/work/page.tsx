@@ -5,7 +5,13 @@ import { VideoBackground } from '@/components/wsclogic/VideoBackground'
 import { CTABanner } from '@/components/wsclogic/CTABanner'
 import { getProjects } from '@/lib/db'
 
-export const metadata = { title: 'Work — WSCLogic' }
+export const metadata = {
+  title: 'Portfolio & Case Studies — WSCLogic',
+  description: 'Explore the WSCLogic portfolio featuring high-fidelity CGI ads, Next.js web platforms, custom dashboards, paid ad scaling, and tech branding systems.',
+  alternates: {
+    canonical: 'https://wsclogic.com/work'
+  }
+}
 
 export default function WorkPage() {
   return (

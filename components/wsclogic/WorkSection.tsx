@@ -186,12 +186,63 @@ export function WorkSection({ projects, featuredOnly = false }: { projects: Work
           
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
             {[
-              { title: 'Sub-Second Speeds', desc: 'Pre-rendered layouts and optimized edge routing for instant load times.' },
-              { title: 'Cinematic Precision', desc: 'Physically accurate rendering engines mapping assets for CGI and VFX ads.' },
-              { title: 'Metric-Driven Audits', desc: 'Rigorous A/B user cohort testing across landing pages and ad scripts.' },
-              { title: 'Full Integration', desc: 'Secure custom endpoints connecting lead databases, CRM dashboards, and HR ERPs.' }
+              { 
+                title: 'Sub-Second Speeds', 
+                desc: 'Pre-rendered layouts and optimized edge routing for instant load times.',
+                icon: (
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#06b6d4" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ marginBottom: '12px', filter: 'drop-shadow(0 0 4px rgba(6, 182, 212, 0.5))' }}>
+                    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+                  </svg>
+                )
+              },
+              { 
+                title: 'Cinematic Precision', 
+                desc: 'Physically accurate rendering engines mapping assets for CGI and VFX ads.',
+                icon: (
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#d946ef" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ marginBottom: '12px', filter: 'drop-shadow(0 0 4px rgba(217, 70, 239, 0.5))' }}>
+                    <path d="M23 7l-7 5 7 5V7z" />
+                    <rect x="1" y="5" width="15" height="14" rx="2" ry="2" />
+                  </svg>
+                )
+              },
+              { 
+                title: 'Metric-Driven Audits', 
+                desc: 'Rigorous A/B user cohort testing across landing pages and ad scripts.',
+                icon: (
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#10b981" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ marginBottom: '12px', filter: 'drop-shadow(0 0 4px rgba(16, 185, 129, 0.5))' }}>
+                    <line x1="18" y1="20" x2="18" y2="10" />
+                    <line x1="12" y1="20" x2="12" y2="4" />
+                    <line x1="6" y1="20" x2="6" y2="14" />
+                  </svg>
+                )
+              },
+              { 
+                title: 'Full Integration', 
+                desc: 'Secure custom endpoints connecting lead databases, CRM dashboards, and HR ERPs.',
+                icon: (
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#6366f1" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ marginBottom: '12px', filter: 'drop-shadow(0 0 4px rgba(99, 102, 241, 0.5))' }}>
+                    <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+                    <polyline points="3.27 6.96 12 12.01 20.73 6.96" />
+                    <line x1="12" y1="22.08" x2="12" y2="12" />
+                  </svg>
+                )
+              }
             ].map((item, idx) => (
-              <div key={idx} style={{ background: 'rgba(255, 255, 255, 0.01)', border: '1px solid rgba(255, 255, 255, 0.05)', borderRadius: '12px', padding: '20px' }}>
+              <div 
+                key={idx} 
+                className="glass-card"
+                style={{ 
+                  background: 'rgba(255, 255, 255, 0.01)', 
+                  border: '1px solid rgba(255, 255, 255, 0.05)', 
+                  borderRadius: '12px', 
+                  padding: '24px 20px',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  transition: 'all 0.3s ease',
+                  cursor: 'default'
+                }}
+              >
+                {item.icon}
                 <h4 className="cn-syne" style={{ fontSize: '15px', fontWeight: 700, color: '#fff', marginBottom: '8px' }}>{item.title}</h4>
                 <p style={{ fontSize: '12px', lineHeight: 1.6, color: '#9ca3af' }}>{item.desc}</p>
               </div>
