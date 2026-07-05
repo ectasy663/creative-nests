@@ -40,7 +40,7 @@ export function Header() {
             <span style={{ background: 'linear-gradient(135deg, #dfb76c, #b89047)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>WexLogic</span>
           </div>
           <div style={{ fontSize: '8px', letterSpacing: '4px', textTransform: 'uppercase', color: '#dfb76c', fontWeight: 600 }}>
-            Premium Agency
+            an IT company
           </div>
         </div>
       </Link>

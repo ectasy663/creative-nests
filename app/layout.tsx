@@ -13,6 +13,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: '/'
   },
+  icons: {
+    icon: '/company-logo.png',
+  },
   openGraph: {
     title: 'WexLogic — India\'s #1 Creative Studio',
     description: 'CGI & VFX Ads, Web & App Development, Branding, SEO & Marketing, Paid Ads, Video Editing, custom CRM/ERP integrations — premium digital solutions.',
