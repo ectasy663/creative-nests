@@ -60,17 +60,13 @@ export default async function WorkProjectPage({ params }: { params: Promise<{ sl
             {tag}
           </p>
 
-          {/* Running Demo Video Player */}
+          {/* Running Demo Cover Image */}
           <div style={{ width: '100%', height: 'clamp(280px, 45vw, 500px)', position: 'relative', border: '1px solid rgba(255, 255, 255, 0.1)', borderRadius: '16px', boxShadow: '0 20px 40px rgba(0,0,0,0.5)', marginBottom: '56px', overflow: 'hidden', background: '#000' }}>
-            <video 
-              autoPlay 
-              loop 
-              muted 
-              playsInline 
+            <img 
+              src={data.image} 
+              alt={data.title}
               style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-            >
-              <source src={data.videoUrl} type="video/mp4" />
-            </video>
+            />
           </div>
 
           {/* Details Sidebar / Meta Grid */}

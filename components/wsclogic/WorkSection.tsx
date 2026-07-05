@@ -105,20 +105,16 @@ export function WorkSection({ projects, featuredOnly = false }: { projects: Work
                   background: '#040307'
                 }}
               >
-                <video
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
+                <img
+                  src={project.image}
+                  alt={project.title}
                   className="hover:scale-105 transition-transform duration-500 ease-out"
                   style={{
                     width: '100%',
                     height: '100%',
                     objectFit: 'cover'
                   }}
-                >
-                  <source src={project.videoUrl} type="video/mp4" />
-                </video>
+                />
               </div>
 
               <h3 className="cn-syne" style={{ fontSize: '22px', fontWeight: 800, color: '#fff', lineHeight: 1.3, letterSpacing: '-0.5px' }}>
