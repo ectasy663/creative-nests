@@ -9,8 +9,8 @@ import { getBlogPostBySlug } from '@/lib/db'
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params
   const post = getBlogPostBySlug(slug)
-  if (!post) return { title: 'Post Not Found — Creative Nests' }
-  return { title: `${post.title} — Creative Nests` }
+  if (!post) return { title: 'Post Not Found — WSCLogic' }
+  return { title: `${post.title} — WSCLogic` }
 }
 
 export default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {

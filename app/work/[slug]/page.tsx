@@ -9,8 +9,8 @@ import { getProjectBySlug } from '@/lib/db'
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params
   const project = getProjectBySlug(slug)
-  if (!project) return { title: 'Project Not Found — Creative Nests' }
-  return { title: `${project.title} — Creative Nests` }
+  if (!project) return { title: 'Project Not Found — WSCLogic' }
+  return { title: `${project.title} — WSCLogic` }
 }
 
 export default async function WorkProjectPage({ params }: { params: Promise<{ slug: string }> }) {
@@ -21,7 +21,7 @@ export default async function WorkProjectPage({ params }: { params: Promise<{ sl
     notFound()
   }
 
-  const client = 'Creative Nests Client'
+  const client = 'WSCLogic Client'
   const year = '2026'
   const services = data.tags
   const tag = data.tags.join(' · ')

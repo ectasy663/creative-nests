@@ -4,9 +4,21 @@ import { DirectCallWidget } from '@/components/creative-nests/DirectCallWidget'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Creative Nests — India\'s #1 Creative Agency',
+  title: 'WSCLogic — India\'s #1 Creative Agency',
   description: 'CGI, VFX, Branding, Web & App Development, SEO, Paid Ads, Video Editing — all under one roof.',
   generator: 'v0.app',
+  openGraph: {
+    title: 'WSCLogic — India\'s #1 Creative Agency',
+    description: 'CGI, VFX, Branding, Web & App Development, SEO, Paid Ads, Video Editing — all under one roof.',
+    url: 'https://wsclogic.com',
+    siteName: 'WSCLogic',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'WSCLogic — India\'s #1 Creative Agency',
+    description: 'CGI, VFX, Branding, Web & App Development, SEO, Paid Ads, Video Editing — all under one roof.',
+  }
 }
 
 export const viewport: Viewport = {

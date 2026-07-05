@@ -134,7 +134,7 @@ Off-the-shelf products charge per-user licenses that scale aggressively. B2B ent
 Building a lightweight, custom CRM dashboard using Next.js allows you to pay purely for serverless execution, avoiding license fees and maintaining total security over client telemetry.
 
 ### Our Strategy for Pipeline Success
-At Creative Nests, we don't believe in one-size-fits-all. We audit your existing pipelines, integrate custom hooks to capture leads, and automate client follow-ups to maximize operational velocity.`,
+At WSCLogic, we don't believe in one-size-fits-all. We audit your existing pipelines, integrate custom hooks to capture leads, and automate client follow-ups to maximize operational velocity.`,
         category: "CRM & ERP",
         readTime: "5 min read",
         date: "June 15, 2026",
@@ -376,7 +376,7 @@ At Creative Nests, we don't believe in one-size-fits-all. We audit your existing
   if (!fs.existsSync(WORK_PATH)) {
     const defaultWork: WorkProject[] = [
       {
-        title: "Creative Nests Launch 2024",
+        title: "WSCLogic Launch 2024",
         slug: "creative-nests-launch",
         category: "CGI & Production",
         desc: "Immersive 3D/CGI visual branding mapping the modern frontier.",
@@ -384,7 +384,7 @@ At Creative Nests, we don't believe in one-size-fits-all. We audit your existing
         videoUrl: "https://assets.mixkit.co/videos/preview/mixkit-futuristic-subway-station-with-neon-lights-43958-large.mp4",
         tags: ["CGI", "VFX", "Motion"],
         featured: true,
-        about: "Creative Nests Launch represents our signature visual catalog, capturing next-generation design paradigms through a series of CGI-rendered environments.",
+        about: "WSCLogic Launch represents our signature visual catalog, capturing next-generation design paradigms through a series of CGI-rendered environments.",
         challenge: "Mapping highly stylized brand textures onto multi-angle physical simulations while keeping assets compressed and ready for browser execution.",
         solution: "We deployed custom WebGL rendering chains and optimized 3D coordinate mapping layers directly within serverless Next.js pages.",
         results: ["+340% User Duration Rate", "Perfect 100 PageSpeed Rating", "Featured in CSS Design Awards"]

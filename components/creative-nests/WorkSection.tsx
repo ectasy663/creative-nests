@@ -1,9 +1,24 @@
-import Link from 'next/link'
-import { getProjects } from '@/lib/db'
+'use client'
 
-export function WorkSection({ featuredOnly = false }: { featuredOnly?: boolean }) {
-  const allProjects = getProjects()
-  const displayedProjects = featuredOnly ? allProjects.slice(0, 3) : allProjects
+import { useState } from 'react'
+import Link from 'next/link'
+import { WorkProject } from '@/lib/db'
+
+export function WorkSection({ projects, featuredOnly = false }: { projects: WorkProject[], featuredOnly?: boolean }) {
+  const allProjects = projects
+  const [selectedCategory, setSelectedCategory] = useState<string>('All')
+  
+  // Extract unique categories
+  const categories = ['All', ...Array.from(new Set(allProjects.map(p => p.category)))]
+
+  // Filter projects
+  let displayedProjects = allProjects
+  if (selectedCategory !== 'All') {
+    displayedProjects = displayedProjects.filter(p => p.category === selectedCategory)
+  }
+  if (featuredOnly) {
+    displayedProjects = displayedProjects.slice(0, 3)
+  }
 
   return (
     <section id="portfolio" style={{ background: 'transparent', padding: '80px 28px' }}>
@@ -24,9 +39,36 @@ export function WorkSection({ featuredOnly = false }: { featuredOnly?: boolean }
         </div>
       </div>
 
+      {/* Categories Filter Bar (Only show if not featuredOnly) */}
+      {!featuredOnly && (
+        <div style={{ display: 'flex', gap: '12px', marginBottom: '40px', overflowX: 'auto', paddingBottom: '8px', scrollbarWidth: 'none' }}>
+          {categories.map(category => (
+            <button
+              key={category}
+              onClick={() => setSelectedCategory(category)}
+              style={{
+                background: selectedCategory === category ? 'rgba(217, 70, 239, 0.2)' : 'rgba(255, 255, 255, 0.03)',
+                border: `1px solid ${selectedCategory === category ? 'rgba(217, 70, 239, 0.5)' : 'rgba(255, 255, 255, 0.1)'}`,
+                color: selectedCategory === category ? '#fff' : '#9ca3af',
+                padding: '8px 24px',
+                borderRadius: '99px',
+                fontSize: '12px',
+                fontWeight: 600,
+                letterSpacing: '1px',
+                cursor: 'pointer',
+                transition: 'all 0.3s ease',
+                whiteSpace: 'nowrap'
+              }}
+            >
+              {category}
+            </button>
+          ))}
+        </div>
+      )}
+
       {/* Projects Grid */}
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))', gap: '32px' }}>
-        {displayedProjects.map((project) => (
+        {displayedProjects.length > 0 ? displayedProjects.map((project) => (
           <div 
             key={project.slug}
             className="glass-card"
@@ -101,7 +143,11 @@ export function WorkSection({ featuredOnly = false }: { featuredOnly?: boolean }
               </Link>
             </div>
           </div>
-        ))}
+        )) : (
+          <div style={{ padding: '40px', textAlign: 'center', color: '#9ca3af', gridColumn: '1 / -1' }}>
+            No projects found in this category.
+          </div>
+        )}
       </div>
 
       {featuredOnly && (
@@ -134,7 +180,7 @@ export function WorkSection({ featuredOnly = false }: { featuredOnly?: boolean }
               How We Deliver <span style={{ background: 'linear-gradient(135deg, #6366f1, #d946ef)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Unmatched Results</span>
             </h3>
             <p style={{ fontSize: '14px', lineHeight: 1.7, color: '#9ca3af', marginTop: '16px' }}>
-              Every brand transformation in our catalog represents a strategic mixture of high-fidelity engineering, immersive visuals, and conversion optimization pipelines. We don&apos;t just build code; we deploy digital solutions that drive metric-centered enterprise growth.
+              Every brand transformation in our catalog represents a strategic mixture of high-fidelity engineering, immersive visuals, and conversion optimization pipelines. We don't just build code; we deploy digital solutions that drive metric-centered enterprise growth.
             </p>
           </div>
           

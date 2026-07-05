@@ -11,7 +11,7 @@ import 'swiper/css/navigation'
 
 const testimonials = [
   {
-    text: "Creative Nests took our vision and amplified it by 10x. The cinematic CGI ads they produced resulted in our biggest sales quarter ever, driving massive engagement on Instagram and TikTok.",
+    text: "WSCLogic took our vision and amplified it by 10x. The cinematic CGI ads they produced resulted in our biggest sales quarter ever, driving massive engagement on Instagram and TikTok.",
     author: "Sarah Jenkins",
     role: "CMO, TechNova",
     metrics: "+340% Traffic Lift",

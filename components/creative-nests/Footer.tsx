@@ -181,7 +181,7 @@ export function Footer() {
         }}
       >
         <div style={{ fontSize: '11px', letterSpacing: '2px', textTransform: 'uppercase', color: '#6b7280' }}>
-          © Creative Nests {new Date().getFullYear()} — We Create the Impossible
+          © WSCLogic {new Date().getFullYear()} — We Create the Impossible
         </div>
         <div style={{ display: 'flex', gap: '24px', fontSize: '11px' }}>
           <a href="#" className="text-[#6b7280] hover:text-white transition-colors duration-200" style={{ textDecoration: 'none' }}>Privacy Policy</a>

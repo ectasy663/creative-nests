@@ -8,8 +8,8 @@ import { getServiceBySlug } from '@/lib/db'
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params
   const service = getServiceBySlug(slug)
-  if (!service) return { title: 'Service Not Found — Creative Nests' }
-  return { title: `${service.title} — Creative Nests` }
+  if (!service) return { title: 'Service Not Found — WSCLogic' }
+  return { title: `${service.title} — WSCLogic` }
 }
 
 export default async function ServicePage({ params }: { params: Promise<{ slug: string }> }) {
@@ -104,59 +104,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
 
           </div>
 
-          {/* Pricing Table */}
-          <div style={{ marginTop: '80px' }}>
-            <h2 className="cn-bebas" style={{ fontSize: '40px', letterSpacing: '2px', textAlign: 'center', marginBottom: '40px', color: '#fff' }}>
-              Simple, Transparent Pricing
-            </h2>
-            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '32px', justifyContent: 'center' }}>
-              {data.pricing.map((tier, i) => (
-                <div 
-                  key={i} 
-                  className="glass-card" 
-                  style={{ 
-                    padding: '40px 32px', 
-                    width: '350px', 
-                    display: 'flex', 
-                    flexDirection: 'column', 
-                    justifyContent: 'space-between',
-                    minHeight: '420px',
-                    background: i % 2 === 1 ? 'rgba(99, 102, 241, 0.06)' : 'rgba(255, 255, 255, 0.03)',
-                    borderColor: i % 2 === 1 ? 'rgba(99, 102, 241, 0.25)' : 'rgba(255, 255, 255, 0.08)',
-                  }}
-                >
-                  <div>
-                    <div className="cn-bebas" style={{ fontSize: '22px', letterSpacing: '2px', color: i % 2 === 0 ? '#6366f1' : '#d946ef', textTransform: 'uppercase', marginBottom: '8px' }}>
-                      {tier.name}
-                    </div>
-                    <div className="cn-bebas" style={{ fontSize: '48px', lineHeight: 1, margin: '16px 0 24px', color: '#fff' }}>
-                      {tier.price}
-                    </div>
-                    <div style={{ borderBottom: '1px solid rgba(255, 255, 255, 0.08)', marginBottom: '24px' }} />
-                    <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '14px' }}>
-                      {tier.features.map((feat, idx) => (
-                        <li key={idx} style={{ fontSize: '13px', display: 'flex', gap: '10px', alignItems: 'center', color: '#9ca3af' }}>
-                          <span style={{ color: '#10b981' }}>✓</span> {feat}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
 
-                  <Link 
-                    href="/contact" 
-                    className={i % 2 === 1 ? 'gradient-btn-primary' : 'glass-btn-secondary'}
-                    style={{ 
-                      display: 'block', 
-                      textAlign: 'center', 
-                      marginTop: '36px',
-                    }}
-                  >
-                    Get Started →
-                  </Link>
-                </div>
-              ))}
-            </div>
-          </div>
 
         </div>
       </section>

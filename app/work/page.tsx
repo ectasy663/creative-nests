@@ -3,8 +3,9 @@ import { Footer } from '@/components/creative-nests/Footer'
 import { WorkSection } from '@/components/creative-nests/WorkSection'
 import { VideoBackground } from '@/components/creative-nests/VideoBackground'
 import { CTABanner } from '@/components/creative-nests/CTABanner'
+import { getProjects } from '@/lib/db'
 
-export const metadata = { title: 'Work — Creative Nests' }
+export const metadata = { title: 'Work — WSCLogic' }
 
 export default function WorkPage() {
   return (
@@ -14,7 +15,7 @@ export default function WorkPage() {
       <Header />
 
       <section style={{ padding: '40px 0' }}>
-        <WorkSection />
+        <WorkSection projects={getProjects()} />
       </section>
 
       <CTABanner

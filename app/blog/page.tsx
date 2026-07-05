@@ -6,7 +6,7 @@ import { VideoBackground } from '@/components/creative-nests/VideoBackground'
 import { CTABanner } from '@/components/creative-nests/CTABanner'
 import { getBlogPosts } from '@/lib/db'
 
-export const metadata = { title: 'Blog — Creative Nests' }
+export const metadata = { title: 'Blog — WSCLogic' }
 
 export default function BlogListingPage() {
   const posts = getBlogPosts()
