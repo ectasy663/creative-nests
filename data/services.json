@@ -6,7 +6,7 @@
     "subtitle": "Cinematic ads that defy gravity and command engagement.",
     "desc": "In a digital world crowded with average content, our CGI & VFX advertisements are designed to grab attention instantly. We blend high-fidelity 3D assets, fluid dynamics, and realistic animations to create visual narratives that defy gravity and command engagement.",
     "image": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=1200&q=80",
-    "videoUrl": "https://assets.mixkit.co/videos/preview/mixkit-futuristic-subway-station-with-neon-lights-43958-large.mp4",
+    "videoUrl": "/videos/CGI_VFX_showcase_luxury_car_202607051948_gwr_video_mvp.mp4",
     "features": [
       "Scroll-Stopping 3D Visual Effects",
       "Realistic Simulation & Fluid Dynamics",
@@ -51,7 +51,7 @@
     "subtitle": "World-class digital platforms built for scale & rapid growth.",
     "desc": "We construct blazing fast, secure, and visually stunning web applications utilizing Next.js, React, and robust backend architectures. Our products are not just code; they are conversion engines designed to load instantly and scale seamlessly as your user base grows.",
     "image": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1200&q=80",
-    "videoUrl": "https://assets.mixkit.co/videos/preview/mixkit-screen-of-a-computer-with-running-code-42231-large.mp4",
+    "videoUrl": "/videos/Web_app_development_showcase_202607051935_gwr_video_mvp.mp4",
     "features": [
       "Next.js App Router Architectures",
       "Responsive Fluid Layouts & Tailwind Integration",
@@ -96,7 +96,7 @@
     "subtitle": "Brand identities that speak before words are ever spoken.",
     "desc": "Your brand is not just a logo; it is the gut feeling a customer has about your product. We design cohesive, memorable visual identity systems that evoke emotion and build long-term trust. From custom logos to comprehensive brand books, we ensure your agency looks premium.",
     "image": "https://images.unsplash.com/photo-1626785774625-ddcddc3445e9?auto=format&fit=crop&w=1200&q=80",
-    "videoUrl": "https://assets.mixkit.co/videos/preview/mixkit-abstract-render-of-floating-colors-43224-large.mp4",
+    "videoUrl": "/videos/Luxury_brand_identity_animation_202607051938_gwr_video_mvp.mp4",
     "features": [
       "Memorable Custom Logo Designs",
       "Curated Typography & Color Palette Selection",
@@ -141,7 +141,7 @@
     "subtitle": "Precision search strategies that make you impossible to ignore.",
     "desc": "Getting traffic is easy; getting high-intent, converting traffic is the challenge. We run technical SEO campaigns, content strategies, and link building programs that position your brand at the absolute top of search results. Dominate your market share and capture leads organically.",
     "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80",
-    "videoUrl": "https://assets.mixkit.co/videos/preview/mixkit-financial-graphics-running-on-a-computer-screen-42229-large.mp4",
+    "videoUrl": "/videos/Business_growth_SEO_digital_mark…_202607051937_gwr_video_mvp.mp4",
     "features": [
       "In-Depth Technical SEO Auditing",
       "Keyword Research targeting High-Intent Searches",
@@ -186,7 +186,7 @@
     "subtitle": "Data-driven paid spend designed to return maximum ROI.",
     "desc": "Stop wasting money on campaigns that don't convert. We construct strategic funnel-based ads on Meta (Facebook, Instagram), Google, and LinkedIn. We combine highly engaging ad creatives with hyper-targeted audience testing to scale your acquisition profitability.",
     "image": "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1200&q=80",
-    "videoUrl": "https://assets.mixkit.co/videos/preview/mixkit-hand-holding-a-smartphone-displaying-social-media-41618-large.mp4",
+    "videoUrl": "/videos/Social_media_advertising_power_c…_202607051941_gwr_video_mvp.mp4",
     "features": [
       "High-Converting Ad Copywriting",
       "Hyper-Targeted Lookalike & Custom Audiences",
@@ -231,7 +231,7 @@
     "subtitle": "Frame-perfect storytelling that moves audiences and triggers actions.",
     "desc": "Video editing is the art of manipulating time and emotion. We turn raw footage into high-retention stories, cinematic promotional films, or engaging short-form TikToks and Reels. Our editing hooks viewers within the first 3 seconds and holds them until the final frame.",
     "image": "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=1200&q=80",
-    "videoUrl": "https://assets.mixkit.co/videos/preview/mixkit-timeline-of-a-video-editing-software-42352-large.mp4",
+    "videoUrl": "/videos/Video_production_studio_cinemati…_202607051942_gwr_video_mvp.mp4",
     "features": [
       "High-Retention Cinematic Cuts",
       "Dynamic Sound Design & Sound Effects",
@@ -276,7 +276,7 @@
     "subtitle": "Bespoke customer relationship pipelines built to convert.",
     "desc": "Unlock the potential of your sales pipelines with custom Salesforce, HubSpot, or completely bespoke CRM dashboards. We map your client touchpoints, setup webhook auto-responders, and compile real-time telemetry to prevent lead leakage.",
     "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80",
-    "videoUrl": "https://assets.mixkit.co/videos/preview/mixkit-woman-working-on-a-laptop-at-home-42337-large.mp4",
+    "videoUrl": "/videos/Futuristic_CRM_visualization_int…_202607051945_gwr_video_mvp.mp4",
     "features": [
       "Custom Dashboard Design & API Webhooks",
       "Automated Email & WhatsApp Triggers",
@@ -321,7 +321,7 @@
     "subtitle": "Custom enterprise resources dashboards built to scale.",
     "desc": "Unify inventory tracking, employee logistics, ledger records, and operations into a high-performance custom ERP portal. Crafted with robust security protocols, Next.js, and lightweight responsive architectures to scale alongside your organization.",
     "image": "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1200&q=80",
-    "videoUrl": "https://assets.mixkit.co/videos/preview/mixkit-server-room-racks-in-a-datacenter-41584-large.mp4",
+    "videoUrl": "/videos/Enterprise_resource_planning_vis…_202607051945_gwr_video_mvp.mp4",
     "features": [
       "Secure Multi-Tenant DB Architectures",
       "Real-time Inventory & Logistic Tracking",

@@ -1,6 +1,5 @@
 import { Header } from '@/components/wsclogic/Header'
 import { Footer } from '@/components/wsclogic/Footer'
-import { VideoBackground } from '@/components/wsclogic/VideoBackground'
 import Link from 'next/link'
 import Image from 'next/image'
 import { notFound } from 'next/navigation'
@@ -34,8 +33,7 @@ export default async function WorkProjectPage({ params }: { params: Promise<{ sl
   const intro = data.about
 
   return (
-    <div style={{ position: 'relative', minHeight: '100vh', color: '#f3f4f6' }}>
-      <VideoBackground src="/Brutalist_IT_company_hero_video_202607032332_gwr_video_mvp.mp4" />
+    <div style={{ position: 'relative', minHeight: '100vh', color: '#f3f4f6', backgroundColor: '#000' }}>
       
       <Header />
 
