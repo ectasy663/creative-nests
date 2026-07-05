@@ -32,7 +32,7 @@ export function CTABanner({
   return (
     <section
       style={{
-        background: 'rgba(8, 7, 13, 0.75)',
+        background: 'radial-gradient(circle at 50% 0%, rgba(223, 183, 108, 0.05) 0%, rgba(8, 7, 13, 0.95) 75%)',
         backdropFilter: 'blur(16px)',
         WebkitBackdropFilter: 'blur(16px)',
         borderTop: '1px solid rgba(255, 255, 255, 0.08)',
@@ -47,15 +47,15 @@ export function CTABanner({
       <div style={{ position: 'relative', zIndex: 2 }}>
         <div
           style={{
-            background: 'rgba(99, 102, 241, 0.1)',
-            border: '1px solid rgba(99, 102, 241, 0.3)',
+            background: 'rgba(223, 183, 108, 0.08)',
+            border: '1px solid rgba(223, 183, 108, 0.3)',
             borderRadius: '99px',
             display: 'inline-block',
             padding: '6px 18px',
             marginBottom: '24px',
           }}
         >
-          <span style={{ fontSize: '9px', letterSpacing: '5px', textTransform: 'uppercase', fontWeight: 700, color: '#a855f7' }}>
+          <span style={{ fontSize: '9px', letterSpacing: '5px', textTransform: 'uppercase', fontWeight: 700, color: '#dfb76c' }}>
             Let&apos;s Work Together
           </span>
         </div>
@@ -66,7 +66,7 @@ export function CTABanner({
         >
           READY TO
           <br />
-          <span style={{ background: 'linear-gradient(135deg, #6366f1, #d946ef)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>DOMINATE</span>
+          <span style={{ background: 'linear-gradient(135deg, #dfb76c, #b89047)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>DOMINATE</span>
           <br />
           YOUR MARKET?
         </div>

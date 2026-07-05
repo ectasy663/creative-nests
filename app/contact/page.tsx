@@ -1,12 +1,12 @@
-import { Header } from '@/components/wsclogic/Header'
-import { Footer } from '@/components/wsclogic/Footer'
-import { ContactForm } from '@/components/wsclogic/ContactForm'
+import { Header } from '@/components/wexlogic/Header'
+import { Footer } from '@/components/wexlogic/Footer'
+import { ContactForm } from '@/components/wexlogic/ContactForm'
 
 export const metadata = {
-  title: 'Contact Us — WSCLogic',
-  description: 'Have a project in mind? Reach out to WSCLogic for custom CGI campaigns, Next.js web applications, paid ads, SEO, and CRM/ERP integrations.',
+  title: 'Contact Us — WexLogic',
+  description: 'Have a project in mind? Reach out to WexLogic for custom CGI campaigns, Next.js web applications, paid ads, SEO, and CRM/ERP integrations.',
   alternates: {
-    canonical: 'https://wsclogic.com/contact'
+    canonical: 'https://wexlogic.com/contact'
   }
 }
 

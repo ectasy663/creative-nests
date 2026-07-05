@@ -37,9 +37,9 @@ export function Header() {
         <Logo size={40} />
         <div>
           <div className="cn-syne" style={{ fontSize: '18px', fontWeight: 800, color: '#fff', letterSpacing: '1px' }}>
-            <span style={{ background: 'linear-gradient(135deg, #6366f1, #d946ef)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>WSCLogic</span>
+            <span style={{ background: 'linear-gradient(135deg, #dfb76c, #b89047)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>WexLogic</span>
           </div>
-          <div style={{ fontSize: '8px', letterSpacing: '4px', textTransform: 'uppercase', color: '#a855f7', fontWeight: 600 }}>
+          <div style={{ fontSize: '8px', letterSpacing: '4px', textTransform: 'uppercase', color: '#dfb76c', fontWeight: 600 }}>
             Premium Agency
           </div>
         </div>

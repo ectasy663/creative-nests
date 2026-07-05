@@ -1,5 +1,5 @@
-import { Header } from '@/components/wsclogic/Header'
-import { Footer } from '@/components/wsclogic/Footer'
+import { Header } from '@/components/wexlogic/Header'
+import { Footer } from '@/components/wexlogic/Footer'
 import Link from 'next/link'
 import Image from 'next/image'
 import { notFound } from 'next/navigation'
@@ -8,12 +8,12 @@ import { getProjectBySlug } from '@/lib/db'
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params
   const project = getProjectBySlug(slug)
-  if (!project) return { title: 'Project Not Found — WSCLogic' }
+  if (!project) return { title: 'Project Not Found — WexLogic' }
   return {
-    title: `${project.title} — WSCLogic`,
+    title: `${project.title} — WexLogic`,
     description: project.desc.slice(0, 155) + '...',
     alternates: {
-      canonical: `https://wsclogic.com/work/${slug}`
+      canonical: `https://wexlogic.com/work/${slug}`
     }
   }
 }
@@ -26,7 +26,7 @@ export default async function WorkProjectPage({ params }: { params: Promise<{ sl
     notFound()
   }
 
-  const client = 'WSCLogic Client'
+  const client = 'WexLogic Client'
   const year = '2026'
   const services = data.tags
   const tag = data.tags.join(' · ')

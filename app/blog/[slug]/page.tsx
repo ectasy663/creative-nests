@@ -1,5 +1,5 @@
-import { Header } from '@/components/wsclogic/Header'
-import { Footer } from '@/components/wsclogic/Footer'
+import { Header } from '@/components/wexlogic/Header'
+import { Footer } from '@/components/wexlogic/Footer'
 import Link from 'next/link'
 import Image from 'next/image'
 import { notFound } from 'next/navigation'
@@ -8,12 +8,12 @@ import { getBlogPostBySlug } from '@/lib/db'
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params
   const post = getBlogPostBySlug(slug)
-  if (!post) return { title: 'Post Not Found — WSCLogic' }
+  if (!post) return { title: 'Post Not Found — WexLogic' }
   return {
-    title: `${post.title} — WSCLogic`,
+    title: `${post.title} — WexLogic`,
     description: post.excerpt.slice(0, 155) + '...',
     alternates: {
-      canonical: `https://wsclogic.com/blog/${slug}`
+      canonical: `https://wexlogic.com/blog/${slug}`
     }
   }
 }

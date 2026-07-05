@@ -1,15 +1,15 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { Header } from '@/components/wsclogic/Header'
-import { Footer } from '@/components/wsclogic/Footer'
-import { CTABanner } from '@/components/wsclogic/CTABanner'
+import { Header } from '@/components/wexlogic/Header'
+import { Footer } from '@/components/wexlogic/Footer'
+import { CTABanner } from '@/components/wexlogic/CTABanner'
 import { getBlogPosts } from '@/lib/db'
 
 export const metadata = {
-  title: 'Insights & Technical Blog — WSCLogic',
-  description: 'Read the latest guides and engineering insights on CGI animation, Next.js setups, paid advertising, and bespoke database architectures from WSCLogic.',
+  title: 'Insights & Technical Blog — WexLogic',
+  description: 'Read the latest guides and engineering insights on CGI animation, Next.js setups, paid advertising, and bespoke database architectures from WexLogic.',
   alternates: {
-    canonical: 'https://wsclogic.com/blog'
+    canonical: 'https://wexlogic.com/blog'
   }
 }
 
@@ -30,7 +30,7 @@ export default function BlogListingPage() {
             </span>
           </div>
           <h1 className="cn-bebas" style={{ fontSize: 'clamp(48px, 8vw, 84px)', lineHeight: 0.9, marginBottom: '16px', color: '#fff' }}>
-            <span style={{ background: 'linear-gradient(135deg, #a855f7, #06b6d4)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>WSCLogic Blog</span>
+            <span style={{ background: 'linear-gradient(135deg, #a855f7, #06b6d4)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>WexLogic Blog</span>
           </h1>
           <p className="cn-syne" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)', color: '#9ca3af', maxWidth: '600px', margin: '0 auto 40px', lineHeight: 1.6 }}>
             Our team shares guides, insights, and case histories about CGI ads, engineering SaaS platforms, scaling marketing funnels, and enterprise ERP strategy.

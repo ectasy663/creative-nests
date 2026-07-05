@@ -99,11 +99,11 @@ export function ContactForm() {
           
           <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', flexWrap: 'wrap', gap: '16px' }}>
             <div>
-              <div style={{ background: 'rgba(99, 102, 241, 0.1)', border: '1px solid rgba(99, 102, 241, 0.3)', display: 'inline-block', padding: '6px 18px', borderRadius: '99px', marginBottom: '16px' }}>
-                <span style={{ fontSize: '10px', letterSpacing: '4px', textTransform: 'uppercase', fontWeight: 700, color: '#6366f1' }}>Get In Touch</span>
+              <div style={{ background: 'rgba(223, 183, 108, 0.08)', border: '1px solid rgba(223, 183, 108, 0.3)', display: 'inline-block', padding: '6px 18px', borderRadius: '99px', marginBottom: '16px' }}>
+                <span style={{ fontSize: '10px', letterSpacing: '4px', textTransform: 'uppercase', fontWeight: 700, color: '#dfb76c' }}>Get In Touch</span>
               </div>
               <h1 className="cn-bebas" style={{ fontSize: 'clamp(38px, 6vw, 64px)', letterSpacing: '1px', color: '#fff', lineHeight: 1 }}>
-                Start Your <span style={{ background: 'linear-gradient(135deg, #6366f1, #d946ef)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Journey</span>
+                Start Your <span style={{ background: 'linear-gradient(135deg, #dfb76c, #b89047)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Journey</span>
               </h1>
             </div>
             <div style={{ fontSize: '12px', letterSpacing: '2px', textTransform: 'uppercase', color: '#9ca3af', fontWeight: 600, textAlign: 'right' }}>
@@ -121,9 +121,9 @@ export function ContactForm() {
                 <div style={{ width: '40px', height: '3px', background: '#6366f1', borderRadius: '99px' }} />
               </div>
               {[
-                { label: 'Email Address', value: 'hello@wsclogic.com', link: 'mailto:hello@wsclogic.com' },
+                { label: 'Email Address', value: 'hello@wexlogic.com', link: 'mailto:hello@wexlogic.com' },
                 { label: 'WhatsApp Chat', value: '+91 98765 43210', link: 'https://wa.me/919876543210' },
-                { label: 'Social Channels', value: '@wsclogic', link: 'https://instagram.com/wsclogic' },
+                { label: 'Social Channels', value: '@wexlogic', link: 'https://instagram.com/wexlogic' },
                 { label: 'Primary Office', value: 'Bangalore — Serving Global Accounts', link: null },
               ].map(({ label, value, link }) => (
                 <div key={label}>
@@ -139,7 +139,7 @@ export function ContactForm() {
               ))}
               <div style={{ marginTop: 'auto' }}>
                 <div style={{ background: 'rgba(99, 102, 241, 0.1)', border: '1px solid rgba(99, 102, 241, 0.25)', padding: '8px 16px', borderRadius: '6px', display: 'inline-block' }}>
-                  <span style={{ fontSize: '9px', letterSpacing: '2px', textTransform: 'uppercase', color: '#6366f1', fontWeight: 700 }}>WSCLogic Digital Studio</span>
+                  <span style={{ fontSize: '9px', letterSpacing: '2px', textTransform: 'uppercase', color: '#6366f1', fontWeight: 700 }}>WexLogic Digital Studio</span>
                 </div>
               </div>
             </div>
@@ -224,11 +224,11 @@ export function ContactForm() {
       {/* FAQ SECTION */}
       <section style={{ padding: '64px 28px 80px', maxWidth: '800px', margin: '0 auto' }}>
         <div style={{ textAlign: 'center', marginBottom: '44px' }}>
-          <div style={{ background: 'rgba(168, 85, 247, 0.1)', border: '1px solid rgba(168, 85, 247, 0.3)', display: 'inline-block', padding: '6px 16px', borderRadius: '99px', marginBottom: '16px' }}>
-            <span style={{ fontSize: '9px', letterSpacing: '3px', textTransform: 'uppercase', fontWeight: 700, color: '#a855f7' }}>FAQ</span>
+          <div style={{ background: 'rgba(223, 183, 108, 0.08)', border: '1px solid rgba(223, 183, 108, 0.3)', display: 'inline-block', padding: '6px 16px', borderRadius: '99px', marginBottom: '16px' }}>
+            <span style={{ fontSize: '9px', letterSpacing: '3px', textTransform: 'uppercase', fontWeight: 700, color: '#dfb76c' }}>FAQ</span>
           </div>
           <h2 className="cn-bebas" style={{ fontSize: '38px', color: '#fff', letterSpacing: '1px' }}>
-            Frequently Asked <span style={{ background: 'linear-gradient(135deg, #a855f7, #6366f1)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Questions</span>
+            Frequently Asked <span style={{ background: 'linear-gradient(135deg, #dfb76c, #b89047)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Questions</span>
           </h2>
         </div>
 

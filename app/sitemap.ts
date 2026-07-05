@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next'
 import { getBlogPosts, getServices, getProjects } from '@/lib/db'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://wsclogic.com'
+  const baseUrl = 'https://wexlogic.com'
 
   // Static routes
   const routes = ['', '/services', '/work', '/blog', '/contact'].map((route) => ({

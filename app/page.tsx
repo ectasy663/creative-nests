@@ -1,20 +1,20 @@
 import Link from 'next/link'
-import { Header } from '@/components/wsclogic/Header'
-import { Footer } from '@/components/wsclogic/Footer'
-import { Ticker } from '@/components/wsclogic/Ticker'
-import { CTABanner } from '@/components/wsclogic/CTABanner'
-import { VideoBackground } from '@/components/wsclogic/VideoBackground'
-import { ServicesSection } from '@/components/wsclogic/ServicesSection'
-import { WorkSection } from '@/components/wsclogic/WorkSection'
-import { TestimonialsSection } from '@/components/wsclogic/TestimonialsSection'
-import { ProcessSection } from '@/components/wsclogic/ProcessSection'
+import { Header } from '@/components/wexlogic/Header'
+import { Footer } from '@/components/wexlogic/Footer'
+import { Ticker } from '@/components/wexlogic/Ticker'
+import { CTABanner } from '@/components/wexlogic/CTABanner'
+import { VideoBackground } from '@/components/wexlogic/VideoBackground'
+import { ServicesSection } from '@/components/wexlogic/ServicesSection'
+import { WorkSection } from '@/components/wexlogic/WorkSection'
+import { TestimonialsSection } from '@/components/wexlogic/TestimonialsSection'
+import { ProcessSection } from '@/components/wexlogic/ProcessSection'
 import { getProjects } from '@/lib/db'
 
 export const metadata = {
-  title: 'WSCLogic — CGI & VFX Ads, Web & App Development, Branding',
-  description: 'WSCLogic is India\'s premium digital studio delivering cinematic CGI ads, high-performance Next.js architectures, paid acquisition, and bespoke ERP/CRM dashboards.',
+  title: 'WexLogic — CGI & VFX Ads, Web & App Development, Branding',
+  description: 'WexLogic is India\'s premium digital studio delivering cinematic CGI ads, high-performance Next.js architectures, paid acquisition, and bespoke ERP/CRM dashboards.',
   alternates: {
-    canonical: 'https://wsclogic.com'
+    canonical: 'https://wexlogic.com'
   }
 }
 
@@ -36,8 +36,8 @@ export default function HomePage() {
       >
         <VideoBackground src="/Brutalist_IT_company_hero_video_202607032332_gwr_video_mvp.mp4" />
         {/* Soft background neon glows */}
-        <div style={{ position: 'absolute', top: '10%', right: '10%', width: '300px', height: '300px', background: 'radial-gradient(circle, rgba(99, 102, 241, 0.15) 0%, transparent 70%)', filter: 'blur(40px)', pointerEvents: 'none' }} />
-        <div style={{ position: 'absolute', bottom: '10%', left: '5%', width: '250px', height: '250px', background: 'radial-gradient(circle, rgba(217, 70, 239, 0.1) 0%, transparent 70%)', filter: 'blur(45px)', pointerEvents: 'none' }} />
+        <div style={{ position: 'absolute', top: '10%', right: '10%', width: '300px', height: '300px', background: 'radial-gradient(circle, rgba(223, 183, 108, 0.15) 0%, transparent 70%)', filter: 'blur(40px)', pointerEvents: 'none' }} />
+        <div style={{ position: 'absolute', bottom: '10%', left: '5%', width: '250px', height: '250px', background: 'radial-gradient(circle, rgba(184, 144, 71, 0.08) 0%, transparent 70%)', filter: 'blur(45px)', pointerEvents: 'none' }} />
 
         <div style={{ maxWidth: '1200px', margin: '0 auto', display: 'flex', flexWrap: 'wrap', gap: '48px', alignItems: 'center', justifyContent: 'space-between' }}>
           
@@ -45,8 +45,8 @@ export default function HomePage() {
           <div style={{ flex: '1 1 550px', zIndex: 10 }}>
             {/* Badge */}
             <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '24px' }}>
-              <div style={{ background: 'rgba(99, 102, 241, 0.1)', border: '1px solid rgba(99, 102, 241, 0.3)', borderRadius: '99px', padding: '6px 16px' }}>
-                <span style={{ fontSize: '10px', letterSpacing: '3px', textTransform: 'uppercase', fontWeight: 700, color: '#6366f1' }}>
+              <div style={{ background: 'rgba(223, 183, 108, 0.1)', border: '1px solid rgba(223, 183, 108, 0.3)', borderRadius: '99px', padding: '6px 16px' }}>
+                <span style={{ fontSize: '10px', letterSpacing: '3px', textTransform: 'uppercase', fontWeight: 700, color: '#dfb76c' }}>
                   Next-Gen Digital Production Studio
                 </span>
               </div>
@@ -55,7 +55,7 @@ export default function HomePage() {
             {/* Headline */}
             <h1 className="cn-syne" style={{ fontSize: 'clamp(36px, 5vw, 56px)', fontWeight: 800, color: '#fff', lineHeight: 1.25, paddingTop: '10px', marginBottom: '24px', letterSpacing: '-1px' }}>
               Where Brands Become<br />
-              <span style={{ background: 'linear-gradient(135deg, #6366f1, #d946ef)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Legends</span>.
+              <span style={{ background: 'linear-gradient(135deg, #dfb76c, #b89047)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Legends</span>.
             </h1>
 
             {/* Description Paragraph */}
@@ -86,7 +86,7 @@ export default function HomePage() {
               {/* Card Title */}
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '16px', borderBottom: '1px solid rgba(255, 255, 255, 0.08)', paddingBottom: '12px' }}>
                 <span style={{ fontSize: '10px', letterSpacing: '2px', textTransform: 'uppercase', color: '#9ca3af', fontWeight: 700 }}>OUR PROCESS</span>
-                <span style={{ fontSize: '9px', color: '#06b6d4', fontWeight: 600 }}>METHODOLOGY</span>
+                <span style={{ fontSize: '9px', color: '#dfb76c', fontWeight: 600 }}>METHODOLOGY</span>
               </div>
 
               {/* Scrolling Window with vertical fades */}
@@ -109,17 +109,17 @@ export default function HomePage() {
                   }}
                 >
                   {[
-                    { num: '01', title: 'Discovery & Audit', color: '#6366f1' },
-                    { num: '02', title: 'Architecture Blueprint', color: '#d946ef' },
-                    { num: '03', title: 'High-Fidelity Execution', color: '#06b6d4' },
-                    { num: '04', title: 'Stress Testing & Q/A', color: '#10b981' },
-                    { num: '05', title: 'Launch & Scale', color: '#6366f1' },
+                    { num: '01', title: 'Discovery & Audit', color: '#dfb76c' },
+                    { num: '02', title: 'Architecture Blueprint', color: '#c5a059' },
+                    { num: '03', title: 'High-Fidelity Execution', color: '#e5c185' },
+                    { num: '04', title: 'Stress Testing & Q/A', color: '#a37f3d' },
+                    { num: '05', title: 'Launch & Scale', color: '#dfb76c' },
                   ].concat([
-                    { num: '01', title: 'Discovery & Audit', color: '#6366f1' },
-                    { num: '02', title: 'Architecture Blueprint', color: '#d946ef' },
-                    { num: '03', title: 'High-Fidelity Execution', color: '#06b6d4' },
-                    { num: '04', title: 'Stress Testing & Q/A', color: '#10b981' },
-                    { num: '05', title: 'Launch & Scale', color: '#6366f1' },
+                    { num: '01', title: 'Discovery & Audit', color: '#dfb76c' },
+                    { num: '02', title: 'Architecture Blueprint', color: '#c5a059' },
+                    { num: '03', title: 'High-Fidelity Execution', color: '#e5c185' },
+                    { num: '04', title: 'Stress Testing & Q/A', color: '#a37f3d' },
+                    { num: '05', title: 'Launch & Scale', color: '#dfb76c' },
                   ]).map((item, idx) => (
                     <Link
                       key={idx}
@@ -154,10 +154,10 @@ export default function HomePage() {
           }}
         >
           {[
-            { value: '30+',   label: 'Projects Completed', valueColor: '#6366f1' },
-            { value: '20+',   label: 'Happy Clients',      valueColor: '#d946ef' },
-            { value: '10X',   label: 'Revenue Growth',     valueColor: '#06b6d4' },
-            { value: '100%',  label: 'Satisfaction Rate',  valueColor: '#10b981' },
+            { value: '30+',   label: 'Projects Completed', valueColor: '#dfb76c' },
+            { value: '20+',   label: 'Happy Clients',      valueColor: '#c5a059' },
+            { value: '10X',   label: 'Revenue Growth',     valueColor: '#e5c185' },
+            { value: '100%',  label: 'Satisfaction Rate',  valueColor: '#a37f3d' },
           ].map(({ value, label, valueColor }) => (
             <div
               key={label}

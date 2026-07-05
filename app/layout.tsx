@@ -1,28 +1,28 @@
 import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
-import { DirectCallWidget } from '@/components/wsclogic/DirectCallWidget'
+import { DirectCallWidget } from '@/components/wexlogic/DirectCallWidget'
 import './globals.css'
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://wsclogic.com'),
+  metadataBase: new URL('https://wexlogic.com'),
   title: {
-    default: 'WSCLogic — India\'s #1 Creative Studio',
-    template: '%s | WSCLogic'
+    default: 'WexLogic — India\'s #1 Creative Studio',
+    template: '%s | WexLogic'
   },
   description: 'CGI & VFX Ads, Web & App Development, Branding, SEO & Marketing, Paid Ads, Video Editing, custom CRM/ERP integrations — premium digital solutions.',
   alternates: {
     canonical: '/'
   },
   openGraph: {
-    title: 'WSCLogic — India\'s #1 Creative Studio',
+    title: 'WexLogic — India\'s #1 Creative Studio',
     description: 'CGI & VFX Ads, Web & App Development, Branding, SEO & Marketing, Paid Ads, Video Editing, custom CRM/ERP integrations — premium digital solutions.',
-    url: 'https://wsclogic.com',
-    siteName: 'WSCLogic',
+    url: 'https://wexlogic.com',
+    siteName: 'WexLogic',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'WSCLogic — India\'s #1 Creative Studio',
+    title: 'WexLogic — India\'s #1 Creative Studio',
     description: 'CGI & VFX Ads, Web & App Development, Branding, SEO & Marketing, Paid Ads, Video Editing, custom CRM/ERP integrations — premium digital solutions.',
   }
 }

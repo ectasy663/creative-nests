@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: '/api/',
     },
-    sitemap: 'https://wsclogic.com/sitemap.xml',
+    sitemap: 'https://wexlogic.com/sitemap.xml',
   }
 }

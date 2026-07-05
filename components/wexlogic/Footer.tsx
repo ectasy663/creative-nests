@@ -4,9 +4,9 @@ import { LogoSmall } from './Logo'
 export function Footer() {
   const colors = ['#6366f1', '#d946ef', '#06b6d4']
   const hrefs = [
-    'https://instagram.com/wsclogic',
+    'https://instagram.com/wexlogic',
     'https://wa.me/919876543210',
-    'mailto:hello@wsclogic.com'
+    'mailto:hello@wexlogic.com'
   ]
 
   return (
@@ -51,7 +51,7 @@ export function Footer() {
           <Link href="/" style={{ display: 'flex', alignItems: 'center', gap: '10px', textDecoration: 'none' }}>
             <LogoSmall />
             <span className="cn-syne" style={{ fontSize: '18px', fontWeight: 800, color: '#fff' }}>
-              <span style={{ background: 'linear-gradient(135deg, #6366f1, #d946ef)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>WSCLogic</span>
+              <span style={{ background: 'linear-gradient(135deg, #dfb76c, #b89047)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>WexLogic</span>
             </span>
           </Link>
           <p style={{ fontSize: '13px', lineHeight: 1.6, color: '#9ca3af', fontWeight: 400 }}>
@@ -141,7 +141,7 @@ export function Footer() {
             Contact & HQ
           </h3>
           <div style={{ fontSize: '13px', color: '#9ca3af', lineHeight: 1.6 }}>
-            <div>Email: <span style={{ color: '#fff', fontWeight: 600 }}>hello@wsclogic.com</span></div>
+            <div>Email: <span style={{ color: '#fff', fontWeight: 600 }}>hello@wexlogic.com</span></div>
             <div style={{ marginTop: '4px' }}>Phone: <span style={{ color: '#fff', fontWeight: 600 }}>+91 98765 43210</span></div>
             <div style={{ marginTop: '4px' }}>Office: <span style={{ color: '#fff', fontWeight: 600 }}>Bangalore & Mumbai, India</span></div>
           </div>
@@ -181,7 +181,7 @@ export function Footer() {
         }}
       >
         <div style={{ fontSize: '11px', letterSpacing: '2px', textTransform: 'uppercase', color: '#6b7280' }}>
-          © WSCLogic {new Date().getFullYear()} — We Create the Impossible
+          © WexLogic {new Date().getFullYear()} — We Create the Impossible
         </div>
         <div style={{ display: 'flex', gap: '24px', fontSize: '11px' }}>
           <a href="#" className="text-[#6b7280] hover:text-white transition-colors duration-200" style={{ textDecoration: 'none' }}>Privacy Policy</a>

@@ -21,17 +21,17 @@ export function WorkSection({ projects, featuredOnly = false }: { projects: Work
   }
 
   return (
-    <section id="portfolio" style={{ background: 'transparent', padding: '80px 28px' }}>
+    <section id="portfolio" style={{ background: 'radial-gradient(circle at 50% 0%, rgba(223, 183, 108, 0.04) 0%, #040307 70%)', padding: '80px 28px', borderBottom: '1px solid rgba(255, 255, 255, 0.08)' }}>
       {/* Header Panel */}
       <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', marginBottom: '56px', flexWrap: 'wrap', gap: '20px' }}>
         <div>
-          <div style={{ background: 'rgba(217, 70, 239, 0.1)', border: '1px solid rgba(217, 70, 239, 0.3)', display: 'inline-block', padding: '6px 18px', borderRadius: '99px', marginBottom: '16px' }}>
-            <span style={{ fontSize: '10px', letterSpacing: '4px', textTransform: 'uppercase', fontWeight: 700, color: '#d946ef' }}>
+          <div style={{ background: 'rgba(223, 183, 108, 0.08)', border: '1px solid rgba(223, 183, 108, 0.3)', display: 'inline-block', padding: '6px 18px', borderRadius: '99px', marginBottom: '16px' }}>
+            <span style={{ fontSize: '10px', letterSpacing: '4px', textTransform: 'uppercase', fontWeight: 700, color: '#dfb76c' }}>
               {featuredOnly ? 'Featured Portfolio' : 'Complete Showcase'}
             </span>
           </div>
           <h2 className="cn-bebas" style={{ fontSize: 'clamp(42px, 6vw, 68px)', letterSpacing: '1px', color: '#fff', lineHeight: 1, paddingTop: '4px' }}>
-            Selected Case <span style={{ background: 'linear-gradient(135deg, #d946ef, #06b6d4)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Studies</span>
+            Selected Case <span style={{ background: 'linear-gradient(135deg, #dfb76c, #b89047)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Studies</span>
           </h2>
         </div>
         <div style={{ fontSize: '12px', letterSpacing: '2px', textTransform: 'uppercase', color: '#9ca3af', fontWeight: 600, textAlign: 'right' }}>
@@ -47,8 +47,8 @@ export function WorkSection({ projects, featuredOnly = false }: { projects: Work
               key={category}
               onClick={() => setSelectedCategory(category)}
               style={{
-                background: selectedCategory === category ? 'rgba(217, 70, 239, 0.2)' : 'rgba(255, 255, 255, 0.03)',
-                border: `1px solid ${selectedCategory === category ? 'rgba(217, 70, 239, 0.5)' : 'rgba(255, 255, 255, 0.1)'}`,
+                background: selectedCategory === category ? 'rgba(223, 183, 108, 0.2)' : 'rgba(255, 255, 255, 0.03)',
+                border: `1px solid ${selectedCategory === category ? 'rgba(223, 183, 108, 0.5)' : 'rgba(255, 255, 255, 0.1)'}`,
                 color: selectedCategory === category ? '#fff' : '#9ca3af',
                 padding: '8px 24px',
                 borderRadius: '99px',
@@ -83,11 +83,11 @@ export function WorkSection({ projects, featuredOnly = false }: { projects: Work
             }}
           >
             {/* Background neon accent */}
-            <div style={{ position: 'absolute', top: '0', right: '0', width: '120px', height: '120px', background: '#d946ef', opacity: 0.04, filter: 'blur(35px)', pointerEvents: 'none' }} />
+            <div style={{ position: 'absolute', top: '0', right: '0', width: '120px', height: '120px', background: '#dfb76c', opacity: 0.04, filter: 'blur(35px)', pointerEvents: 'none' }} />
             
             <div style={{ position: 'relative', zIndex: 1 }}>
-              <div style={{ background: 'rgba(217, 70, 239, 0.15)', border: '1px solid rgba(217, 70, 239, 0.3)', display: 'inline-block', padding: '4px 14px', borderRadius: '99px', marginBottom: '20px' }}>
-                <span style={{ fontSize: '9px', letterSpacing: '3px', textTransform: 'uppercase', color: '#d946ef', fontWeight: 700 }}>
+              <div style={{ background: 'rgba(223, 183, 108, 0.15)', border: '1px solid rgba(223, 183, 108, 0.3)', display: 'inline-block', padding: '4px 14px', borderRadius: '99px', marginBottom: '20px' }}>
+                <span style={{ fontSize: '9px', letterSpacing: '3px', textTransform: 'uppercase', color: '#dfb76c', fontWeight: 700 }}>
                   {project.category}
                 </span>
               </div>
@@ -129,7 +129,7 @@ export function WorkSection({ projects, featuredOnly = false }: { projects: Work
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', position: 'relative', zIndex: 1, marginTop: '32px' }}>
               <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
                 {project.tags.map((tag) => (
-                  <span key={tag} style={{ fontSize: '9px', letterSpacing: '1px', textTransform: 'uppercase', color: '#06b6d4', fontWeight: 600 }}>
+                  <span key={tag} style={{ fontSize: '9px', letterSpacing: '1px', textTransform: 'uppercase', color: '#dfb76c', fontWeight: 600 }}>
                     {tag}
                   </span>
                 ))}
@@ -164,16 +164,16 @@ export function WorkSection({ projects, featuredOnly = false }: { projects: Work
           overflow: 'hidden'
         }}
       >
-        <div style={{ position: 'absolute', top: '-20%', left: '-10%', width: '300px', height: '300px', background: 'radial-gradient(circle, rgba(99, 102, 241, 0.1) 0%, transparent 70%)', filter: 'blur(40px)', pointerEvents: 'none' }} />
-        <div style={{ position: 'absolute', bottom: '-20%', right: '-10%', width: '300px', height: '300px', background: 'radial-gradient(circle, rgba(217, 70, 239, 0.08) 0%, transparent 70%)', filter: 'blur(45px)', pointerEvents: 'none' }} />
+        <div style={{ position: 'absolute', top: '-20%', left: '-10%', width: '300px', height: '300px', background: 'radial-gradient(circle, rgba(223, 183, 108, 0.08) 0%, transparent 70%)', filter: 'blur(40px)', pointerEvents: 'none' }} />
+        <div style={{ position: 'absolute', bottom: '-20%', right: '-10%', width: '300px', height: '300px', background: 'radial-gradient(circle, rgba(184, 144, 71, 0.06) 0%, transparent 70%)', filter: 'blur(45px)', pointerEvents: 'none' }} />
         
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '40px', position: 'relative', zIndex: 1 }}>
           <div>
-            <div style={{ background: 'rgba(99, 102, 241, 0.1)', border: '1px solid rgba(99, 102, 241, 0.3)', display: 'inline-block', padding: '4px 12px', borderRadius: '99px', marginBottom: '16px' }}>
-              <span style={{ fontSize: '9px', letterSpacing: '3px', textTransform: 'uppercase', color: '#6366f1', fontWeight: 700 }}>About Our Portfolio</span>
+            <div style={{ background: 'rgba(223, 183, 108, 0.08)', border: '1px solid rgba(223, 183, 108, 0.3)', display: 'inline-block', padding: '4px 12px', borderRadius: '99px', marginBottom: '16px' }}>
+              <span style={{ fontSize: '9px', letterSpacing: '3px', textTransform: 'uppercase', color: '#dfb76c', fontWeight: 700 }}>About Our Portfolio</span>
             </div>
             <h3 className="cn-bebas" style={{ fontSize: '38px', color: '#fff', letterSpacing: '1px', lineHeight: 1 }}>
-              How We Deliver <span style={{ background: 'linear-gradient(135deg, #6366f1, #d946ef)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Unmatched Results</span>
+              How We Deliver <span style={{ background: 'linear-gradient(135deg, #dfb76c, #b89047)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Unmatched Results</span>
             </h3>
             <p style={{ fontSize: '14px', lineHeight: 1.7, color: '#9ca3af', marginTop: '16px' }}>
               Every brand transformation in our catalog represents a strategic mixture of high-fidelity engineering, immersive visuals, and conversion optimization pipelines. We don't just build code; we deploy digital solutions that drive metric-centered enterprise growth.
@@ -186,7 +186,7 @@ export function WorkSection({ projects, featuredOnly = false }: { projects: Work
                 title: 'Sub-Second Speeds', 
                 desc: 'Pre-rendered layouts and optimized edge routing for instant load times.',
                 icon: (
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#06b6d4" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ marginBottom: '12px', filter: 'drop-shadow(0 0 4px rgba(6, 182, 212, 0.5))' }}>
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#dfb76c" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ marginBottom: '12px', filter: 'drop-shadow(0 0 4px rgba(223, 183, 108, 0.4))' }}>
                     <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
                   </svg>
                 )
@@ -195,7 +195,7 @@ export function WorkSection({ projects, featuredOnly = false }: { projects: Work
                 title: 'Cinematic Precision', 
                 desc: 'Physically accurate rendering engines mapping assets for CGI and VFX ads.',
                 icon: (
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#d946ef" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ marginBottom: '12px', filter: 'drop-shadow(0 0 4px rgba(217, 70, 239, 0.5))' }}>
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#c5a059" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ marginBottom: '12px', filter: 'drop-shadow(0 0 4px rgba(197, 160, 89, 0.4))' }}>
                     <path d="M23 7l-7 5 7 5V7z" />
                     <rect x="1" y="5" width="15" height="14" rx="2" ry="2" />
                   </svg>
@@ -205,7 +205,7 @@ export function WorkSection({ projects, featuredOnly = false }: { projects: Work
                 title: 'Metric-Driven Audits', 
                 desc: 'Rigorous A/B user cohort testing across landing pages and ad scripts.',
                 icon: (
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#10b981" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ marginBottom: '12px', filter: 'drop-shadow(0 0 4px rgba(16, 185, 129, 0.5))' }}>
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e5c185" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ marginBottom: '12px', filter: 'drop-shadow(0 0 4px rgba(229, 193, 133, 0.4))' }}>
                     <line x1="18" y1="20" x2="18" y2="10" />
                     <line x1="12" y1="20" x2="12" y2="4" />
                     <line x1="6" y1="20" x2="6" y2="14" />
@@ -216,7 +216,7 @@ export function WorkSection({ projects, featuredOnly = false }: { projects: Work
                 title: 'Full Integration', 
                 desc: 'Secure custom endpoints connecting lead databases, CRM dashboards, and HR ERPs.',
                 icon: (
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#6366f1" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ marginBottom: '12px', filter: 'drop-shadow(0 0 4px rgba(99, 102, 241, 0.5))' }}>
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#a37f3d" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ marginBottom: '12px', filter: 'drop-shadow(0 0 4px rgba(163, 127, 61, 0.4))' }}>
                     <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
                     <polyline points="3.27 6.96 12 12.01 20.73 6.96" />
                     <line x1="12" y1="22.08" x2="12" y2="12" />

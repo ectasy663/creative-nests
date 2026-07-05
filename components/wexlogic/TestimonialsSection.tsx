@@ -11,7 +11,7 @@ import 'swiper/css/navigation'
 
 const testimonials = [
   {
-    text: "WSCLogic took our vision and amplified it by 10x. The cinematic CGI ads they produced resulted in our biggest sales quarter ever, driving massive engagement on Instagram and TikTok.",
+    text: "WexLogic took our vision and amplified it by 10x. The cinematic CGI ads they produced resulted in our biggest sales quarter ever, driving massive engagement on Instagram and TikTok.",
     author: "Sarah Jenkins",
     role: "CMO, TechNova",
     metrics: "+340% Traffic Lift",
@@ -50,17 +50,17 @@ const testimonials = [
 
 export function TestimonialsSection() {
   return (
-    <section id="testimonies" style={{ background: 'transparent', padding: '80px 28px' }}>
+    <section id="testimonies" style={{ background: 'radial-gradient(circle at 50% 0%, rgba(223, 183, 108, 0.04) 0%, #040307 70%)', padding: '80px 28px', borderBottom: '1px solid rgba(255, 255, 255, 0.08)' }}>
       {/* Header */}
       <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', marginBottom: '56px', flexWrap: 'wrap', gap: '20px' }}>
         <div>
-          <div style={{ background: 'rgba(6, 182, 212, 0.1)', border: '1px solid rgba(6, 182, 212, 0.3)', display: 'inline-block', padding: '6px 18px', borderRadius: '99px', marginBottom: '16px' }}>
-            <span style={{ fontSize: '10px', letterSpacing: '4px', textTransform: 'uppercase', fontWeight: 700, color: '#06b6d4' }}>
+          <div style={{ background: 'rgba(223, 183, 108, 0.08)', border: '1px solid rgba(223, 183, 108, 0.3)', display: 'inline-block', padding: '6px 18px', borderRadius: '99px', marginBottom: '16px' }}>
+            <span style={{ fontSize: '10px', letterSpacing: '4px', textTransform: 'uppercase', fontWeight: 700, color: '#dfb76c' }}>
               Feedback
             </span>
           </div>
           <h2 className="cn-bebas" style={{ fontSize: 'clamp(42px, 6vw, 68px)', letterSpacing: '1px', color: '#fff', lineHeight: 1 }}>
-            Client <span style={{ background: 'linear-gradient(135deg, #06b6d4, #6366f1)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Testimonies</span>
+            Client <span style={{ background: 'linear-gradient(135deg, #dfb76c, #b89047)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Testimonies</span>
           </h2>
         </div>
         <div style={{ fontSize: '12px', letterSpacing: '2px', textTransform: 'uppercase', color: '#9ca3af', fontWeight: 600, textAlign: 'right' }}>
@@ -147,8 +147,8 @@ export function TestimonialsSection() {
                       <div style={{ fontSize: '10px', color: '#9ca3af', marginTop: '1px' }}>{item.role}</div>
                     </div>
                   </div>
-                  <div style={{ background: 'rgba(6, 182, 212, 0.08)', border: '1px solid rgba(6, 182, 212, 0.25)', padding: '4px 10px', borderRadius: '6px' }}>
-                    <span style={{ fontSize: '9px', fontWeight: 700, color: '#06b6d4', textTransform: 'uppercase', letterSpacing: '0.5px' }}>{item.metrics}</span>
+                  <div style={{ background: 'rgba(223, 183, 108, 0.08)', border: '1px solid rgba(223, 183, 108, 0.25)', padding: '4px 10px', borderRadius: '6px' }}>
+                    <span style={{ fontSize: '9px', fontWeight: 700, color: '#dfb76c', textTransform: 'uppercase', letterSpacing: '0.5px' }}>{item.metrics}</span>
                   </div>
                 </div>
               </div>

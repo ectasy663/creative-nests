@@ -1,5 +1,5 @@
-import { Header } from '@/components/wsclogic/Header'
-import { Footer } from '@/components/wsclogic/Footer'
+import { Header } from '@/components/wexlogic/Header'
+import { Footer } from '@/components/wexlogic/Footer'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { getServiceBySlug } from '@/lib/db'
@@ -7,12 +7,12 @@ import { getServiceBySlug } from '@/lib/db'
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params
   const service = getServiceBySlug(slug)
-  if (!service) return { title: 'Service Not Found — WSCLogic' }
+  if (!service) return { title: 'Service Not Found — WexLogic' }
   return {
-    title: `${service.title} — WSCLogic`,
+    title: `${service.title} — WexLogic`,
     description: service.desc.slice(0, 155) + '...',
     alternates: {
-      canonical: `https://wsclogic.com/services/${slug}`
+      canonical: `https://wexlogic.com/services/${slug}`
     }
   }
 }

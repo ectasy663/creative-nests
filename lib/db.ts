@@ -134,7 +134,7 @@ Off-the-shelf products charge per-user licenses that scale aggressively. B2B ent
 Building a lightweight, custom CRM dashboard using Next.js allows you to pay purely for serverless execution, avoiding license fees and maintaining total security over client telemetry.
 
 ### Our Strategy for Pipeline Success
-At WSCLogic, we don't believe in one-size-fits-all. We audit your existing pipelines, integrate custom hooks to capture leads, and automate client follow-ups to maximize operational velocity.`,
+At WexLogic, we don't believe in one-size-fits-all. We audit your existing pipelines, integrate custom hooks to capture leads, and automate client follow-ups to maximize operational velocity.`,
         category: "CRM & ERP",
         readTime: "5 min read",
         date: "June 15, 2026",
@@ -375,15 +375,15 @@ At WSCLogic, we don't believe in one-size-fits-all. We audit your existing pipel
   // Seed Projects (Work) if empty or outdated
   const defaultWork: WorkProject[] = [
     {
-      title: "WSCLogic Launch 2024",
-      slug: "wsclogic-launch",
+      title: "WexLogic Launch 2024",
+      slug: "wexlogic-launch",
       category: "CGI & Production",
       desc: "Immersive 3D/CGI visual branding mapping the modern frontier.",
       image: "https://images.unsplash.com/photo-1541701494587-cb58502866ab?auto=format&fit=crop&w=800&q=80",
       videoUrl: "/videos/CGI_VFX_showcase_luxury_car_202607051948_gwr_video_mvp.mp4",
       tags: ["CGI", "VFX", "Motion"],
       featured: true,
-      about: "WSCLogic Launch represents our signature visual catalog, capturing next-generation design paradigms through a series of CGI-rendered environments.",
+      about: "WexLogic Launch represents our signature visual catalog, capturing next-generation design paradigms through a series of CGI-rendered environments.",
       challenge: "Mapping highly stylized brand textures onto multi-angle physical simulations while keeping assets compressed and ready for browser execution.",
       solution: "We deployed custom WebGL rendering chains and optimized 3D coordinate mapping layers directly within serverless Next.js pages.",
       results: ["+340% User Duration Rate", "Perfect 100 PageSpeed Rating", "Featured in CSS Design Awards"]
@@ -499,6 +499,34 @@ At WSCLogic, we don't believe in one-size-fits-all. We audit your existing pipel
       challenge: "Creating a modern visual brand that bridges clinical trust and consumer accessibility.",
       solution: "Designed a clean, geometric logo mark accompanied by an interactive brand guidelines portal and assets generation tool.",
       results: ["100% brand asset adoption", "+40% user recognition rate", "Complete brand assets delivered in 10 days"]
+    },
+    {
+      title: "Velo Corp Rebrand",
+      slug: "velo-rebrand",
+      category: "Branding",
+      desc: "Complete visual rebranding and design system mapping for fintech API layers.",
+      image: "https://images.unsplash.com/photo-1600132806370-bf17e65e942f?auto=format&fit=crop&w=800&q=80",
+      videoUrl: "/videos/Luxury_brand_identity_animation_202607051938_gwr_video_mvp.mp4",
+      tags: ["Branding", "Rebrand", "Typography"],
+      featured: false,
+      about: "A complete global rebrand and design system for Velo Corp, mapping their financial API services.",
+      challenge: "Aligning a tech-heavy developer toolset with an premium enterprise design aesthetic.",
+      solution: "Designed a clean golden geometric logo, custom typeface, and an interactive digital brand guidelines handbook.",
+      results: ["100% Brand adoption rate", "+70% enterprise client inquiries", "Completed rebrand in 14 days"]
+    },
+    {
+      title: "Lumen Health Identity",
+      slug: "lumen-identity",
+      category: "Branding",
+      desc: "Corporate identity system, logo design, and brand assets guidelines for health networks.",
+      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80",
+      videoUrl: "/videos/Luxury_brand_identity_animation_202607051938_gwr_video_mvp.mp4",
+      tags: ["Identity", "Design", "Logo"],
+      featured: false,
+      about: "Corporate identity system and logo design for Lumen Health ecosystems.",
+      challenge: "Bridging consumer warmth with modern medical trust.",
+      solution: "Designed a minimalist glowing golden typography logo accompanied by customizable print and digital stationery kits.",
+      results: ["Delivered 120+ branding assets", "+50% user brand recall score", "Fully responsive brand manual website"]
     },
     {
       title: "EduSphere SEO Campaign",

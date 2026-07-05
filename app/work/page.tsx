@@ -1,14 +1,14 @@
-import { Header } from '@/components/wsclogic/Header'
-import { Footer } from '@/components/wsclogic/Footer'
-import { WorkSection } from '@/components/wsclogic/WorkSection'
-import { CTABanner } from '@/components/wsclogic/CTABanner'
+import { Header } from '@/components/wexlogic/Header'
+import { Footer } from '@/components/wexlogic/Footer'
+import { WorkSection } from '@/components/wexlogic/WorkSection'
+import { CTABanner } from '@/components/wexlogic/CTABanner'
 import { getProjects } from '@/lib/db'
 
 export const metadata = {
-  title: 'Portfolio & Case Studies — WSCLogic',
-  description: 'Explore the WSCLogic portfolio featuring high-fidelity CGI ads, Next.js web platforms, custom dashboards, paid ad scaling, and tech branding systems.',
+  title: 'Portfolio & Case Studies — WexLogic',
+  description: 'Explore the WexLogic portfolio featuring high-fidelity CGI ads, Next.js web platforms, custom dashboards, paid ad scaling, and tech branding systems.',
   alternates: {
-    canonical: 'https://wsclogic.com/work'
+    canonical: 'https://wexlogic.com/work'
   }
 }
 

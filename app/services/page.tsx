@@ -1,14 +1,14 @@
-import { Header } from '@/components/wsclogic/Header'
-import { Footer } from '@/components/wsclogic/Footer'
-import { ServicesSection } from '@/components/wsclogic/ServicesSection'
-import { CTABanner } from '@/components/wsclogic/CTABanner'
-import { ProcessSection } from '@/components/wsclogic/ProcessSection'
+import { Header } from '@/components/wexlogic/Header'
+import { Footer } from '@/components/wexlogic/Footer'
+import { ServicesSection } from '@/components/wexlogic/ServicesSection'
+import { CTABanner } from '@/components/wexlogic/CTABanner'
+import { ProcessSection } from '@/components/wexlogic/ProcessSection'
 
 export const metadata = {
-  title: 'Our Services — WSCLogic',
+  title: 'Our Services — WexLogic',
   description: 'From scroll-stopping CGI/VFX campaigns to world-class React web development, technical SEO, social video edits, and database integrations.',
   alternates: {
-    canonical: 'https://wsclogic.com/services'
+    canonical: 'https://wexlogic.com/services'
   }
 }
 

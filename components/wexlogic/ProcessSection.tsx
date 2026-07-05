@@ -13,36 +13,36 @@ const steps: ProcessStep[] = [
     step: '01',
     title: 'Discovery & Audit',
     desc: 'In-depth analysis of your current infrastructure, bottlenecks, and strategic goals.',
-    color: '#6366f1',
-    shadowColor: 'rgba(99, 102, 241, 0.15)'
+    color: '#dfb76c',
+    shadowColor: 'rgba(223, 183, 108, 0.15)'
   },
   {
     step: '02',
     title: 'Architecture Blueprint',
     desc: 'Detailed wireframes, technical stack selection, and UI/UX design system mapping.',
-    color: '#d946ef',
-    shadowColor: 'rgba(217, 70, 239, 0.15)'
+    color: '#c5a059',
+    shadowColor: 'rgba(197, 160, 89, 0.15)'
   },
   {
     step: '03',
     title: 'High-Fidelity Execution',
     desc: 'Agile development and precise rendering using the latest robust frameworks.',
-    color: '#06b6d4',
-    shadowColor: 'rgba(6, 182, 212, 0.15)'
+    color: '#e5c185',
+    shadowColor: 'rgba(229, 193, 133, 0.15)'
   },
   {
     step: '04',
     title: 'Stress Testing & Q/A',
     desc: 'Rigorous performance checks, security audits, and cohort testing before rollout.',
-    color: '#10b981',
-    shadowColor: 'rgba(16, 185, 129, 0.15)'
+    color: '#a37f3d',
+    shadowColor: 'rgba(163, 127, 61, 0.15)'
   },
   {
     step: '05',
     title: 'Launch & Scale',
     desc: 'Seamless deployment with continuous post-launch optimization and metric tracking.',
-    color: '#6366f1',
-    shadowColor: 'rgba(99, 102, 241, 0.15)'
+    color: '#dfb76c',
+    shadowColor: 'rgba(223, 183, 108, 0.15)'
   }
 ]
 
@@ -51,7 +51,7 @@ export function ProcessSection() {
     <section
       id="process"
       style={{
-        background: '#040307',
+        background: 'radial-gradient(circle at 50% 0%, rgba(223, 183, 108, 0.05) 0%, #040307 70%)',
         padding: '96px 28px',
         borderBottom: '1px solid rgba(255, 255, 255, 0.08)',
         position: 'relative',
@@ -59,17 +59,17 @@ export function ProcessSection() {
       }}
     >
       {/* Background glowing blurred circles for futuristic tech vibe */}
-      <div style={{ position: 'absolute', top: '10%', left: '5%', width: '300px', height: '300px', background: 'radial-gradient(circle, rgba(99, 102, 241, 0.08) 0%, transparent 70%)', filter: 'blur(50px)', pointerEvents: 'none' }} />
-      <div style={{ position: 'absolute', bottom: '10%', right: '5%', width: '300px', height: '300px', background: 'radial-gradient(circle, rgba(217, 70, 239, 0.06) 0%, transparent 70%)', filter: 'blur(50px)', pointerEvents: 'none' }} />
+      <div style={{ position: 'absolute', top: '10%', left: '5%', width: '300px', height: '300px', background: 'radial-gradient(circle, rgba(223, 183, 108, 0.06) 0%, transparent 70%)', filter: 'blur(50px)', pointerEvents: 'none' }} />
+      <div style={{ position: 'absolute', bottom: '10%', right: '5%', width: '300px', height: '300px', background: 'radial-gradient(circle, rgba(184, 144, 71, 0.04) 0%, transparent 70%)', filter: 'blur(50px)', pointerEvents: 'none' }} />
 
       <div style={{ maxWidth: '1200px', margin: '0 auto', position: 'relative', zIndex: 2 }}>
         {/* Title */}
         <div style={{ textAlign: 'center', marginBottom: '80px' }}>
-          <div style={{ display: 'inline-block', background: 'rgba(6, 182, 212, 0.1)', border: '1px solid rgba(6, 182, 212, 0.3)', padding: '6px 18px', borderRadius: '99px', marginBottom: '16px' }}>
-            <span style={{ fontSize: '10px', letterSpacing: '4px', textTransform: 'uppercase', fontWeight: 700, color: '#06b6d4' }}>Our Methodology</span>
+          <div style={{ display: 'inline-block', background: 'rgba(223, 183, 108, 0.08)', border: '1px solid rgba(223, 183, 108, 0.3)', padding: '6px 18px', borderRadius: '99px', marginBottom: '16px' }}>
+            <span style={{ fontSize: '10px', letterSpacing: '4px', textTransform: 'uppercase', fontWeight: 700, color: '#dfb76c' }}>Our Methodology</span>
           </div>
           <h2 className="cn-bebas" style={{ fontSize: 'clamp(38px, 5vw, 60px)', color: '#fff', letterSpacing: '2px', lineHeight: 1.1 }}>
-            Process of <span style={{ background: 'linear-gradient(135deg, #06b6d4, #6366f1)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Work</span>
+            Process of <span style={{ background: 'linear-gradient(135deg, #dfb76c, #b89047)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Work</span>
           </h2>
           <p style={{ fontSize: '15px', color: '#9ca3af', maxWidth: '600px', margin: '16px auto 0', lineHeight: 1.6 }}>
             We follow a rigorous, metric-driven workflow designed to eliminate guesswork and deliver precise, enterprise-grade digital products.
@@ -86,7 +86,7 @@ export function ProcessSection() {
               left: '50px',
               right: '50px',
               height: '3px',
-              background: 'linear-gradient(90deg, #6366f1, #d946ef, #06b6d4, #10b981, #6366f1)',
+              background: 'linear-gradient(90deg, #b89047, #dfb76c, #b89047)',
               opacity: 0.25,
               zIndex: 1
             }}
