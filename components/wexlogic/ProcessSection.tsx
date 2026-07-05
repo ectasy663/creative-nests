@@ -93,7 +93,7 @@ export function ProcessSection() {
             className="hidden lg:block"
           />
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '32px', position: 'relative', zIndex: 2 }}>
+          <div className="process-steps-grid">
             {steps.map((item, idx) => (
               <div 
                 key={idx} 
