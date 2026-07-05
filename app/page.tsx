@@ -106,6 +106,8 @@ export default function HomePage() {
                     { num: '04', title: 'SEO & Marketing', color: '#6366f1', href: '/services/seo-marketing' },
                     { num: '05', title: 'Paid Ads & Meta', color: '#d946ef', href: '/services/paid-ads-meta' },
                     { num: '06', title: 'Video Editing', color: '#06b6d4', href: '/services/video-editing' },
+                    { num: '07', title: 'CRM Systems', color: '#6366f1', href: '/services/crm-systems' },
+                    { num: '08', title: 'ERP Solutions', color: '#d946ef', href: '/services/erp-solutions' },
                   ].concat([
                     { num: '01', title: 'CGI & VFX Ads', color: '#6366f1', href: '/services/cgi-vfx-ads' },
                     { num: '02', title: 'Web & App Dev', color: '#d946ef', href: '/services/web-app-dev' },
@@ -113,6 +115,8 @@ export default function HomePage() {
                     { num: '04', title: 'SEO & Marketing', color: '#6366f1', href: '/services/seo-marketing' },
                     { num: '05', title: 'Paid Ads & Meta', color: '#d946ef', href: '/services/paid-ads-meta' },
                     { num: '06', title: 'Video Editing', color: '#06b6d4', href: '/services/video-editing' },
+                    { num: '07', title: 'CRM Systems', color: '#6366f1', href: '/services/crm-systems' },
+                    { num: '08', title: 'ERP Solutions', color: '#d946ef', href: '/services/erp-solutions' },
                   ]).map((item, idx) => (
                     <Link
                       key={idx}
@@ -147,8 +151,8 @@ export default function HomePage() {
           }}
         >
           {[
-            { value: '50+',   label: 'Projects Completed', valueColor: '#6366f1' },
-            { value: '30+',   label: 'Happy Clients',      valueColor: '#d946ef' },
+            { value: '30+',   label: 'Projects Completed', valueColor: '#6366f1' },
+            { value: '20+',   label: 'Happy Clients',      valueColor: '#d946ef' },
             { value: '10X',   label: 'Revenue Growth',     valueColor: '#06b6d4' },
             { value: '100%',  label: 'Satisfaction Rate',  valueColor: '#10b981' },
           ].map(({ value, label, valueColor }) => (

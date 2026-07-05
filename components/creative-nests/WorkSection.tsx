@@ -1,123 +1,38 @@
 import Link from 'next/link'
-import Image from 'next/image'
+import { getProjects } from '@/lib/db'
 
 export function WorkSection({ featuredOnly = false }: { featuredOnly?: boolean }) {
+  const allProjects = getProjects()
+  const displayedProjects = featuredOnly ? allProjects.slice(0, 3) : allProjects
+
   return (
-    <section id="portfolio" style={{ background: 'transparent', padding: '72px 28px' }}>
-      <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', marginBottom: '44px', flexWrap: 'wrap', gap: '16px' }}>
+    <section id="portfolio" style={{ background: 'transparent', padding: '80px 28px' }}>
+      {/* Header Panel */}
+      <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', marginBottom: '56px', flexWrap: 'wrap', gap: '20px' }}>
         <div>
-          <div style={{ background: 'rgba(217, 70, 239, 0.1)', border: '1px solid rgba(217, 70, 239, 0.3)', display: 'inline-block', padding: '6px 16px', borderRadius: '99px', marginBottom: '16px' }}>
-            <span style={{ fontSize: '9px', letterSpacing: '4px', textTransform: 'uppercase', fontWeight: 700, color: '#d946ef' }}>
-              {featuredOnly ? 'Featured Portfolio' : 'Case Studies'}
+          <div style={{ background: 'rgba(217, 70, 239, 0.1)', border: '1px solid rgba(217, 70, 239, 0.3)', display: 'inline-block', padding: '6px 18px', borderRadius: '99px', marginBottom: '16px' }}>
+            <span style={{ fontSize: '10px', letterSpacing: '4px', textTransform: 'uppercase', fontWeight: 700, color: '#d946ef' }}>
+              {featuredOnly ? 'Featured Portfolio' : 'Complete Showcase'}
             </span>
           </div>
-          <div className="cn-bebas" style={{ fontSize: 'clamp(38px, 6vw, 64px)', letterSpacing: '1px', color: '#fff', lineHeight: 1.1, paddingTop: '8px' }}>
-            Selected <span style={{ background: 'linear-gradient(135deg, #d946ef, #06b6d4)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Projects</span>
-          </div>
+          <h2 className="cn-bebas" style={{ fontSize: 'clamp(42px, 6vw, 68px)', letterSpacing: '1px', color: '#fff', lineHeight: 1, paddingTop: '4px' }}>
+            Selected Case <span style={{ background: 'linear-gradient(135deg, #d946ef, #06b6d4)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Studies</span>
+          </h2>
+        </div>
+        <div style={{ fontSize: '12px', letterSpacing: '2px', textTransform: 'uppercase', color: '#9ca3af', fontWeight: 600, textAlign: 'right' }}>
+          {featuredOnly ? 'Active Production' : 'Delivered Excellence'}
         </div>
       </div>
 
+      {/* Projects Grid */}
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))', gap: '32px' }}>
-        
-        {/* Featured */}
-        <div 
-          className="glass-card"
-          style={{ 
-            padding: '32px 28px', 
-            minHeight: '450px', 
-            display: 'flex', 
-            flexDirection: 'column', 
-            justifyContent: 'space-between', 
-            position: 'relative', 
-            overflow: 'hidden',
-          }}
-        >
-          <div style={{ position: 'absolute', top: '0', right: '0', width: '120px', height: '120px', background: '#d946ef', opacity: 0.05, filter: 'blur(40px)', pointerEvents: 'none' }} />
-          
-          <div style={{ position: 'relative', zIndex: 1 }}>
-            <div style={{ background: 'rgba(217, 70, 239, 0.15)', border: '1px solid rgba(217, 70, 239, 0.3)', display: 'inline-block', padding: '4px 12px', borderRadius: '99px', marginBottom: '16px' }}>
-              <span style={{ fontSize: '8px', letterSpacing: '3px', textTransform: 'uppercase' as const, color: '#d946ef', fontWeight: 700 }}>Featured · CGI</span>
-            </div>
-            
-            {/* Featured Image */}
-            <div style={{ width: '100%', height: '220px', position: 'relative', border: '1px solid rgba(255, 255, 255, 0.1)', borderRadius: '12px', margin: '8px 0 20px', overflow: 'hidden' }}>
-              <Image 
-                src="https://images.unsplash.com/photo-1541701494587-cb58502866ab?auto=format&fit=crop&w=800&q=80" 
-                alt="Creative Nests Launch" 
-                fill 
-                style={{ objectFit: 'cover' }} 
-              />
-            </div>
-
-            <h3 className="cn-syne" style={{ fontSize: '22px', fontWeight: 800, color: '#fff', lineHeight: 1.25, paddingTop: '4px' }}>
-              Creative Nests Launch 2024
-            </h3>
-            <p style={{ fontSize: '13px', color: '#9ca3af', marginTop: '6px', lineHeight: 1.5 }}>
-              Immersive 3D/CGI visual branding mapping the modern frontier.
-            </p>
-          </div>
-
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', position: 'relative', zIndex: 1, marginTop: '24px' }}>
-            <span style={{ fontSize: '10px', letterSpacing: '2px', textTransform: 'uppercase' as const, color: '#06b6d4', fontWeight: 600 }}>CGI · VFX · Motion</span>
-            <Link href="/work/creative-nests-launch" className="gradient-btn-primary" style={{ padding: '8px 20px', fontSize: '9px' }}>
-              View Case Study →
-            </Link>
-          </div>
-        </div>
-
-        {/* Branding */}
-        <div 
-          className="glass-card"
-          style={{ 
-            padding: '32px 28px', 
-            minHeight: '450px', 
-            display: 'flex', 
-            flexDirection: 'column', 
-            justifyContent: 'space-between', 
-            position: 'relative', 
-            overflow: 'hidden',
-          }}
-        >
-          <div style={{ position: 'absolute', top: '0', right: '0', width: '120px', height: '120px', background: '#06b6d4', opacity: 0.05, filter: 'blur(40px)', pointerEvents: 'none' }} />
-
-          <div style={{ position: 'relative', zIndex: 1 }}>
-            <div style={{ background: 'rgba(6, 182, 212, 0.15)', border: '1px solid rgba(6, 182, 212, 0.3)', display: 'inline-block', padding: '4px 12px', borderRadius: '99px', marginBottom: '16px' }}>
-              <span style={{ fontSize: '8px', letterSpacing: '3px', textTransform: 'uppercase' as const, color: '#06b6d4', fontWeight: 700 }}>Identity System</span>
-            </div>
-            
-            {/* Project Image */}
-            <div style={{ width: '100%', height: '220px', position: 'relative', border: '1px solid rgba(255, 255, 255, 0.1)', borderRadius: '12px', margin: '8px 0 20px', overflow: 'hidden' }}>
-              <Image 
-                src="https://images.unsplash.com/photo-1626785774625-ddcddc3445e9?auto=format&fit=crop&w=600&q=80" 
-                alt="Identity Design" 
-                fill 
-                style={{ objectFit: 'cover' }} 
-              />
-            </div>
-
-            <h3 className="cn-syne" style={{ fontSize: '22px', fontWeight: 800, color: '#fff', lineHeight: 1.25, paddingTop: '4px' }}>
-              Apex Brand Identity 
-            </h3>
-            <p style={{ fontSize: '13px', color: '#9ca3af', marginTop: '6px', lineHeight: 1.5 }}>
-              Minimalist tech-driven logo patterns and core design system.
-            </p>
-          </div>
-
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', position: 'relative', zIndex: 1, marginTop: '24px' }}>
-            <span style={{ fontSize: '10px', letterSpacing: '2px', textTransform: 'uppercase' as const, color: '#6366f1', fontWeight: 600 }}>Design · Identity</span>
-            <Link href="/work/identity-design" className="gradient-btn-primary" style={{ padding: '8px 20px', fontSize: '9px' }}>
-              View Case Study →
-            </Link>
-          </div>
-        </div>
-
-        {/* Ecomm - Only show if not featuredOnly */}
-        {!featuredOnly && (
+        {displayedProjects.map((project) => (
           <div 
+            key={project.slug}
             className="glass-card"
             style={{ 
               padding: '32px 28px', 
-              minHeight: '450px', 
+              minHeight: '480px', 
               display: 'flex', 
               flexDirection: 'column', 
               justifyContent: 'space-between', 
@@ -125,48 +40,119 @@ export function WorkSection({ featuredOnly = false }: { featuredOnly?: boolean }
               overflow: 'hidden',
             }}
           >
-            <div style={{ position: 'absolute', top: '0', right: '0', width: '120px', height: '120px', background: '#6366f1', opacity: 0.05, filter: 'blur(40px)', pointerEvents: 'none' }} />
-
+            {/* Background neon accent */}
+            <div style={{ position: 'absolute', top: '0', right: '0', width: '120px', height: '120px', background: '#d946ef', opacity: 0.04, filter: 'blur(35px)', pointerEvents: 'none' }} />
+            
             <div style={{ position: 'relative', zIndex: 1 }}>
-              <div style={{ background: 'rgba(99, 102, 241, 0.15)', border: '1px solid rgba(99, 102, 241, 0.3)', display: 'inline-block', padding: '4px 12px', borderRadius: '99px', marginBottom: '16px' }}>
-                <span style={{ fontSize: '8px', letterSpacing: '3px', textTransform: 'uppercase' as const, color: '#6366f1', fontWeight: 700 }}>NextJS Dev</span>
+              <div style={{ background: 'rgba(217, 70, 239, 0.15)', border: '1px solid rgba(217, 70, 239, 0.3)', display: 'inline-block', padding: '4px 14px', borderRadius: '99px', marginBottom: '20px' }}>
+                <span style={{ fontSize: '9px', letterSpacing: '3px', textTransform: 'uppercase', color: '#d946ef', fontWeight: 700 }}>
+                  {project.category}
+                </span>
               </div>
               
-              {/* Project Image */}
-              <div style={{ width: '100%', height: '220px', position: 'relative', border: '1px solid rgba(255, 255, 255, 0.1)', borderRadius: '12px', margin: '8px 0 20px', overflow: 'hidden' }}>
-                <Image 
-                  src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80" 
-                  alt="Ecomm Platform" 
-                  fill 
-                  style={{ objectFit: 'cover' }} 
-                />
+              {/* Project Video Frame */}
+              <div 
+                style={{ 
+                  width: '100%', 
+                  height: '220px', 
+                  position: 'relative', 
+                  border: '1px solid rgba(255, 255, 255, 0.08)', 
+                  borderRadius: '12px', 
+                  marginBottom: '24px', 
+                  overflow: 'hidden',
+                  background: '#040307'
+                }}
+              >
+                <video
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className="hover:scale-105 transition-transform duration-500 ease-out"
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover'
+                  }}
+                >
+                  <source src={project.videoUrl} type="video/mp4" />
+                </video>
               </div>
 
-              <h3 className="cn-syne" style={{ fontSize: '22px', fontWeight: 800, color: '#fff', lineHeight: 1.25, paddingTop: '4px' }}>
-                TrendHQ Platform Dev
+              <h3 className="cn-syne" style={{ fontSize: '22px', fontWeight: 800, color: '#fff', lineHeight: 1.3, letterSpacing: '-0.5px' }}>
+                {project.title}
               </h3>
-              <p style={{ fontSize: '13px', color: '#9ca3af', marginTop: '6px', lineHeight: 1.5 }}>
-                Sub-second page speeds driving e-commerce conversions.
+              <p style={{ fontSize: '14px', color: '#9ca3af', marginTop: '8px', lineHeight: 1.6 }}>
+                {project.desc}
               </p>
             </div>
 
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', position: 'relative', zIndex: 1, marginTop: '24px' }}>
-              <span style={{ fontSize: '10px', letterSpacing: '2px', textTransform: 'uppercase' as const, color: '#d946ef', fontWeight: 600 }}>Web · React · Dev</span>
-              <Link href="/work/ecomm-platform" className="gradient-btn-primary" style={{ padding: '8px 20px', fontSize: '9px' }}>
-                View Case Study →
+            {/* Bottom Row */}
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', position: 'relative', zIndex: 1, marginTop: '32px' }}>
+              <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
+                {project.tags.map((tag) => (
+                  <span key={tag} style={{ fontSize: '9px', letterSpacing: '1px', textTransform: 'uppercase', color: '#06b6d4', fontWeight: 600 }}>
+                    {tag}
+                  </span>
+                ))}
+              </div>
+              <Link href={`/work/${project.slug}`} className="gradient-btn-primary" style={{ padding: '8px 22px', fontSize: '9px', letterSpacing: '1.5px' }}>
+                Case Study →
               </Link>
             </div>
           </div>
-        )}
+        ))}
       </div>
 
       {featuredOnly && (
-        <div style={{ display: 'flex', justifyContent: 'center', marginTop: '56px' }}>
-          <Link href="/work" className="gradient-btn-primary">
+        <div style={{ display: 'flex', justifyContent: 'center', marginTop: '64px' }}>
+          <Link href="/work" className="gradient-btn-primary" style={{ padding: '14px 40px', fontSize: '11px', letterSpacing: '2.5px' }}>
             View All Projects
           </Link>
         </div>
       )}
+
+      {/* About sub-section inside the Projects/Work list page/section */}
+      <div 
+        className="glass-card"
+        style={{
+          marginTop: '80px',
+          padding: '48px 40px',
+          position: 'relative',
+          overflow: 'hidden'
+        }}
+      >
+        <div style={{ position: 'absolute', top: '-20%', left: '-10%', width: '300px', height: '300px', background: 'radial-gradient(circle, rgba(99, 102, 241, 0.1) 0%, transparent 70%)', filter: 'blur(40px)', pointerEvents: 'none' }} />
+        <div style={{ position: 'absolute', bottom: '-20%', right: '-10%', width: '300px', height: '300px', background: 'radial-gradient(circle, rgba(217, 70, 239, 0.08) 0%, transparent 70%)', filter: 'blur(45px)', pointerEvents: 'none' }} />
+        
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '40px', position: 'relative', zIndex: 1 }}>
+          <div>
+            <div style={{ background: 'rgba(99, 102, 241, 0.1)', border: '1px solid rgba(99, 102, 241, 0.3)', display: 'inline-block', padding: '4px 12px', borderRadius: '99px', marginBottom: '16px' }}>
+              <span style={{ fontSize: '9px', letterSpacing: '3px', textTransform: 'uppercase', color: '#6366f1', fontWeight: 700 }}>About Our Portfolio</span>
+            </div>
+            <h3 className="cn-bebas" style={{ fontSize: '38px', color: '#fff', letterSpacing: '1px', lineHeight: 1 }}>
+              How We Deliver <span style={{ background: 'linear-gradient(135deg, #6366f1, #d946ef)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Unmatched Results</span>
+            </h3>
+            <p style={{ fontSize: '14px', lineHeight: 1.7, color: '#9ca3af', marginTop: '16px' }}>
+              Every brand transformation in our catalog represents a strategic mixture of high-fidelity engineering, immersive visuals, and conversion optimization pipelines. We don&apos;t just build code; we deploy digital solutions that drive metric-centered enterprise growth.
+            </p>
+          </div>
+          
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
+            {[
+              { title: 'Sub-Second Speeds', desc: 'Pre-rendered layouts and optimized edge routing for instant load times.' },
+              { title: 'Cinematic Precision', desc: 'Physically accurate rendering engines mapping assets for CGI and VFX ads.' },
+              { title: 'Metric-Driven Audits', desc: 'Rigorous A/B user cohort testing across landing pages and ad scripts.' },
+              { title: 'Full Integration', desc: 'Secure custom endpoints connecting lead databases, CRM dashboards, and HR ERPs.' }
+            ].map((item, idx) => (
+              <div key={idx} style={{ background: 'rgba(255, 255, 255, 0.01)', border: '1px solid rgba(255, 255, 255, 0.05)', borderRadius: '12px', padding: '20px' }}>
+                <h4 className="cn-syne" style={{ fontSize: '15px', fontWeight: 700, color: '#fff', marginBottom: '8px' }}>{item.title}</h4>
+                <p style={{ fontSize: '12px', lineHeight: 1.6, color: '#9ca3af' }}>{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
     </section>
   )
 }

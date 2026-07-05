@@ -2,157 +2,19 @@ import { Header } from '@/components/creative-nests/Header'
 import { Footer } from '@/components/creative-nests/Footer'
 import { VideoBackground } from '@/components/creative-nests/VideoBackground'
 import Link from 'next/link'
-import Image from 'next/image'
 import { notFound } from 'next/navigation'
+import { getServiceBySlug } from '@/lib/db'
 
-interface ServiceDetail {
-  title: string
-  subtitle: string
-  desc: string
-  image: string
-  features: string[]
-  process: string[]
-  pricing: { name: string; price: string; features: string[] }[]
-}
-
-const serviceData: Record<string, ServiceDetail> = {
-  'cgi-vfx-ads': {
-    title: 'CGI & VFX Ads',
-    subtitle: 'Cinematic ads that stop the scroll & burn into memory.',
-    desc: 'In a digital world crowded with average content, our CGI & VFX advertisements are designed to grab attention instantly. We blend high-fidelity 3D assets, fluid dynamics, and realistic animations to create visual narratives that defy gravity and command engagement.',
-    image: 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=1200&q=80',
-    features: [
-      'Scroll-Stopping 3D Visual Effects',
-      'Realistic Simulation & Fluid Dynamics',
-      'High-Impact Social Media Hook Integration',
-      'Flawless Motion Tracking & Green Screen Compositing'
-    ],
-    process: [
-      'Concept Scripting & Storyboarding',
-      '3D Modelling & Texturing Assets',
-      'VFX Animation & Simulation rendering',
-      'Sound Design & Final Compositing'
-    ],
-    pricing: [
-      { name: 'Core Campaign', price: '₹49k', features: ['1 VFX Ad (15s)', 'Storyboarding', '2 Rounds of Revision', '1080p Resolution'] },
-      { name: 'Domination Tier', price: '₹120k', features: ['3 VFX Ads (15-30s)', 'Detailed Storyboarding', 'Unlimited Revisions', '4K Rendering + Social Hooks'] }
-    ]
-  },
-  'web-app-dev': {
-    title: 'Web & App Dev',
-    subtitle: 'World-class digital platforms built for scale & rapid growth.',
-    desc: 'We construct blazing fast, secure, and visually stunning web applications utilizing Next.js, React, and robust backend architectures. Our products are not just code; they are conversion engines designed to load instantly and scale seamlessly as your user base grows.',
-    image: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1200&q=80',
-    features: [
-      'Next.js 15 App Router Architectures',
-      'Responsive Fluid Layouts & Tailwind Integration',
-      'Blazing Fast SEO-optimized Performance',
-      'Robust API Integrations & State Management'
-    ],
-    process: [
-      'Wireframing & UI/UX Design System Mapping',
-      'Component Architecture Planning',
-      'Front & Backend Code Implementation',
-      'Performance Optimization & Hosting Deployment'
-    ],
-    pricing: [
-      { name: 'Startup Launch', price: '₹89k', features: ['5 Responsive Pages', 'SEO Configuration', 'Contact Form Integration', '1 Month Support'] },
-      { name: 'Enterprise SaaS', price: '₹250k', features: ['Custom App Logic', 'Interactive Dashboard', 'Full API Integrations', '3 Months Support'] }
-    ]
-  },
-  'branding-logo': {
-    title: 'Branding & Logo',
-    subtitle: 'Brand identities that speak before words are ever spoken.',
-    desc: 'Your brand is not just a logo; it is the gut feeling a customer has about your product. We design cohesive, memorable visual identity systems that evoke emotion and build long-term trust. From custom logos to comprehensive brand books, we ensure your agency looks premium.',
-    image: 'https://images.unsplash.com/photo-1626785774625-ddcddc3445e9?auto=format&fit=crop&w=1200&q=80',
-    features: [
-      'Memorable Custom Logo Designs',
-      'Curated Typography & Color Palette Selection',
-      'Brand Identity Guidelines (Brand Book)',
-      'Digital & Print Stationeries Design'
-    ],
-    process: [
-      'Brand Discovery & Competitive Analysis',
-      'Moodboarding & Concept Presentation',
-      'Logo Iteration & Refinement',
-      'Brand Asset Packaging & Exporting'
-    ],
-    pricing: [
-      { name: 'Essential Identity', price: '₹35k', features: ['Primary Logo + Palette', 'Typography System', 'Letterhead & Card Design', 'Basic Guidelines'] },
-      { name: 'Total Brand Universe', price: '₹95k', features: ['Full Identity System', 'Comprehensive Brand Book', 'Social Media Templates', 'Packaging Design'] }
-    ]
-  },
-  'seo-marketing': {
-    title: 'SEO & Marketing',
-    subtitle: 'Precision search strategies that make you impossible to ignore.',
-    desc: 'Getting traffic is easy; getting high-intent, converting traffic is the challenge. We run technical SEO campaigns, content strategies, and link building programs that position your brand at the absolute top of search results. Dominate your market share and capture leads organicially.',
-    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80',
-    features: [
-      'In-Depth Technical SEO Auditing',
-      'Keyword Research targeting High-Intent Searches',
-      'High-Quality Content Marketing Strategies',
-      'Authoritative White-Hat Link Building'
-    ],
-    process: [
-      'Technical SEO Audit & Setup',
-      'Keyword Mapping & Content Calendar Outline',
-      'Content Production & Optimization',
-      'Monthly Ranking & Traffic Audit Reports'
-    ],
-    pricing: [
-      { name: 'Growth Kickstart', price: '₹29k/mo', features: ['Keyword Mapping', 'On-Page Optimization', '4 SEO-optimized Articles/mo', 'Monthly Performance Report'] },
-      { name: 'Market Domination', price: '₹75k/mo', features: ['Advanced Competitor Audits', 'Full Technical Cleanups', '8 Premium Articles/mo', 'Dedicated Account Lead'] }
-    ]
-  },
-  'paid-ads-meta': {
-    title: 'Paid Ads & Meta',
-    subtitle: 'Data-driven paid spend designed to return maximum ROI.',
-    desc: 'Stop wasting money on campaigns that don\'t convert. We construct strategic funnel-based ads on Meta (Facebook, Instagram), Google, and LinkedIn. We combine highly engaging ad creatives with hyper-targeted audience testing to scale your acquisition profitabilty.',
-    image: 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1200&q=80',
-    features: [
-      'High-Converting Ad Copywriting',
-      'Hyper-Targeted Lookalike & Custom Audiences',
-      'Rigorous A/B Creative & Headline Testing',
-      'Remarketing Funnels & Pixel Configuration'
-    ],
-    process: [
-      'Funnel Architecture & Budget Allocation',
-      'Ad Creative Design & Copywriting',
-      'Campaign Launch & Initial Testing Phase',
-      'Daily Optimization & Profit Scaling'
-    ],
-    pricing: [
-      { name: 'Starter Campaign', price: '₹40k/mo', features: ['Campaign Setup', 'Weekly Creative Edits', 'Ad Spend Optimization', 'Monthly Reports'] },
-      { name: 'Scale Tier', price: '₹90k/mo', features: ['Multi-Channel Funnel Setup', 'Unlimited Ad Creative Assets', 'Daily Scaling & Budgets', 'Weekly Direct Synced Calls'] }
-    ]
-  },
-  'video-editing': {
-    title: 'Video Editing',
-    subtitle: 'Frame-perfect storytelling that moves audiences and triggers actions.',
-    desc: 'Video editing is the art of manipulating time and emotion. We turn raw footage into high-retention stories, cinematic promotional films, or engaging short-form TikToks and Reels. Our editing hooks viewers within the first 3 seconds and holds them until the final frame.',
-    image: 'https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=600&q=80',
-    features: [
-      'High-Retention Cinematic Cuts',
-      'Dynamic Sound Design & Sound Effects',
-      'Custom Motion Graphics & Text Tracking',
-      'Social Media Specific Hooks & Subtitles'
-    ],
-    process: [
-      'Footage Ingestion & Script Analysis',
-      'First Rough Cut Review Session',
-      'Sound Design, Color Grading & VFX Overlay',
-      'Final Rendering & Asset Delivery'
-    ],
-    pricing: [
-      { name: 'Short-Form Bundle', price: '₹25k', features: ['10 Reels/TikToks/Shorts', 'Hook Development', 'Subtitles & Sound Effects', '2 Rounds of Revision'] },
-      { name: 'Cinematic Promos', price: '₹60k', features: ['1 Premium Brand Video (2m)', 'Color Grading & Soundscapes', 'Motion Graphics Overlay', '3 Rounds of Revision'] }
-    ]
-  }
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params
+  const service = getServiceBySlug(slug)
+  if (!service) return { title: 'Service Not Found — Creative Nests' }
+  return { title: `${service.title} — Creative Nests` }
 }
 
 export default async function ServicePage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params
-  const data = serviceData[slug]
+  const data = getServiceBySlug(slug)
 
   if (!data) {
     notFound()
@@ -167,7 +29,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
       <section style={{ padding: '80px 28px', background: 'rgba(8, 7, 13, 0.45)', borderBottom: '1px solid rgba(255, 255, 255, 0.08)' }}>
         <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
           
-          {/* Navigation link / breadcrumb */}
+          {/* Breadcrumbs */}
           <div style={{ display: 'flex', gap: '12px', marginBottom: '32px' }}>
             <Link href="/services" className="glass-btn-secondary" style={{ padding: '6px 16px', fontSize: '10px' }}>
               ← ALL SERVICES
@@ -187,15 +49,23 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
             {data.subtitle}
           </p>
 
-          {/* Hero Banner Image */}
-          <div style={{ width: '100%', height: 'clamp(250px, 40vw, 450px)', position: 'relative', border: '1px solid rgba(255, 255, 255, 0.1)', borderRadius: '16px', boxShadow: '0 20px 40px rgba(0,0,0,0.5)', marginBottom: '56px', overflow: 'hidden' }}>
-            <Image src={data.image} alt={data.title} fill style={{ objectFit: 'cover' }} priority />
+          {/* Service Showcase Video Player */}
+          <div style={{ width: '100%', height: 'clamp(250px, 45vw, 480px)', position: 'relative', border: '1px solid rgba(255, 255, 255, 0.1)', borderRadius: '16px', boxShadow: '0 20px 40px rgba(0,0,0,0.5)', marginBottom: '56px', overflow: 'hidden', background: '#000' }}>
+            <video 
+              autoPlay 
+              loop 
+              muted 
+              playsInline 
+              style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+            >
+              <source src={data.videoUrl} type="video/mp4" />
+            </video>
           </div>
 
-          {/* Grid Layout for Detailed Content */}
+          {/* Details Grid */}
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '48px' }}>
             
-            {/* Left: Description & Features */}
+            {/* Philosophy */}
             <div className="glass-card" style={{ padding: '36px 32px' }}>
               <h2 className="cn-syne" style={{ fontSize: '24px', fontWeight: 800, color: '#fff', marginBottom: '16px' }}>
                 The Philosophy
@@ -217,7 +87,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
               </ul>
             </div>
 
-            {/* Right: The Process */}
+            {/* Workflow */}
             <div className="glass-card" style={{ padding: '36px 32px' }}>
               <h2 className="cn-syne" style={{ fontSize: '24px', fontWeight: 800, color: '#fff', marginBottom: '20px' }}>
                 Modern Digital Workflow
@@ -234,8 +104,8 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
 
           </div>
 
-          {/* Pricing Section */}
-          <div style={{ marginTop: '72px' }}>
+          {/* Pricing Table */}
+          <div style={{ marginTop: '80px' }}>
             <h2 className="cn-bebas" style={{ fontSize: '40px', letterSpacing: '2px', textAlign: 'center', marginBottom: '40px', color: '#fff' }}>
               Simple, Transparent Pricing
             </h2>

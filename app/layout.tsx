@@ -1,5 +1,6 @@
 import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
+import { DirectCallWidget } from '@/components/creative-nests/DirectCallWidget'
 import './globals.css'
 
 export const metadata: Metadata = {
@@ -28,6 +29,7 @@ export default function RootLayout({
       <body className="antialiased text-[#f3f4f6]" style={{ fontFamily: "'Space Grotesk', sans-serif", background: 'transparent' }}>
         <div className="bg-grid-overlay" />
         {children}
+        <DirectCallWidget />
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
     </html>
