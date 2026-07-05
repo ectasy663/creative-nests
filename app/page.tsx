@@ -21,8 +21,6 @@ export const metadata = {
 export default function HomePage() {
   return (
     <main style={{ position: 'relative', minHeight: '100vh', color: '#f3f4f6' }}>
-      <VideoBackground src="/Brutalist_IT_company_hero_video_202607032332_gwr_video_mvp.mp4" />
-      
       <Header />
 
       {/* HERO SECTION */}
@@ -36,6 +34,7 @@ export default function HomePage() {
           overflow: 'hidden',
         }}
       >
+        <VideoBackground src="/Brutalist_IT_company_hero_video_202607032332_gwr_video_mvp.mp4" />
         {/* Soft background neon glows */}
         <div style={{ position: 'absolute', top: '10%', right: '10%', width: '300px', height: '300px', background: 'radial-gradient(circle, rgba(99, 102, 241, 0.15) 0%, transparent 70%)', filter: 'blur(40px)', pointerEvents: 'none' }} />
         <div style={{ position: 'absolute', bottom: '10%', left: '5%', width: '250px', height: '250px', background: 'radial-gradient(circle, rgba(217, 70, 239, 0.1) 0%, transparent 70%)', filter: 'blur(45px)', pointerEvents: 'none' }} />

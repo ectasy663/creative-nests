@@ -639,6 +639,48 @@ At WSCLogic, we don't believe in one-size-fits-all. We audit your existing pipel
       challenge: "High lead drop-off rates on standard inline lead forms.",
       solution: "Built custom interactive quizzes linked with Meta Lead Ads and instant follow-up triggers.",
       results: ["+85% lead-to-booking conversions", "2.1x ROAS on Meta ads", "Enrolled 1,500 new students"]
+    },
+    {
+      title: "Apex Cinematic Promo",
+      slug: "apex-cinematic",
+      category: "Video Editing",
+      desc: "Cinematic launch commercial with tailored soundscapes and grading.",
+      image: "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=800&q=80",
+      videoUrl: "/videos/Video_production_studio_cinemati…_202607051942_gwr_video_mvp.mp4",
+      tags: ["VFX", "Promo", "Color"],
+      featured: false,
+      about: "Cinematic commercial for Apex tool launches, utilizing professional grading and pacing.",
+      challenge: "Matching corporate voice with high-energy edit sequences.",
+      solution: "Designed bespoke typographic overlays, custom sound effects mapping, and 4k coloring workflows.",
+      results: ["1.2M organic ad views", "+40% user retention score", "Adopted for national campaigns"]
+    },
+    {
+      title: "Vibe Short-Form Reels",
+      slug: "vibe-short-form",
+      category: "Video Editing",
+      desc: "Short-form algorithmic cuts driving high completion retention.",
+      image: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=800&q=80",
+      videoUrl: "/videos/Video_production_studio_cinemati…_202607051942_gwr_video_mvp.mp4",
+      tags: ["TikTok", "Reels", "Shorts"],
+      featured: false,
+      about: "Short-form advertising reels optimized for fast-paced social algorithms.",
+      challenge: "Reducing user swipe-away rates in the first 1.5 seconds.",
+      solution: "Created dynamic zoom cuts, automatic kinetic typography, and high-frequency sound triggers.",
+      results: ["+195% TikTok completion rate", "Generated 80k profile visits", "Zero drop-off in first 2 seconds"]
+    },
+    {
+      title: "Velo Corp Explainer",
+      slug: "velo-corp-explainer",
+      category: "Video Editing",
+      desc: "Motion graphics explainer reels mapping complex backend features.",
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80",
+      videoUrl: "/videos/Video_production_studio_cinemati…_202607051942_gwr_video_mvp.mp4",
+      tags: ["Corporate", "Explainer", "Cuts"],
+      featured: false,
+      about: "Corporate explainer and onboarding reels illustrating complex API systems.",
+      challenge: "Explaining database logic visually without losing viewer interest.",
+      solution: "Integrated detailed 2D motion graphics animations with smooth transitions and professional voiceover mapping.",
+      results: ["Used by 10,000+ new hires", "+85% knowledge transfer rate", "Reduced onboarding support requests by 25%"]
     }
   ];
 
