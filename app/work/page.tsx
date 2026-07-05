@@ -1,8 +1,8 @@
-import { Header } from '@/components/creative-nests/Header'
-import { Footer } from '@/components/creative-nests/Footer'
-import { WorkSection } from '@/components/creative-nests/WorkSection'
-import { VideoBackground } from '@/components/creative-nests/VideoBackground'
-import { CTABanner } from '@/components/creative-nests/CTABanner'
+import { Header } from '@/components/wsclogic/Header'
+import { Footer } from '@/components/wsclogic/Footer'
+import { WorkSection } from '@/components/wsclogic/WorkSection'
+import { VideoBackground } from '@/components/wsclogic/VideoBackground'
+import { CTABanner } from '@/components/wsclogic/CTABanner'
 import { getProjects } from '@/lib/db'
 
 export const metadata = { title: 'Work — WSCLogic' }

@@ -1,9 +1,9 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { Header } from '@/components/creative-nests/Header'
-import { Footer } from '@/components/creative-nests/Footer'
-import { VideoBackground } from '@/components/creative-nests/VideoBackground'
-import { CTABanner } from '@/components/creative-nests/CTABanner'
+import { Header } from '@/components/wsclogic/Header'
+import { Footer } from '@/components/wsclogic/Footer'
+import { VideoBackground } from '@/components/wsclogic/VideoBackground'
+import { CTABanner } from '@/components/wsclogic/CTABanner'
 import { getBlogPosts } from '@/lib/db'
 
 export const metadata = { title: 'Blog — WSCLogic' }
@@ -26,7 +26,7 @@ export default function BlogListingPage() {
             </span>
           </div>
           <h1 className="cn-bebas" style={{ fontSize: 'clamp(48px, 8vw, 84px)', lineHeight: 0.9, marginBottom: '16px', color: '#fff' }}>
-            Creative <span style={{ background: 'linear-gradient(135deg, #a855f7, #06b6d4)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Nests Blog</span>
+            <span style={{ background: 'linear-gradient(135deg, #a855f7, #06b6d4)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>WSCLogic Blog</span>
           </h1>
           <p className="cn-syne" style={{ fontSize: 'clamp(14px, 2.5vw, 18px)', color: '#9ca3af', maxWidth: '600px', margin: '0 auto 40px', lineHeight: 1.6 }}>
             Our team shares guides, insights, and case histories about CGI ads, engineering SaaS platforms, scaling marketing funnels, and enterprise ERP strategy.

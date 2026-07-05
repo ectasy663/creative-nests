@@ -4,9 +4,9 @@ import { LogoSmall } from './Logo'
 export function Footer() {
   const colors = ['#6366f1', '#d946ef', '#06b6d4']
   const hrefs = [
-    'https://instagram.com/creativenests',
+    'https://instagram.com/wsclogic',
     'https://wa.me/919876543210',
-    'mailto:hello@creativenests.in'
+    'mailto:hello@wsclogic.com'
   ]
 
   return (
@@ -51,7 +51,7 @@ export function Footer() {
           <Link href="/" style={{ display: 'flex', alignItems: 'center', gap: '10px', textDecoration: 'none' }}>
             <LogoSmall />
             <span className="cn-syne" style={{ fontSize: '18px', fontWeight: 800, color: '#fff' }}>
-              Creative <span style={{ background: 'linear-gradient(135deg, #6366f1, #d946ef)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Nests</span>
+              <span style={{ background: 'linear-gradient(135deg, #6366f1, #d946ef)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>WSCLogic</span>
             </span>
           </Link>
           <p style={{ fontSize: '13px', lineHeight: 1.6, color: '#9ca3af', fontWeight: 400 }}>
@@ -141,7 +141,7 @@ export function Footer() {
             Contact & HQ
           </h3>
           <div style={{ fontSize: '13px', color: '#9ca3af', lineHeight: 1.6 }}>
-            <div>Email: <span style={{ color: '#fff', fontWeight: 600 }}>hello@creativenests.in</span></div>
+            <div>Email: <span style={{ color: '#fff', fontWeight: 600 }}>hello@wsclogic.com</span></div>
             <div style={{ marginTop: '4px' }}>Phone: <span style={{ color: '#fff', fontWeight: 600 }}>+91 98765 43210</span></div>
             <div style={{ marginTop: '4px' }}>Office: <span style={{ color: '#fff', fontWeight: 600 }}>Bangalore & Mumbai, India</span></div>
           </div>

@@ -1,7 +1,7 @@
 [
   {
-    "title": "Creative Nests Launch 2024",
-    "slug": "creative-nests-launch",
+    "title": "WSCLogic Launch 2024",
+    "slug": "wsclogic-launch",
     "category": "CGI & Production",
     "desc": "Immersive 3D/CGI visual branding mapping the modern frontier.",
     "image": "https://images.unsplash.com/photo-1541701494587-cb58502866ab?auto=format&fit=crop&w=800&q=80",
@@ -12,7 +12,7 @@
       "Motion"
     ],
     "featured": true,
-    "about": "Creative Nests Launch represents our signature visual catalog, capturing next-generation design paradigms through a series of CGI-rendered environments.",
+    "about": "WSCLogic Launch represents our signature visual catalog, capturing next-generation design paradigms through a series of CGI-rendered environments.",
     "challenge": "Mapping highly stylized brand textures onto multi-angle physical simulations while keeping assets compressed and ready for browser execution.",
     "solution": "We deployed custom WebGL rendering chains and optimized 3D coordinate mapping layers directly within serverless Next.js pages.",
     "results": [

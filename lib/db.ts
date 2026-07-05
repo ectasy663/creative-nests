@@ -377,7 +377,7 @@ At WSCLogic, we don't believe in one-size-fits-all. We audit your existing pipel
     const defaultWork: WorkProject[] = [
       {
         title: "WSCLogic Launch 2024",
-        slug: "creative-nests-launch",
+        slug: "wsclogic-launch",
         category: "CGI & Production",
         desc: "Immersive 3D/CGI visual branding mapping the modern frontier.",
         image: "https://images.unsplash.com/photo-1541701494587-cb58502866ab?auto=format&fit=crop&w=800&q=80",

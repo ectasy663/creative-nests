@@ -1,9 +1,9 @@
 'use client'
 
 import { useState } from 'react'
-import { Header } from '@/components/creative-nests/Header'
-import { Footer } from '@/components/creative-nests/Footer'
-import { VideoBackground } from '@/components/creative-nests/VideoBackground'
+import { Header } from '@/components/wsclogic/Header'
+import { Footer } from '@/components/wsclogic/Footer'
+import { VideoBackground } from '@/components/wsclogic/VideoBackground'
 
 interface FAQItem {
   question: string
@@ -108,9 +108,9 @@ export default function ContactPage() {
                 <div style={{ width: '40px', height: '3px', background: '#6366f1', borderRadius: '99px' }} />
               </div>
               {[
-                { label: 'Email Address', value: 'hello@creativenests.in', link: 'mailto:hello@creativenests.in' },
+                { label: 'Email Address', value: 'hello@wsclogic.com', link: 'mailto:hello@wsclogic.com' },
                 { label: 'WhatsApp Chat', value: '+91 98765 43210', link: 'https://wa.me/919876543210' },
-                { label: 'Social Channels', value: '@creativenests', link: 'https://instagram.com/creativenests' },
+                { label: 'Social Channels', value: '@wsclogic', link: 'https://instagram.com/wsclogic' },
                 { label: 'Primary Office', value: 'Bangalore — Serving Global Accounts', link: null },
               ].map(({ label, value, link }) => (
                 <div key={label}>
@@ -126,7 +126,7 @@ export default function ContactPage() {
               ))}
               <div style={{ marginTop: 'auto' }}>
                 <div style={{ background: 'rgba(99, 102, 241, 0.1)', border: '1px solid rgba(99, 102, 241, 0.25)', padding: '8px 16px', borderRadius: '6px', display: 'inline-block' }}>
-                  <span style={{ fontSize: '9px', letterSpacing: '2px', textTransform: 'uppercase', color: '#6366f1', fontWeight: 700 }}>India&apos;s Premium Creative Studio</span>
+                  <span style={{ fontSize: '9px', letterSpacing: '2px', textTransform: 'uppercase', color: '#6366f1', fontWeight: 700 }}>WSCLogic Digital Studio</span>
                 </div>
               </div>
             </div>
