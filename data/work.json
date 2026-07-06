@@ -249,7 +249,7 @@
     "slug": "gifting-muse-oracle",
     "category": "Web Development",
     "desc": "Discover uniquely meaningful gifts tailored to your specific occasion and recipient.",
-    "image": "https://lovable.dev/opengraph-image-p98pqg.png",
+    "image": "https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&fit=crop&w=1200&q=80",
     "videoUrl": "",
     "tags": [
       "AI",
@@ -265,7 +265,7 @@
       "Engaging user flow"
     ],
     "gallery": [
-      "https://lovable.dev/opengraph-image-p98pqg.png"
+      "https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&fit=crop&w=1200&q=80"
     ],
     "liveUrl": "https://gifting-muse-oracle.vercel.app/"
   }
