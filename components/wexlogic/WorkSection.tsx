@@ -96,6 +96,7 @@ function ProjectModal({ project, onClose }: { project: WorkProject; onClose: () 
                   src={activeImage || project.gallery[0]}
                   alt={project.title}
                   fill
+                  sizes="(max-width: 1000px) 100vw, 50vw"
                   style={{ objectFit: 'contain' }}
                 />
               </div>
@@ -111,14 +112,14 @@ function ProjectModal({ project, onClose }: { project: WorkProject; onClose: () 
                       background: 'none', cursor: 'pointer', borderRadius: '6px', overflow: 'hidden', aspectRatio: '1'
                     }}
                   >
-                    <Image src={img} alt="thumbnail" fill style={{ objectFit: 'cover' }} />
+                    <Image src={img} alt="thumbnail" fill sizes="100px" style={{ objectFit: 'cover' }} />
                   </button>
                 ))}
               </div>
             </div>
           ) : (
             <div style={{ position: 'relative', width: '100%', height: '360px', borderRadius: '12px', overflow: 'hidden', background: '#0a0a0f', border: '1px solid rgba(255, 255, 255, 0.08)' }}>
-              <Image src={project.image} alt={project.title} fill style={{ objectFit: 'cover' }} />
+              <Image src={project.image} alt={project.title} fill sizes="(max-width: 1000px) 100vw, 50vw" style={{ objectFit: 'cover' }} />
             </div>
           )}
         </div>
@@ -311,6 +312,7 @@ export function WorkSection({ projects, featuredOnly = false }: { projects: Work
                     src={project.image}
                     alt={project.title}
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     style={{ objectFit: 'cover', transition: 'transform 0.5s ease' }}
                     className="hover-zoom"
                     onMouseEnter={e => { e.currentTarget.style.transform = 'scale(1.05)' }}
