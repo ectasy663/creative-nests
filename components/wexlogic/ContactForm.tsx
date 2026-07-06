@@ -99,7 +99,7 @@ export function ContactForm() {
           
           <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', flexWrap: 'wrap', gap: '16px' }}>
             <div>
-              <div style={{ background: 'rgba(223, 183, 108, 0.08)', border: '1px solid rgba(223, 183, 108, 0.3)', display: 'inline-block', padding: '6px 18px', borderRadius: '99px', marginBottom: '16px' }}>
+              <div style={{ background: 'rgba(223, 183, 108, 0.24)', border: '1px solid rgba(223, 183, 108, 0.3)', display: 'inline-block', padding: '6px 18px', borderRadius: '99px', marginBottom: '16px' }}>
                 <span style={{ fontSize: '10px', letterSpacing: '4px', textTransform: 'uppercase', fontWeight: 700, color: '#dfb76c' }}>Get In Touch</span>
               </div>
               <h1 className="cn-bebas" style={{ fontSize: 'clamp(38px, 6vw, 64px)', letterSpacing: '1px', color: '#fff', lineHeight: 1 }}>
@@ -138,7 +138,7 @@ export function ContactForm() {
                 </div>
               ))}
               <div style={{ marginTop: 'auto' }}>
-                <div style={{ background: 'rgba(223, 183, 108, 0.08)', border: '1px solid rgba(223, 183, 108, 0.25)', padding: '8px 16px', borderRadius: '6px', display: 'inline-block' }}>
+                <div style={{ background: 'rgba(223, 183, 108, 0.24)', border: '1px solid rgba(223, 183, 108, 0.25)', padding: '8px 16px', borderRadius: '6px', display: 'inline-block' }}>
                   <span style={{ fontSize: '9px', letterSpacing: '2px', textTransform: 'uppercase', color: '#dfb76c', fontWeight: 700 }}>WexLogic Digital Studio</span>
                 </div>
               </div>
@@ -224,7 +224,7 @@ export function ContactForm() {
       {/* FAQ SECTION */}
       <section style={{ padding: '64px 28px 80px', maxWidth: '800px', margin: '0 auto' }}>
         <div style={{ textAlign: 'center', marginBottom: '44px' }}>
-          <div style={{ background: 'rgba(223, 183, 108, 0.08)', border: '1px solid rgba(223, 183, 108, 0.3)', display: 'inline-block', padding: '6px 16px', borderRadius: '99px', marginBottom: '16px' }}>
+          <div style={{ background: 'rgba(223, 183, 108, 0.24)', border: '1px solid rgba(223, 183, 108, 0.3)', display: 'inline-block', padding: '6px 16px', borderRadius: '99px', marginBottom: '16px' }}>
             <span style={{ fontSize: '9px', letterSpacing: '3px', textTransform: 'uppercase', fontWeight: 700, color: '#dfb76c' }}>FAQ</span>
           </div>
           <h2 className="cn-bebas" style={{ fontSize: '38px', color: '#fff', letterSpacing: '1px' }}>

@@ -51,7 +51,7 @@ export function ProcessSection() {
     <section
       id="process"
       style={{
-        background: 'radial-gradient(circle at 50% 0%, rgba(223, 183, 108, 0.05) 0%, #040307 70%)',
+        background: 'radial-gradient(circle at 50% 0%, rgba(223, 183, 108, 0.15) 0%, #040307 70%)',
         padding: '96px 28px',
         borderBottom: '1px solid rgba(255, 255, 255, 0.08)',
         position: 'relative',
@@ -59,13 +59,13 @@ export function ProcessSection() {
       }}
     >
       {/* Background glowing blurred circles for futuristic tech vibe */}
-      <div style={{ position: 'absolute', top: '10%', left: '5%', width: '300px', height: '300px', background: 'radial-gradient(circle, rgba(223, 183, 108, 0.06) 0%, transparent 70%)', filter: 'blur(50px)', pointerEvents: 'none' }} />
-      <div style={{ position: 'absolute', bottom: '10%', right: '5%', width: '300px', height: '300px', background: 'radial-gradient(circle, rgba(184, 144, 71, 0.04) 0%, transparent 70%)', filter: 'blur(50px)', pointerEvents: 'none' }} />
+      <div style={{ position: 'absolute', top: '10%', left: '5%', width: '300px', height: '300px', background: 'radial-gradient(circle, rgba(223, 183, 108, 0.18) 0%, transparent 70%)', filter: 'blur(50px)', pointerEvents: 'none' }} />
+      <div style={{ position: 'absolute', bottom: '10%', right: '5%', width: '300px', height: '300px', background: 'radial-gradient(circle, rgba(184, 144, 71, 0.12) 0%, transparent 70%)', filter: 'blur(50px)', pointerEvents: 'none' }} />
 
       <div style={{ maxWidth: '1200px', margin: '0 auto', position: 'relative', zIndex: 2 }}>
         {/* Title */}
         <div style={{ textAlign: 'center', marginBottom: '80px' }}>
-          <div style={{ display: 'inline-block', background: 'rgba(223, 183, 108, 0.08)', border: '1px solid rgba(223, 183, 108, 0.3)', padding: '6px 18px', borderRadius: '99px', marginBottom: '16px' }}>
+          <div style={{ display: 'inline-block', background: 'rgba(223, 183, 108, 0.24)', border: '1px solid rgba(223, 183, 108, 0.3)', padding: '6px 18px', borderRadius: '99px', marginBottom: '16px' }}>
             <span style={{ fontSize: '10px', letterSpacing: '4px', textTransform: 'uppercase', fontWeight: 700, color: '#dfb76c' }}>Our Methodology</span>
           </div>
           <h2 className="cn-bebas" style={{ fontSize: 'clamp(38px, 5vw, 60px)', color: '#fff', letterSpacing: '2px', lineHeight: 1.1 }}>

@@ -121,11 +121,11 @@ export function ServicesSection({ services, featuredOnly = false }: { services: 
   const displayedServices = featuredOnly ? services.slice(0, 3) : services
 
   return (
-    <section id="services" style={{ background: 'radial-gradient(circle at 50% 0%, rgba(223, 183, 108, 0.04) 0%, #040307 70%)', padding: '80px 28px', borderBottom: '1px solid rgba(255, 255, 255, 0.08)' }}>
+    <section id="services" style={{ background: 'radial-gradient(circle at 50% 0%, rgba(223, 183, 108, 0.12) 0%, #040307 70%)', padding: '80px 28px', borderBottom: '1px solid rgba(255, 255, 255, 0.08)' }}>
       {/* Section Header */}
       <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', marginBottom: '56px', flexWrap: 'wrap', gap: '20px' }}>
         <div>
-          <div style={{ background: 'rgba(223, 183, 108, 0.08)', border: '1px solid rgba(223, 183, 108, 0.3)', display: 'inline-block', padding: '6px 18px', borderRadius: '99px', marginBottom: '16px' }}>
+          <div style={{ background: 'rgba(223, 183, 108, 0.24)', border: '1px solid rgba(223, 183, 108, 0.3)', display: 'inline-block', padding: '6px 18px', borderRadius: '99px', marginBottom: '16px' }}>
             <span style={{ fontSize: '10px', letterSpacing: '4px', textTransform: 'uppercase', fontWeight: 700, color: '#dfb76c' }}>
               {featuredOnly ? 'Core Capabilities' : 'Full Suite Capabilities'}
             </span>

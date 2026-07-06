@@ -44,6 +44,7 @@ export interface WorkProject {
   results: string[]
   gallery?: string[]
   videos?: string[]
+  liveUrl?: string
 }
 
 export interface ContactSubmission {

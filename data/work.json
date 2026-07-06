@@ -201,6 +201,7 @@
     "desc": "Experience Real Estate Agility with Web3 Digital Twin Technology.",
     "image": "https://thisismagma.com/wp-content/uploads/2023/05/thisismagma.com-magma-a-la-3eme-edition-du-tech-talk-de-cbre-france-1684942208038.jpeg",
     "videoUrl": "",
+    "liveUrl": "https://magma-website-swart.vercel.app/",
     "tags": [
       "Web3",
       "Real Estate",
@@ -240,7 +241,8 @@
       "Sub-second transaction parsing",
       "High-performance UI"
     ],
-    "gallery": []
+    "gallery": [],
+    "liveUrl": "https://tokenarium.vercel.app/"
   },
   {
     "title": "Sentient Gifting Alchemist",
@@ -264,6 +266,7 @@
     ],
     "gallery": [
       "https://lovable.dev/opengraph-image-p98pqg.png"
-    ]
+    ],
+    "liveUrl": "https://gifting-muse-oracle.vercel.app/"
   }
 ]

@@ -39,7 +39,7 @@ export default function HomePage() {
         <VideoBackground src="/Brutalist_IT_company_hero_video_202607032332_gwr_video_mvp.mp4" />
         {/* Soft background neon glows */}
         <div style={{ position: 'absolute', top: '10%', right: '10%', width: '300px', height: '300px', background: 'radial-gradient(circle, rgba(223, 183, 108, 0.15) 0%, transparent 70%)', filter: 'blur(40px)', pointerEvents: 'none' }} />
-        <div style={{ position: 'absolute', bottom: '10%', left: '5%', width: '250px', height: '250px', background: 'radial-gradient(circle, rgba(184, 144, 71, 0.08) 0%, transparent 70%)', filter: 'blur(45px)', pointerEvents: 'none' }} />
+        <div style={{ position: 'absolute', bottom: '10%', left: '5%', width: '250px', height: '250px', background: 'radial-gradient(circle, rgba(184, 144, 71, 0.24) 0%, transparent 70%)', filter: 'blur(45px)', pointerEvents: 'none' }} />
 
         <div style={{ maxWidth: '1200px', margin: '0 auto', display: 'flex', flexWrap: 'wrap', gap: '48px', alignItems: 'center', justifyContent: 'space-between' }}>
           
@@ -115,19 +115,19 @@ export default function HomePage() {
                     { num: '02', title: 'Web & App Dev', color: '#c5a059' },
                     { num: '03', title: 'Branding & Logo', color: '#e5c185' },
                     { num: '04', title: 'SEO & Marketing', color: '#a37f3d' },
-                    { num: '05', title: 'Video Editing', color: '#dfb76c' },
-                    { num: '06', title: 'Paid Ads', color: '#c5a059' },
-                    { num: '07', title: 'Resonance 2k25', color: '#e5c185' },
-                    { num: '08', title: 'Vibrant Gujarat', color: '#a37f3d' },
+                    { num: '05', title: 'Paid Ads & Meta', color: '#dfb76c' },
+                    { num: '06', title: 'Video Editing', color: '#c5a059' },
+                    { num: '07', title: 'CRM Systems', color: '#e5c185' },
+                    { num: '08', title: 'ERP Solutions', color: '#a37f3d' },
                   ].concat([
                     { num: '01', title: 'CGI & VFX Ads', color: '#dfb76c' },
                     { num: '02', title: 'Web & App Dev', color: '#c5a059' },
                     { num: '03', title: 'Branding & Logo', color: '#e5c185' },
                     { num: '04', title: 'SEO & Marketing', color: '#a37f3d' },
-                    { num: '05', title: 'Video Editing', color: '#dfb76c' },
-                    { num: '06', title: 'Paid Ads', color: '#c5a059' },
-                    { num: '07', title: 'Resonance 2k25', color: '#e5c185' },
-                    { num: '08', title: 'Vibrant Gujarat', color: '#a37f3d' },
+                    { num: '05', title: 'Paid Ads & Meta', color: '#dfb76c' },
+                    { num: '06', title: 'Video Editing', color: '#c5a059' },
+                    { num: '07', title: 'CRM Systems', color: '#e5c185' },
+                    { num: '08', title: 'ERP Solutions', color: '#a37f3d' },
                   ]).map((item, idx) => (
                     <Link
                       key={idx}

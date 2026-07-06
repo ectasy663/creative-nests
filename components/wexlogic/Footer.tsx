@@ -58,20 +58,22 @@ export function Footer() {
             Premium production studio building high-performance digital platforms, CGI campaigns, and scalable custom enterprise systems.
           </p>
           <div style={{ display: 'flex', gap: '14px', marginTop: '8px' }}>
-            {['Instagram', 'WhatsApp', 'Email'].map((social, idx) => (
-              <a 
-                key={social} 
-                href={hrefs[idx]}
-                target="_blank" 
-                rel="noopener noreferrer"
-                className={`social-btn-${idx}`}
-                style={{ 
-                  fontSize: '11px', 
-                  letterSpacing: '1px', 
-                  textTransform: 'uppercase', 
-                  fontWeight: 700, 
-                  textDecoration: 'none', 
-                  color: colors[idx], 
+            {['Instagram', 'WhatsApp', 'Email'].map((social, idx) => {
+              const isEmail = social === 'Email';
+              return (
+                <a 
+                  key={social} 
+                  href={hrefs[idx]}
+                  target={isEmail ? undefined : "_blank"} 
+                  rel={isEmail ? undefined : "noopener noreferrer"}
+                  className={`social-btn-${idx}`}
+                  style={{ 
+                    fontSize: '11px', 
+                    letterSpacing: '1px', 
+                    textTransform: 'uppercase', 
+                    fontWeight: 700, 
+                    textDecoration: 'none', 
+                    color: colors[idx], 
                   border: `1.5px solid ${colors[idx]}`,
                   padding: '6px 14px',
                   borderRadius: '99px',
@@ -81,7 +83,8 @@ export function Footer() {
               >
                 {social}
               </a>
-            ))}
+              )
+            })}
           </div>
         </div>
 

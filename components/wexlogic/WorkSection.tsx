@@ -152,6 +152,34 @@ function ProjectModal({ project, onClose }: { project: WorkProject; onClose: () 
             <p style={{ fontSize: '14px', color: '#9ca3af', lineHeight: 1.6, marginBottom: '24px' }}>
               {project.desc}
             </p>
+            
+            {project.liveUrl && (
+              <div style={{ marginBottom: '24px' }}>
+                <a 
+                  href={project.liveUrl} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  style={{
+                    display: 'inline-block',
+                    background: 'rgba(223, 183, 108, 0.15)',
+                    border: '1px solid rgba(223, 183, 108, 0.4)',
+                    color: '#dfb76c',
+                    padding: '8px 16px',
+                    borderRadius: '8px',
+                    fontSize: '12px',
+                    fontWeight: 600,
+                    textTransform: 'uppercase',
+                    letterSpacing: '1px',
+                    textDecoration: 'none',
+                    transition: 'all 0.2s'
+                  }}
+                  onMouseEnter={e => { e.currentTarget.style.background = 'rgba(223, 183, 108, 0.25)' }}
+                  onMouseLeave={e => { e.currentTarget.style.background = 'rgba(223, 183, 108, 0.15)' }}
+                >
+                  Visit Live Site ↗
+                </a>
+              </div>
+            )}
 
             <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', marginBottom: '24px' }}>
               <div>
@@ -221,7 +249,7 @@ export function WorkSection({ projects, featuredOnly = false }: { projects: Work
         .work-card:hover {
           transform: translateY(-4px);
           border-color: rgba(223, 183, 108, 0.25);
-          box-shadow: 0 24px 60px rgba(0,0,0,0.4), 0 0 0 1px rgba(223,183,108,0.08);
+          box-shadow: 0 24px 60px rgba(0,0,0,0.4), 0 0 0 1px rgba(223,183,108, 0.24);
         }
         .cat-btn { transition: all 0.25s ease; }
         .cat-btn:hover { background: rgba(223,183,108,0.12) !important; color: #fff !important; }
@@ -232,14 +260,14 @@ export function WorkSection({ projects, featuredOnly = false }: { projects: Work
       )}
 
       <section id="portfolio" style={{
-        background: 'radial-gradient(circle at 50% 0%, rgba(223,183,108,0.05) 0%, #040307 60%)',
+        background: 'radial-gradient(circle at 50% 0%, rgba(223,183,108, 0.15) 0%, #040307 60%)',
         padding: '80px 28px',
         borderBottom: '1px solid rgba(255,255,255,0.08)'
       }}>
         {/* Header */}
         <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', marginBottom: '48px', flexWrap: 'wrap', gap: '20px' }}>
           <div>
-            <div style={{ background: 'rgba(223,183,108,0.08)', border: '1px solid rgba(223,183,108,0.25)', display: 'inline-block', padding: '6px 18px', borderRadius: '99px', marginBottom: '14px' }}>
+            <div style={{ background: 'rgba(223,183,108, 0.24)', border: '1px solid rgba(223,183,108,0.25)', display: 'inline-block', padding: '6px 18px', borderRadius: '99px', marginBottom: '14px' }}>
               <span style={{ fontSize: '10px', letterSpacing: '4px', textTransform: 'uppercase', fontWeight: 700, color: '#dfb76c' }}>
                 {featuredOnly ? 'Featured Portfolio' : 'Complete Showcase'}
               </span>
@@ -285,7 +313,7 @@ export function WorkSection({ projects, featuredOnly = false }: { projects: Work
           {displayedProjects.length > 0 ? displayedProjects.map((project) => (
             <div key={project.slug} className="work-card" onClick={() => setActiveProject(project)}>
               {/* Glow */}
-              <div style={{ position: 'absolute', top: 0, right: 0, width: '160px', height: '160px', background: 'radial-gradient(circle, rgba(223,183,108,0.06) 0%, transparent 70%)', pointerEvents: 'none' }} />
+              <div style={{ position: 'absolute', top: 0, right: 0, width: '160px', height: '160px', background: 'radial-gradient(circle, rgba(223,183,108, 0.18) 0%, transparent 70%)', pointerEvents: 'none' }} />
 
               <div style={{ padding: '24px 22px' }}>
                 {/* Category badge */}
@@ -348,7 +376,7 @@ export function WorkSection({ projects, featuredOnly = false }: { projects: Work
                     style={{
                       fontSize: '9px', letterSpacing: '1.5px', textTransform: 'uppercase',
                       color: '#dfb76c', fontWeight: 700,
-                      background: 'rgba(223, 183, 108, 0.08)',
+                      background: 'rgba(223, 183, 108, 0.24)',
                       border: '1px solid rgba(223, 183, 108, 0.2)',
                       padding: '6px 16px', borderRadius: '6px',
                       cursor: 'pointer',
@@ -356,7 +384,7 @@ export function WorkSection({ projects, featuredOnly = false }: { projects: Work
                       whiteSpace: 'nowrap'
                     }}
                     onMouseEnter={e => { e.currentTarget.style.background = 'rgba(223, 183, 108, 0.15)' }}
-                    onMouseLeave={e => { e.currentTarget.style.background = 'rgba(223, 183, 108, 0.08)' }}
+                    onMouseLeave={e => { e.currentTarget.style.background = 'rgba(223, 183, 108, 0.24)' }}
                   >
                     View Project →
                   </button>

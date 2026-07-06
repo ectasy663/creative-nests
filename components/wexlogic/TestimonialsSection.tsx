@@ -50,11 +50,11 @@ const testimonials = [
 
 export function TestimonialsSection() {
   return (
-    <section id="testimonies" style={{ background: 'radial-gradient(circle at 50% 0%, rgba(223, 183, 108, 0.04) 0%, #040307 70%)', padding: '80px 28px', borderBottom: '1px solid rgba(255, 255, 255, 0.08)' }}>
+    <section id="testimonies" style={{ background: 'radial-gradient(circle at 50% 0%, rgba(223, 183, 108, 0.12) 0%, #040307 70%)', padding: '80px 28px', borderBottom: '1px solid rgba(255, 255, 255, 0.08)' }}>
       {/* Header */}
       <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', marginBottom: '56px', flexWrap: 'wrap', gap: '20px' }}>
         <div>
-          <div style={{ background: 'rgba(223, 183, 108, 0.08)', border: '1px solid rgba(223, 183, 108, 0.3)', display: 'inline-block', padding: '6px 18px', borderRadius: '99px', marginBottom: '16px' }}>
+          <div style={{ background: 'rgba(223, 183, 108, 0.24)', border: '1px solid rgba(223, 183, 108, 0.3)', display: 'inline-block', padding: '6px 18px', borderRadius: '99px', marginBottom: '16px' }}>
             <span style={{ fontSize: '10px', letterSpacing: '4px', textTransform: 'uppercase', fontWeight: 700, color: '#dfb76c' }}>
               Feedback
             </span>
@@ -147,7 +147,7 @@ export function TestimonialsSection() {
                       <div style={{ fontSize: '10px', color: '#9ca3af', marginTop: '1px' }}>{item.role}</div>
                     </div>
                   </div>
-                  <div style={{ background: 'rgba(223, 183, 108, 0.08)', border: '1px solid rgba(223, 183, 108, 0.25)', padding: '4px 10px', borderRadius: '6px' }}>
+                  <div style={{ background: 'rgba(223, 183, 108, 0.24)', border: '1px solid rgba(223, 183, 108, 0.25)', padding: '4px 10px', borderRadius: '6px' }}>
                     <span style={{ fontSize: '9px', fontWeight: 700, color: '#dfb76c', textTransform: 'uppercase', letterSpacing: '0.5px' }}>{item.metrics}</span>
                   </div>
                 </div>

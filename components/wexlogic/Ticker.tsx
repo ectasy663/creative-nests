@@ -35,7 +35,7 @@ export function Ticker() {
   return (
     <div
       style={{
-        background: 'radial-gradient(circle at 50% 0%, rgba(223, 183, 108, 0.03) 0%, rgba(8, 7, 13, 0.85) 100%)',
+        background: 'radial-gradient(circle at 50% 0%, rgba(223, 183, 108, 0.09) 0%, rgba(8, 7, 13, 0.85) 100%)',
         backdropFilter: 'blur(10px)',
         borderBottom: '1px solid rgba(255, 255, 255, 0.08)',
         borderTop: '1px solid rgba(255, 255, 255, 0.08)',

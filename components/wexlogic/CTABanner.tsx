@@ -32,7 +32,7 @@ export function CTABanner({
   return (
     <section
       style={{
-        background: 'radial-gradient(circle at 50% 0%, rgba(223, 183, 108, 0.05) 0%, rgba(8, 7, 13, 0.95) 75%)',
+        background: 'radial-gradient(circle at 50% 0%, rgba(223, 183, 108, 0.15) 0%, rgba(8, 7, 13, 0.95) 75%)',
         backdropFilter: 'blur(16px)',
         WebkitBackdropFilter: 'blur(16px)',
         borderTop: '1px solid rgba(255, 255, 255, 0.08)',
@@ -47,7 +47,7 @@ export function CTABanner({
       <div style={{ position: 'relative', zIndex: 2 }}>
         <div
           style={{
-            background: 'rgba(223, 183, 108, 0.08)',
+            background: 'rgba(223, 183, 108, 0.24)',
             border: '1px solid rgba(223, 183, 108, 0.3)',
             borderRadius: '99px',
             display: 'inline-block',
