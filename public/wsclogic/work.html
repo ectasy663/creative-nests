@@ -500,15 +500,53 @@
     mediaContainer.innerHTML = '';
     
     if (project.mediaType === 'videos') {
+      // Main Video Player Container
+      const playerDiv = document.createElement('div');
+      playerDiv.style.width = '100%';
+      playerDiv.style.border = '3px solid #0D0D0D';
+      playerDiv.style.background = '#000';
+      playerDiv.style.marginBottom = '14px';
+      playerDiv.style.overflow = 'hidden';
+      
+      const mainVid = document.createElement('video');
+      mainVid.src = project.videos[0];
+      mainVid.controls = true;
+      mainVid.style.width = '100%';
+      mainVid.style.display = 'block';
+      mainVid.id = 'mainVideoPreview';
+      playerDiv.appendChild(mainVid);
+      mediaContainer.appendChild(playerDiv);
+      
+      // Video Tabs Grid
+      const tabsDiv = document.createElement('div');
+      tabsDiv.style.display = 'grid';
+      tabsDiv.style.gridTemplateColumns = 'repeat(auto-fit, minmax(120px, 1fr))';
+      tabsDiv.style.gap = '8px';
+      
       project.videos.forEach((vidUrl, index) => {
-        const videoBlock = document.createElement('div');
-        videoBlock.className = 'video-item';
-        videoBlock.innerHTML = `
-          <div style="font-size:10px; font-weight:700; color:#0D0D0D; margin-bottom:4px; text-transform:uppercase;">Video Reel ${index + 1}</div>
-          <video src="${vidUrl}" controls muted style="width:100%; border:3px solid #0D0D0D; background:#000;"></video>
-        `;
-        mediaContainer.appendChild(videoBlock);
+        const tabBtn = document.createElement('button');
+        tabBtn.className = 'video-tab-btn';
+        tabBtn.style.padding = '10px 14px';
+        tabBtn.style.border = '2px solid ' + (index === 0 ? '#6B3FA0' : '#0D0D0D');
+        tabBtn.style.background = '#fff';
+        tabBtn.style.cursor = 'pointer';
+        tabBtn.style.borderRadius = '4px';
+        tabBtn.style.fontWeight = '700';
+        tabBtn.style.fontSize = '11px';
+        tabBtn.style.textTransform = 'uppercase';
+        tabBtn.style.letterSpacing = '1px';
+        tabBtn.innerText = '▶ Showcase ' + (index + 1);
+        
+        tabBtn.onclick = () => {
+          document.querySelectorAll('.video-tab-btn').forEach(btn => btn.style.borderColor = '#0D0D0D');
+          tabBtn.style.borderColor = '#6B3FA0';
+          const videoElement = document.getElementById('mainVideoPreview');
+          videoElement.src = vidUrl;
+          videoElement.play();
+        };
+        tabsDiv.appendChild(tabBtn);
       });
+      mediaContainer.appendChild(tabsDiv);
     } else if (project.mediaType === 'gallery') {
       // Main Preview Image
       const previewDiv = document.createElement('div');
