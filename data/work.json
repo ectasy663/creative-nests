@@ -4,7 +4,7 @@
     "slug": "cgi-vfx-ads",
     "category": "CGI & VFX",
     "desc": "Mind-bending visual effects and CGI campaigns.",
-    "image": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=600&q=80",
+    "image": "/cgi-vfx-thumbnail.jpeg",
     "videoUrl": "/cgi and vfx ads/lv_0_20260624232603.mp4",
     "tags": [
       "CGI",
@@ -192,6 +192,78 @@
       "/seo & marketing/IMG_20260706_021916_445.jpg",
       "/seo & marketing/IMG_20260706_021928_804.jpg",
       "/seo & marketing/IMG_20260706_022030_669.jpg"
+    ]
+  },
+  {
+    "title": "Magma - Digital Twin Token Platform",
+    "slug": "magma-website",
+    "category": "Web Development",
+    "desc": "Experience Real Estate Agility with Web3 Digital Twin Technology.",
+    "image": "https://thisismagma.com/wp-content/uploads/2023/05/thisismagma.com-magma-a-la-3eme-edition-du-tech-talk-de-cbre-france-1684942208038.jpeg",
+    "videoUrl": "",
+    "tags": [
+      "Web3",
+      "Real Estate",
+      "Platform"
+    ],
+    "featured": true,
+    "about": "Magma is a Web3 platform for real estate stakeholders to manage interactions between physical and digital assets through unique 3D representations.",
+    "challenge": "Developing a robust Digital Twin Token (DTT) platform bridging physical buildings with the blockchain.",
+    "solution": "Built a scalable frontend architecture that directly connects to smart contracts for transparent property data tracking.",
+    "results": [
+      "Seamless Web3 Integration",
+      "Interactive 3D Environments"
+    ],
+    "gallery": [
+      "https://thisismagma.com/wp-content/uploads/2023/05/thisismagma.com-magma-a-la-3eme-edition-du-tech-talk-de-cbre-france-1684942208038.jpeg",
+      "https://thisismagma.com/wp-content/uploads/2023/05/thisismagma.com-workshop-blockchain-et-actif-digitaux-sba-16-min-scaled.jpg",
+      "https://thisismagma.com/wp-content/uploads/2023/03/magma.wp2.cubdev.com-exploring-the-potential-of-real-estate-tokenization-digital-twins-magma.png"
+    ]
+  },
+  {
+    "title": "Tokenarium - Solana Project",
+    "slug": "tokenarium-website",
+    "category": "Web Development",
+    "desc": "Next-generation Solana ecosystem project and web application.",
+    "image": "https://images.unsplash.com/photo-1621504450181-5d356f61d307?auto=format&fit=crop&w=600&q=80",
+    "videoUrl": "",
+    "tags": [
+      "Solana",
+      "Crypto",
+      "Web App"
+    ],
+    "featured": true,
+    "about": "A fast and reactive Web3 single-page application built for the Solana network.",
+    "challenge": "Handling high-frequency blockchain transactions in real-time.",
+    "solution": "Utilized optimized React hooks and dedicated RPC endpoints for lightning-fast state updates.",
+    "results": [
+      "Sub-second transaction parsing",
+      "High-performance UI"
+    ],
+    "gallery": []
+  },
+  {
+    "title": "Sentient Gifting Alchemist",
+    "slug": "gifting-muse-oracle",
+    "category": "Web Development",
+    "desc": "Discover uniquely meaningful gifts tailored to your specific occasion and recipient.",
+    "image": "https://lovable.dev/opengraph-image-p98pqg.png",
+    "videoUrl": "",
+    "tags": [
+      "AI",
+      "E-commerce",
+      "Tools"
+    ],
+    "featured": true,
+    "about": "An AI-powered gifting assistant that curates meaningful presents based on recipient personas and occasions.",
+    "challenge": "Integrating complex AI prompt chains while maintaining a simple user interface.",
+    "solution": "Developed a streamlined conversational UI backed by an intelligent recommendation engine.",
+    "results": [
+      "Highly personalized gift curation",
+      "Engaging user flow"
+    ],
+    "gallery": [
+      "https://lovable.dev/opengraph-image-p98pqg.png"
     ]
   }
 ]

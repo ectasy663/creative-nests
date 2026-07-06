@@ -13,6 +13,16 @@ const nextConfig = {
         hostname: 'images.unsplash.com',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'thisismagma.com',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'lovable.dev',
+        pathname: '/**',
+      },
     ],
     // Modern formats for browsers that support them
     formats: ['image/avif', 'image/webp'],
