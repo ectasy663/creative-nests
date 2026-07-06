@@ -2,12 +2,16 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { WorkProject } from '@/lib/db'
+import { useUIStore } from '@/lib/store'
 
 // ── Project Modal Detail View ──────────────────────────────────────────────────
 function ProjectModal({ project, onClose }: { project: WorkProject; onClose: () => void }) {
-  const [activeImage, setActiveImage] = useState<string | null>(null)
-  const [activeVideo, setActiveVideo] = useState<string | null>(null)
+  const activeImage = useUIStore(state => state.activeImage)
+  const setActiveImage = useUIStore(state => state.setActiveImage)
+  const activeVideo = useUIStore(state => state.activeVideo)
+  const setActiveVideo = useUIStore(state => state.setActiveVideo)
 
   return (
     <div
@@ -87,11 +91,12 @@ function ProjectModal({ project, onClose }: { project: WorkProject; onClose: () 
               </div>
               
               {/* Main Preview */}
-              <div style={{ width: '100%', height: '320px', borderRadius: '12px', overflow: 'hidden', background: '#0f0e15', marginBottom: '14px', border: '1px solid rgba(255, 255, 255, 0.08)' }}>
-                <img
+              <div style={{ position: 'relative', width: '100%', height: '320px', borderRadius: '12px', overflow: 'hidden', background: '#0f0e15', marginBottom: '14px', border: '1px solid rgba(255, 255, 255, 0.08)' }}>
+                <Image
                   src={activeImage || project.gallery[0]}
                   alt={project.title}
-                  style={{ width: '100%', height: '100%', objectFit: 'contain' }}
+                  fill
+                  style={{ objectFit: 'contain' }}
                 />
               </div>
 
@@ -102,18 +107,18 @@ function ProjectModal({ project, onClose }: { project: WorkProject; onClose: () 
                     key={idx}
                     onClick={() => setActiveImage(img)}
                     style={{
-                      padding: 0, border: activeImage === img || (!activeImage && idx === 0) ? '2px solid #dfb76c' : '1px solid rgba(255, 255, 255, 0.1)',
+                      position: 'relative', padding: 0, border: activeImage === img || (!activeImage && idx === 0) ? '2px solid #dfb76c' : '1px solid rgba(255, 255, 255, 0.1)',
                       background: 'none', cursor: 'pointer', borderRadius: '6px', overflow: 'hidden', aspectRatio: '1'
                     }}
                   >
-                    <img src={img} alt="thumbnail" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                    <Image src={img} alt="thumbnail" fill style={{ objectFit: 'cover' }} />
                   </button>
                 ))}
               </div>
             </div>
           ) : (
-            <div style={{ width: '100%', height: '360px', borderRadius: '12px', overflow: 'hidden', background: '#0a0a0f', border: '1px solid rgba(255, 255, 255, 0.08)' }}>
-              <img src={project.image} alt={project.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+            <div style={{ position: 'relative', width: '100%', height: '360px', borderRadius: '12px', overflow: 'hidden', background: '#0a0a0f', border: '1px solid rgba(255, 255, 255, 0.08)' }}>
+              <Image src={project.image} alt={project.title} fill style={{ objectFit: 'cover' }} />
             </div>
           )}
         </div>
@@ -183,7 +188,8 @@ function ProjectModal({ project, onClose }: { project: WorkProject; onClose: () 
 export function WorkSection({ projects, featuredOnly = false }: { projects: WorkProject[], featuredOnly?: boolean }) {
   const allProjects = projects
   const [selectedCategory, setSelectedCategory] = useState<string>('All')
-  const [activeProject, setActiveProject] = useState<WorkProject | null>(null)
+  const activeProject = useUIStore(state => state.activeProject)
+  const setActiveProject = useUIStore(state => state.setActiveProject)
 
   const categories = ['All', ...Array.from(new Set(allProjects.map(p => p.category)))]
 
@@ -299,13 +305,12 @@ export function WorkSection({ projects, featuredOnly = false }: { projects: Work
                 </div>
 
                 {/* Card Placeholder Cover Image */}
-                <div style={{ width: '100%', height: '200px', borderRadius: '10px', overflow: 'hidden', marginBottom: '16px', background: '#0a0a0f', border: '1px solid rgba(255, 255, 255, 0.05)' }}>
-                  <img
+                <div style={{ position: 'relative', width: '100%', height: '200px', borderRadius: '10px', overflow: 'hidden', marginBottom: '16px', background: '#0a0a0f', border: '1px solid rgba(255, 255, 255, 0.05)' }}>
+                  <Image
                     src={project.image}
                     alt={project.title}
-                    loading="lazy"
-                    decoding="async"
-                    style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.5s ease' }}
+                    fill
+                    style={{ objectFit: 'cover', transition: 'transform 0.5s ease' }}
                     className="hover-zoom"
                     onMouseEnter={e => { e.currentTarget.style.transform = 'scale(1.05)' }}
                     onMouseLeave={e => { e.currentTarget.style.transform = 'scale(1)' }}

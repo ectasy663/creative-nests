@@ -1,13 +1,15 @@
 import Link from 'next/link'
 import { Header } from '@/components/wexlogic/Header'
-import { Footer } from '@/components/wexlogic/Footer'
-import { Ticker } from '@/components/wexlogic/Ticker'
-import { CTABanner } from '@/components/wexlogic/CTABanner'
+import dynamic from 'next/dynamic'
 import { VideoBackground } from '@/components/wexlogic/VideoBackground'
-import { ServicesSection } from '@/components/wexlogic/ServicesSection'
-import { WorkSection } from '@/components/wexlogic/WorkSection'
-import { TestimonialsSection } from '@/components/wexlogic/TestimonialsSection'
-import { ProcessSection } from '@/components/wexlogic/ProcessSection'
+
+const ProcessSection = dynamic(() => import('@/components/wexlogic/ProcessSection').then(mod => mod.ProcessSection))
+const Ticker = dynamic(() => import('@/components/wexlogic/Ticker').then(mod => mod.Ticker))
+const ServicesSection = dynamic(() => import('@/components/wexlogic/ServicesSection').then(mod => mod.ServicesSection))
+const WorkSection = dynamic(() => import('@/components/wexlogic/WorkSection').then(mod => mod.WorkSection))
+const TestimonialsSection = dynamic(() => import('@/components/wexlogic/TestimonialsSection').then(mod => mod.TestimonialsSection))
+const CTABanner = dynamic(() => import('@/components/wexlogic/CTABanner').then(mod => mod.CTABanner))
+const Footer = dynamic(() => import('@/components/wexlogic/Footer').then(mod => mod.Footer))
 import { getProjects } from '@/lib/db'
 
 export const metadata = {
