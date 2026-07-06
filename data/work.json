@@ -139,5 +139,59 @@
       "/vibrant gujarat/ID CARD_01.png",
       "/vibrant gujarat/Pamphlet.png"
     ]
+  },
+  {
+    "title": "Meta Ads Campaigns",
+    "slug": "meta-ads-campaigns",
+    "category": "Meta Ads",
+    "desc": "High-converting creative assets for Meta advertising.",
+    "image": "/meta ads/IMG_20260706_223500_192.jpg",
+    "videoUrl": "",
+    "tags": [
+      "Meta",
+      "Ads",
+      "Performance"
+    ],
+    "featured": true,
+    "about": "A collection of top-performing ad creatives designed for Facebook and Instagram.",
+    "challenge": "Stopping the scroll in a crowded feed.",
+    "solution": "Bold visuals and direct messaging.",
+    "results": [
+      "Increased ROAS",
+      "Lowered CPA"
+    ],
+    "gallery": [
+      "/meta ads/IMG_20260706_223500_192.jpg",
+      "/meta ads/IMG_20260706_223519_627.jpg",
+      "/meta ads/IMG_20260706_223623_213.jpg"
+    ]
+  },
+  {
+    "title": "SEO & Digital Marketing",
+    "slug": "seo-and-marketing",
+    "category": "SEO & Marketing",
+    "desc": "Data-driven SEO strategies and marketing collateral.",
+    "image": "/seo & marketing/IMG_20260706_012646_392.jpg",
+    "videoUrl": "",
+    "tags": [
+      "SEO",
+      "Marketing",
+      "Growth"
+    ],
+    "featured": true,
+    "about": "Comprehensive SEO and digital marketing campaigns tailored for rapid growth.",
+    "challenge": "Improving organic visibility and lead quality.",
+    "solution": "Technical SEO audits paired with high-quality content marketing.",
+    "results": [
+      "10x Organic Traffic",
+      "Top 3 rankings for core keywords"
+    ],
+    "gallery": [
+      "/seo & marketing/IMG_20260706_012646_392.jpg",
+      "/seo & marketing/IMG_20260706_021902_826.jpg",
+      "/seo & marketing/IMG_20260706_021916_445.jpg",
+      "/seo & marketing/IMG_20260706_021928_804.jpg",
+      "/seo & marketing/IMG_20260706_022030_669.jpg"
+    ]
   }
 ]
