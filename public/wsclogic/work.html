@@ -5,6 +5,169 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Work — WexLogic</title>
   <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Styling for clean cards grid */
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 32px;
+      margin-top: 24px;
+    }
+    .project-card {
+      background: #fff;
+      border: 3px solid #0D0D0D;
+      box-shadow: 6px 6px 0 #0D0D0D;
+      padding: 24px;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 380px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .project-card:hover {
+      transform: translate(-2px, -2px);
+      box-shadow: 8px 8px 0 #6B3FA0;
+    }
+    .project-card-image {
+      width: 100%;
+      height: 200px;
+      border: 3px solid #0D0D0D;
+      overflow: hidden;
+      margin-bottom: 16px;
+      background: #eee;
+    }
+    .project-card-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+    .project-card:hover .project-card-image img {
+      transform: scale(1.05);
+    }
+    
+    /* Modal Styles */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(13, 13, 13, 0.95);
+      backdrop-filter: blur(10px);
+      z-index: 9999;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      animation: fadeIn 0.2s ease;
+    }
+    .modal-container {
+      background: #fff;
+      border: 4px solid #0D0D0D;
+      box-shadow: 8px 8px 0 #0D0D0D;
+      width: 100%;
+      max-width: 950px;
+      max-height: 90vh;
+      overflow-y: auto;
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      animation: scaleUp 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .modal-media {
+      padding: 32px;
+      background: #F5F0E8;
+      border-right: 3px solid #0D0D0D;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      justify-content: center;
+      max-height: 80vh;
+      overflow-y: auto;
+    }
+    .modal-details {
+      padding: 36px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .modal-close-btn {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: #0D0D0D;
+      color: #fff;
+      border: 2px solid #0D0D0D;
+      padding: 8px 16px;
+      cursor: pointer;
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: all 0.2s;
+    }
+    .modal-close-btn:hover {
+      background: #fff;
+      color: #0D0D0D;
+      box-shadow: 3px 3px 0 #6B3FA0;
+    }
+    .gallery-preview {
+      width: 100%;
+      height: 300px;
+      border: 3px solid #0D0D0D;
+      background: #fff;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .gallery-preview img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+    .gallery-thumbs {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+      gap: 6px;
+    }
+    .gallery-thumb-btn {
+      padding: 0;
+      border: 2px solid #0D0D0D;
+      border-radius: 4px;
+      overflow: hidden;
+      cursor: pointer;
+      aspect-ratio: 1;
+    }
+    .gallery-thumb-btn img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .video-item {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .video-item video {
+      width: 100%;
+      border: 3px solid #0D0D0D;
+      background: #000;
+    }
+    .deliverable-tag {
+      font-size: 11px;
+      color: #0D0D0D;
+      background: #F5F0E8;
+      border: 1px solid #0D0D0D;
+      padding: 6px 12px;
+      border-radius: 4px;
+      font-weight: 600;
+    }
+    
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes scaleUp { from { transform: scale(0.96); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+  </style>
 </head>
 <body>
 <div class="w">
@@ -43,92 +206,85 @@
       </div>
     </div>
 
-    <div style="display:grid;grid-template-columns:3fr 2fr;gap:0;border:3px solid #0D0D0D">
-      <!-- LEFT SIDE: CGI & VFX Ads -->
-      <div style="background:#F4A261;border-right:3px solid #0D0D0D;padding:36px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden">
+    <!-- Clean Grid: One placeholder card per project -->
+    <div class="project-grid">
+      <!-- Project 1: CGI and VFX Showreels -->
+      <div class="project-card" onclick="openProjectModal('cgi-vfx')">
         <div>
-          <div style="background:#0D0D0D;display:inline-block;padding:3px 12px;margin-bottom:12px">
-            <span style="font-size:8px;letter-spacing:4px;text-transform:uppercase;color:#F4A261;font-weight:700">CGI & VFX Ads</span>
+          <div class="project-card-image">
+            <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=600&q=80" alt="CGI Cover">
           </div>
-          <h3 style="font-family:'Syne',sans-serif;font-size:28px;font-weight:800;color:#0D0D0D;line-height:1.2;margin-bottom:24px">
-            Premium CGI & VFX Campaigns
-          </h3>
-          <div style="display:flex;flex-direction:column;gap:16px">
-            <div>
-              <div style="font-size:10px;font-weight:700;color:#0D0D0D;margin-bottom:6px;text-transform:uppercase;letter-spacing:1px">Video Showcase 01</div>
-              <video src="../cgi and vfx ads/lv_0_20260624232603.mp4" controls muted style="width:100%;border:2px solid #0D0D0D;background:#000;display:block"></video>
-            </div>
-            <div>
-              <div style="font-size:10px;font-weight:700;color:#0D0D0D;margin-bottom:6px;text-transform:uppercase;letter-spacing:1px">Video Showcase 02</div>
-              <video src="../cgi and vfx ads/Screen Recording 2026-07-06 171647_edited.mp4" controls muted style="width:100%;border:2px solid #0D0D0D;background:#000;display:block"></video>
-            </div>
-          </div>
+          <div style="background:#6B3FA0;display:inline-block;padding:2px 10px;margin-bottom:8px;"><span style="font-size:8px;letter-spacing:2px;text-transform:uppercase;color:#fff;font-weight:700">CGI & VFX</span></div>
+          <h3 style="font-family:'Syne',sans-serif;font-size:20px;font-weight:800;color:#0D0D0D;margin:0 0 8px 0;">CGI and VFX Showreels</h3>
+          <p style="font-size:12px;color:#666;line-height:1.4;margin:0;">Mind-bending visual effects and CGI campaigns.</p>
         </div>
-        <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-top:24px">
-          <div style="font-size:9px;letter-spacing:2px;text-transform:uppercase;color:#6B3FA0;font-weight:600">CGI · VFX · Ads</div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-top:16px;border-top:1px solid #eee;padding-top:12px;">
+          <span style="font-size:9px;color:#6B3FA0;font-weight:600;letter-spacing:1px;">#CGI #VFX #VIDEO</span>
+          <span style="font-size:10px;font-weight:700;color:#F4A261;text-transform:uppercase;letter-spacing:1px;">View →</span>
         </div>
       </div>
 
-      <!-- RIGHT SIDE: Branding Galleries -->
-      <div style="background:#fff;padding:24px;display:flex;flex-direction:column;gap:24px;overflow-y:auto;max-height:800px">
-        <div style="background:#6B3FA0;display:inline-block;padding:4px 12px;align-self:flex-start">
-          <span style="font-size:9px;letter-spacing:3px;text-transform:uppercase;color:#F4A261;font-weight:700">Branding Works</span>
-        </div>
-        
-        <!-- Creative Art -->
+      <!-- Project 2: Resonance 2k25 -->
+      <div class="project-card" onclick="openProjectModal('resonance')">
         <div>
-          <h4 style="font-family:'Syne',sans-serif;font-size:16px;font-weight:800;color:#0D0D0D;margin-bottom:8px">Creative Art</h4>
-          <div style="display:grid;grid-template-columns:repeat(4, 1fr);gap:6px">
-            <img src="../creative art/art 01.png" style="width:100%;height:50px;object-fit:cover;border:1px solid #0D0D0D" alt="Art 1">
-            <img src="../creative art/art 2.png" style="width:100%;height:50px;object-fit:cover;border:1px solid #0D0D0D" alt="Art 2">
-            <img src="../creative art/art-4-first.jpg" style="width:100%;height:50px;object-fit:cover;border:1px solid #0D0D0D" alt="Art 3">
-            <img src="../creative art/art-5.jpg" style="width:100%;height:50px;object-fit:cover;border:1px solid #0D0D0D" alt="Art 4">
-            <img src="../creative art/art-6--.jpg" style="width:100%;height:50px;object-fit:cover;border:1px solid #0D0D0D" alt="Art 5">
-            <img src="../creative art/ChatGPT Image May 18, 2026, 06_32_40 PM.png" style="width:100%;height:50px;object-fit:cover;border:1px solid #0D0D0D" alt="Art 6">
-            <img src="../creative art/Poster.1.jpg" style="width:100%;height:50px;object-fit:cover;border:1px solid #0D0D0D" alt="Art 7">
+          <div class="project-card-image">
+            <img src="../resonance 2k25/aramn-malik.1.jpg" alt="Resonance Cover">
           </div>
+          <div style="background:#6B3FA0;display:inline-block;padding:2px 10px;margin-bottom:8px;"><span style="font-size:8px;letter-spacing:2px;text-transform:uppercase;color:#fff;font-weight:700">Branding</span></div>
+          <h3 style="font-family:'Syne',sans-serif;font-size:20px;font-weight:800;color:#0D0D0D;margin:0 0 8px 0;">Resonance 2k25</h3>
+          <p style="font-size:12px;color:#666;line-height:1.4;margin:0;">Event branding and visual design for Resonance 2k25 festival.</p>
         </div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-top:16px;border-top:1px solid #eee;padding-top:12px;">
+          <span style="font-size:9px;color:#6B3FA0;font-weight:600;letter-spacing:1px;">#EVENT #BRANDING</span>
+          <span style="font-size:10px;font-weight:700;color:#F4A261;text-transform:uppercase;letter-spacing:1px;">View →</span>
+        </div>
+      </div>
 
-        <!-- Logo -->
+      <!-- Project 3: Creative Art -->
+      <div class="project-card" onclick="openProjectModal('creative-art')">
         <div>
-          <h4 style="font-family:'Syne',sans-serif;font-size:16px;font-weight:800;color:#0D0D0D;margin-bottom:8px">Logo Designs</h4>
-          <div style="display:grid;grid-template-columns:repeat(3, 1fr);gap:6px">
-            <img src="../Logo/Creative Nests Logo.png" style="width:100%;height:50px;object-fit:cover;border:1px solid #0D0D0D" alt="Logo 1">
-            <img src="../Logo/old logo.png" style="width:100%;height:50px;object-fit:cover;border:1px solid #0D0D0D" alt="Logo 2">
-            <img src="../Logo/phycics logo.png" style="width:100%;height:50px;object-fit:cover;border:1px solid #0D0D0D" alt="Logo 3">
-            <img src="../Logo/tushar 0.png" style="width:100%;height:50px;object-fit:cover;border:1px solid #0D0D0D" alt="Logo 4">
-            <img src="../Logo/tushar 01.png" style="width:100%;height:50px;object-fit:cover;border:1px solid #0D0D0D" alt="Logo 5">
+          <div class="project-card-image">
+            <img src="../creative art/art 01.png" alt="Creative Art Cover">
           </div>
+          <div style="background:#6B3FA0;display:inline-block;padding:2px 10px;margin-bottom:8px;"><span style="font-size:8px;letter-spacing:2px;text-transform:uppercase;color:#fff;font-weight:700">Branding</span></div>
+          <h3 style="font-family:'Syne',sans-serif;font-size:20px;font-weight:800;color:#0D0D0D;margin:0 0 8px 0;">Creative Art</h3>
+          <p style="font-size:12px;color:#666;line-height:1.4;margin:0;">Custom creative art showcases and poster illustrations.</p>
         </div>
-
-        <!-- Resonance 2k25 -->
-        <div>
-          <h4 style="font-family:'Syne',sans-serif;font-size:16px;font-weight:800;color:#0D0D0D;margin-bottom:8px">Resonance 2k25</h4>
-          <div style="display:grid;grid-template-columns:repeat(4, 1fr);gap:6px">
-            <img src="../resonance 2k25/aramn-malik.1.jpg" style="width:100%;height:50px;object-fit:cover;border:1px solid #0D0D0D" alt="Res 1">
-            <img src="../resonance 2k25/BHOMENDRA SINGH RATHORE.png" style="width:100%;height:50px;object-fit:cover;border:1px solid #0D0D0D" alt="Res 2">
-            <img src="../resonance 2k25/Bollwood-day.1.jpg" style="width:100%;height:50px;object-fit:cover;border:1px solid #0D0D0D" alt="Res 3">
-            <img src="../resonance 2k25/final-coordinator.jpg" style="width:100%;height:50px;object-fit:cover;border:1px solid #0D0D0D" alt="Res 4">
-            <img src="../resonance 2k25/Final-volunteer.jpg" style="width:100%;height:50px;object-fit:cover;border:1px solid #0D0D0D" alt="Res 5">
-            <img src="../resonance 2k25/javaid-ali.2.jpg" style="width:100%;height:50px;object-fit:cover;border:1px solid #0D0D0D" alt="Res 6">
-            <img src="../resonance 2k25/kabeera (2).png" style="width:100%;height:50px;object-fit:cover;border:1px solid #0D0D0D" alt="Res 7">
-            <img src="../resonance 2k25/Madhur virli final.png" style="width:100%;height:50px;object-fit:cover;border:1px solid #0D0D0D" alt="Res 8">
-            <img src="../resonance 2k25/Madhur-virli.jpg" style="width:100%;height:50px;object-fit:cover;border:1px solid #0D0D0D" alt="Res 9">
-          </div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-top:16px;border-top:1px solid #eee;padding-top:12px;">
+          <span style="font-size:9px;color:#6B3FA0;font-weight:600;letter-spacing:1px;">#ART #BRANDING</span>
+          <span style="font-size:10px;font-weight:700;color:#F4A261;text-transform:uppercase;letter-spacing:1px;">View →</span>
         </div>
+      </div>
 
-        <!-- Vibrant Gujarat -->
+      <!-- Project 4: Logo Designs -->
+      <div class="project-card" onclick="openProjectModal('logos')">
         <div>
-          <h4 style="font-family:'Syne',sans-serif;font-size:16px;font-weight:800;color:#0D0D0D;margin-bottom:8px">Vibrant Gujarat</h4>
-          <div style="display:grid;grid-template-columns:repeat(4, 1fr);gap:6px">
-            <img src="../vibrant gujarat/AD_Hoarding _ 10 x 10.png" style="width:100%;height:50px;object-fit:cover;border:1px solid #0D0D0D" alt="VG 1">
-            <img src="../vibrant gujarat/AD_Invitation Card_02.png" style="width:100%;height:50px;object-fit:cover;border:1px solid #0D0D0D" alt="VG 2">
-            <img src="../vibrant gujarat/AD_Standee Mockup_01.png" style="width:100%;height:50px;object-fit:cover;border:1px solid #0D0D0D" alt="VG 3">
-            <img src="../vibrant gujarat/AD_Standee Mockup_02.png" style="width:100%;height:50px;object-fit:cover;border:1px solid #0D0D0D" alt="VG 4">
-            <img src="../vibrant gujarat/Hording_16x9.png" style="width:100%;height:50px;object-fit:cover;border:1px solid #0D0D0D" alt="VG 5">
-            <img src="../vibrant gujarat/ID CARD_01.png" style="width:100%;height:50px;object-fit:cover;border:1px solid #0D0D0D" alt="VG 6">
-            <img src="../vibrant gujarat/Pamphlet.png" style="width:100%;height:50px;object-fit:cover;border:1px solid #0D0D0D" alt="VG 7">
+          <div class="project-card-image">
+            <img src="../Logo/Creative Nests Logo.png" alt="Logo Cover">
           </div>
+          <div style="background:#6B3FA0;display:inline-block;padding:2px 10px;margin-bottom:8px;"><span style="font-size:8px;letter-spacing:2px;text-transform:uppercase;color:#fff;font-weight:700">Branding</span></div>
+          <h3 style="font-family:'Syne',sans-serif;font-size:20px;font-weight:800;color:#0D0D0D;margin:0 0 8px 0;">Logo Designs</h3>
+          <p style="font-size:12px;color:#666;line-height:1.4;margin:0;">Distinctive logo designs and brand identity marks.</p>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-top:16px;border-top:1px solid #eee;padding-top:12px;">
+          <span style="font-size:9px;color:#6B3FA0;font-weight:600;letter-spacing:1px;">#LOGO #IDENTITY</span>
+          <span style="font-size:10px;font-weight:700;color:#F4A261;text-transform:uppercase;letter-spacing:1px;">View →</span>
+        </div>
+      </div>
+
+      <!-- Project 5: Vibrant Gujarat -->
+      <div class="project-card" onclick="openProjectModal('vibrant-gujarat')">
+        <div>
+          <div class="project-card-image">
+            <img src="../vibrant gujarat/AD_Hoarding _ 10 x 10.png" alt="Vibrant Gujarat Cover">
+          </div>
+          <div style="background:#6B3FA0;display:inline-block;padding:2px 10px;margin-bottom:8px;"><span style="font-size:8px;letter-spacing:2px;text-transform:uppercase;color:#fff;font-weight:700">Branding</span></div>
+          <h3 style="font-family:'Syne',sans-serif;font-size:20px;font-weight:800;color:#0D0D0D;margin:0 0 8px 0;">Vibrant Gujarat</h3>
+          <p style="font-size:12px;color:#666;line-height:1.4;margin:0;">High-impact visual campaigns and standee assets.</p>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-top:16px;border-top:1px solid #eee;padding-top:12px;">
+          <span style="font-size:9px;color:#6B3FA0;font-weight:600;letter-spacing:1px;">#CAMPAIGN #BRANDING</span>
+          <span style="font-size:10px;font-weight:700;color:#F4A261;text-transform:uppercase;letter-spacing:1px;">View →</span>
         </div>
       </div>
     </div>
@@ -177,5 +333,230 @@
   </footer>
 
 </div>
+
+<!-- Interactive Project Modal Overlay -->
+<div id="projectModal" class="modal-overlay" onclick="closeProjectModal()">
+  <div class="modal-container" onclick="event.stopPropagation()">
+    <button class="modal-close-btn" onclick="closeProjectModal()">Close ✕</button>
+    
+    <!-- Left: Media Showcase -->
+    <div id="modalMedia" class="modal-media">
+      <!-- Media will load here dynamically -->
+    </div>
+    
+    <!-- Right: Information & Deliverables -->
+    <div class="modal-details">
+      <div>
+        <div id="modalCategory" style="background:#6B3FA0;display:inline-block;padding:2px 10px;margin-bottom:12px;color:#fff;font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;">Category</div>
+        <h2 id="modalTitle" style="font-family:'Syne',sans-serif;font-size:26px;font-weight:800;color:#0D0D0D;margin:0 0 12px 0;line-height:1.2;">Project Title</h2>
+        <p id="modalDesc" style="font-size:13px;color:#555;line-height:1.5;margin-bottom:24px;">Project description...</p>
+        
+        <div style="display:flex;flex-direction:column;gap:14px;">
+          <div>
+            <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#6B3FA0;margin-bottom:4px;">About the work</div>
+            <div id="modalAbout" style="font-size:12px;color:#666;line-height:1.4;">About details...</div>
+          </div>
+          <div>
+            <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#6B3FA0;margin-bottom:4px;">The Challenge</div>
+            <div id="modalChallenge" style="font-size:12px;color:#666;line-height:1.4;">Challenge details...</div>
+          </div>
+          <div>
+            <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#6B3FA0;margin-bottom:4px;">Our Solution</div>
+            <div id="modalSolution" style="font-size:12px;color:#666;line-height:1.4;">Solution details...</div>
+          </div>
+        </div>
+      </div>
+      
+      <div style="margin-top:24px;border-top:1px solid #eee;padding-top:16px;">
+        <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#6B3FA0;margin-bottom:8px;">Deliverables</div>
+        <div id="modalResults" style="display:flex;gap:6px;flex-wrap:wrap;">
+          <!-- Deliverables list -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Project Database for static mockup
+  const projectsData = {
+    'cgi-vfx': {
+      title: 'CGI and VFX Showreels',
+      category: 'CGI & VFX',
+      desc: 'Mind-bending visual effects and CGI campaigns.',
+      about: 'Direct showcase of our premium CGI and VFX production capabilities.',
+      challenge: 'Executing photorealistic simulations and rendering at fast speed.',
+      solution: 'Leveraged cutting-edge rendering engines and custom compositor nodes.',
+      results: ['Viral engagement', 'Unmatched visual fidelity'],
+      mediaType: 'videos',
+      videos: [
+        '../cgi and vfx ads/lv_0_20260624232603.mp4',
+        '../cgi and vfx ads/Screen Recording 2026-07-06 171647_edited.mp4'
+      ]
+    },
+    'resonance': {
+      title: 'Resonance 2k25',
+      category: 'Branding',
+      desc: 'Event branding and visual design for Resonance 2k25.',
+      about: 'Comprehensive visual branding for the Resonance 2k25 festival.',
+      challenge: 'Capturing the high energy of the live musical event in prints.',
+      solution: 'Vibrant color palettes and high-contrast dynamic typography.',
+      results: ['Massive turnout', 'Cohesive festival visual theme'],
+      mediaType: 'gallery',
+      images: [
+        '../resonance 2k25/aramn-malik.1.jpg',
+        '../resonance 2k25/BHOMENDRA SINGH RATHORE.png',
+        '../resonance 2k25/Bollwood-day.1.jpg',
+        '../resonance 2k25/final-coordinator.jpg',
+        '../resonance 2k25/Final-volunteer.jpg',
+        '../resonance 2k25/javaid-ali.2.jpg',
+        '../resonance 2k25/kabeera (2).png',
+        '../resonance 2k25/Madhur virli final.png',
+        '../resonance 2k25/Madhur-virli.jpg'
+      ]
+    },
+    'creative-art': {
+      title: 'Creative Art',
+      category: 'Branding',
+      desc: 'Custom creative art showcases.',
+      about: 'A diverse collection of creative art pieces tailored for branding campaigns.',
+      challenge: 'Crafting unique visual styles matching corporate profiles.',
+      solution: 'Utilized varied digital painting and digital illustration techniques.',
+      results: ['Stunning visuals', 'High engagement rate'],
+      mediaType: 'gallery',
+      images: [
+        '../creative art/art 01.png',
+        '../creative art/art 2.png',
+        '../creative art/art-4-first.jpg',
+        '../creative art/art-5.jpg',
+        '../creative art/art-6--.jpg',
+        '../creative art/ChatGPT Image May 18, 2026, 06_32_40 PM.png',
+        '../creative art/Poster.1.jpg'
+      ]
+    },
+    'logos': {
+      title: 'Logo Designs',
+      category: 'Branding',
+      desc: 'Distinctive logo and identity marks.',
+      about: 'A curated selection of our finest logo designs.',
+      challenge: 'Creating memorable, scalable, and vector-compliant marks.',
+      solution: 'Focused on geometric precision, custom curves, and meaning.',
+      results: ['Strong brand recall', 'Versatile vector usage'],
+      mediaType: 'gallery',
+      images: [
+        '../Logo/Creative Nests Logo.png',
+        '../Logo/old logo.png',
+        '../Logo/phycics logo.png',
+        '../Logo/tushar 0.png',
+        '../Logo/tushar 01.png'
+      ]
+    },
+    'vibrant-gujarat': {
+      title: 'Vibrant Gujarat',
+      category: 'Branding',
+      desc: 'High-impact visual campaigns for Vibrant Gujarat.',
+      about: 'Strategic visual campaign assets developed for Vibrant Gujarat.',
+      challenge: 'Delivering massive scale outdoor hoarding and print assets.',
+      solution: 'High-resolution vector assets and pristine mockup templates.',
+      results: ['Widespread visibility', 'Professional print execution'],
+      mediaType: 'gallery',
+      images: [
+        '../vibrant gujarat/AD_Hoarding _ 10 x 10.png',
+        '../vibrant gujarat/AD_Invitation Card_02.png',
+        '../vibrant gujarat/AD_Standee Mockup_01.png',
+        '../vibrant gujarat/AD_Standee Mockup_02.png',
+        '../vibrant gujarat/Hording_16x9.png',
+        '../vibrant gujarat/ID CARD_01.png',
+        '../vibrant gujarat/Pamphlet.png'
+      ]
+    }
+  };
+
+  // Open Modal function
+  function openProjectModal(projectId) {
+    const project = projectsData[projectId];
+    if (!project) return;
+    
+    // Set text contents
+    document.getElementById('modalTitle').innerText = project.title;
+    document.getElementById('modalCategory').innerText = project.category;
+    document.getElementById('modalDesc').innerText = project.desc;
+    document.getElementById('modalAbout').innerText = project.about;
+    document.getElementById('modalChallenge').innerText = project.challenge;
+    document.getElementById('modalSolution').innerText = project.solution;
+    
+    // Render deliverables tags
+    const resultsContainer = document.getElementById('modalResults');
+    resultsContainer.innerHTML = '';
+    project.results.forEach(res => {
+      const tag = document.createElement('span');
+      tag.className = 'deliverable-tag';
+      tag.innerText = '✓ ' + res;
+      resultsContainer.appendChild(tag);
+    });
+    
+    // Render Media (gallery vs videos)
+    const mediaContainer = document.getElementById('modalMedia');
+    mediaContainer.innerHTML = '';
+    
+    if (project.mediaType === 'videos') {
+      project.videos.forEach((vidUrl, index) => {
+        const videoBlock = document.createElement('div');
+        videoBlock.className = 'video-item';
+        videoBlock.innerHTML = `
+          <div style="font-size:10px; font-weight:700; color:#0D0D0D; margin-bottom:4px; text-transform:uppercase;">Video Reel ${index + 1}</div>
+          <video src="${vidUrl}" controls muted style="width:100%; border:3px solid #0D0D0D; background:#000;"></video>
+        `;
+        mediaContainer.appendChild(videoBlock);
+      });
+    } else if (project.mediaType === 'gallery') {
+      // Main Preview Image
+      const previewDiv = document.createElement('div');
+      previewDiv.className = 'gallery-preview';
+      const mainImg = document.createElement('img');
+      mainImg.src = project.images[0];
+      mainImg.id = 'mainGalleryPreview';
+      previewDiv.appendChild(mainImg);
+      mediaContainer.appendChild(previewDiv);
+      
+      // Thumbnails Grid
+      const thumbsDiv = document.createElement('div');
+      thumbsDiv.className = 'gallery-thumbs';
+      
+      project.images.forEach((imgUrl, index) => {
+        const thumbBtn = document.createElement('button');
+        thumbBtn.className = 'gallery-thumb-btn';
+        if (index === 0) thumbBtn.style.borderColor = '#6B3FA0';
+        thumbBtn.onclick = () => {
+          document.querySelectorAll('.gallery-thumb-btn').forEach(btn => btn.style.borderColor = '#0D0D0D');
+          thumbBtn.style.borderColor = '#6B3FA0';
+          document.getElementById('mainGalleryPreview').src = imgUrl;
+        };
+        const thumbImg = document.createElement('img');
+        thumbImg.src = imgUrl;
+        thumbBtn.appendChild(thumbImg);
+        thumbsDiv.appendChild(thumbBtn);
+      });
+      
+      mediaContainer.appendChild(thumbsDiv);
+    }
+    
+    // Show Modal
+    const modal = document.getElementById('projectModal');
+    modal.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+  }
+  
+  // Close Modal function
+  function closeProjectModal() {
+    // Pause any playing videos inside modal
+    const videos = document.querySelectorAll('#modalMedia video');
+    videos.forEach(video => video.pause());
+    
+    const modal = document.getElementById('projectModal');
+    modal.style.display = 'none';
+    document.body.style.overflow = 'auto';
+  }
+</script>
 </body>
 </html>
