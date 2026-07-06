@@ -716,16 +716,6 @@ At WexLogic, we don't believe in one-size-fits-all. We audit your existing pipel
 
   if (!fs.existsSync(WORK_PATH)) {
     fs.writeFileSync(WORK_PATH, JSON.stringify(defaultWork, null, 2))
-  } else {
-    try {
-      const data = fs.readFileSync(WORK_PATH, 'utf-8');
-      const existing = JSON.parse(data);
-      if (existing.length !== defaultWork.length) {
-        fs.writeFileSync(WORK_PATH, JSON.stringify(defaultWork, null, 2));
-      }
-    } catch (e) {
-      fs.writeFileSync(WORK_PATH, JSON.stringify(defaultWork, null, 2));
-    }
   }
 }
 
