@@ -42,6 +42,8 @@ export interface WorkProject {
   challenge: string
   solution: string
   results: string[]
+  gallery?: string[]
+  videos?: string[]
 }
 
 export interface ContactSubmission {

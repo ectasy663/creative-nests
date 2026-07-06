@@ -92,30 +92,44 @@ export function WorkSection({ projects, featuredOnly = false }: { projects: Work
                 </span>
               </div>
               
-              {/* Project Video Frame */}
-              <div 
-                style={{ 
-                  width: '100%', 
-                  height: '220px', 
-                  position: 'relative', 
-                  border: '1px solid rgba(255, 255, 255, 0.08)', 
-                  borderRadius: '12px', 
-                  marginBottom: '24px', 
-                  overflow: 'hidden',
-                  background: '#040307'
-                }}
-              >
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="hover:scale-105 transition-transform duration-500 ease-out"
-                  style={{
-                    width: '100%',
-                    height: '100%',
-                    objectFit: 'cover'
+              {/* Project Video Frame or Gallery */}
+              {project.videos && project.videos.length > 0 ? (
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', marginBottom: '24px' }}>
+                  {project.videos.map((vid, idx) => (
+                    <video key={idx} src={vid} controls muted loop playsInline style={{ width: '100%', borderRadius: '12px', background: '#040307', border: '1px solid rgba(255, 255, 255, 0.08)' }} />
+                  ))}
+                </div>
+              ) : project.gallery && project.gallery.length > 0 ? (
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(80px, 1fr))', gap: '8px', marginBottom: '24px' }}>
+                  {project.gallery.map((img, idx) => (
+                    <img key={idx} src={img} alt={`${project.title} - ${idx}`} style={{ width: '100%', height: '80px', objectFit: 'cover', borderRadius: '8px', border: '1px solid rgba(255, 255, 255, 0.08)' }} className="hover:scale-110 transition-transform duration-500 ease-out" />
+                  ))}
+                </div>
+              ) : (
+                <div 
+                  style={{ 
+                    width: '100%', 
+                    height: '220px', 
+                    position: 'relative', 
+                    border: '1px solid rgba(255, 255, 255, 0.08)', 
+                    borderRadius: '12px', 
+                    marginBottom: '24px', 
+                    overflow: 'hidden',
+                    background: '#040307'
                   }}
-                />
-              </div>
+                >
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="hover:scale-105 transition-transform duration-500 ease-out"
+                    style={{
+                      width: '100%',
+                      height: '100%',
+                      objectFit: 'cover'
+                    }}
+                  />
+                </div>
+              )}
 
               <h3 className="cn-syne" style={{ fontSize: '22px', fontWeight: 800, color: '#fff', lineHeight: 1.3, letterSpacing: '-0.5px' }}>
                 {project.title}

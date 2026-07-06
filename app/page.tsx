@@ -85,8 +85,8 @@ export default function HomePage() {
             >
               {/* Card Title */}
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '16px', borderBottom: '1px solid rgba(255, 255, 255, 0.08)', paddingBottom: '12px' }}>
-                <span style={{ fontSize: '10px', letterSpacing: '2px', textTransform: 'uppercase', color: '#9ca3af', fontWeight: 700 }}>OUR PROCESS</span>
-                <span style={{ fontSize: '9px', color: '#dfb76c', fontWeight: 600 }}>METHODOLOGY</span>
+                <span style={{ fontSize: '10px', letterSpacing: '2px', textTransform: 'uppercase', color: '#9ca3af', fontWeight: 700 }}>OUR SERVICES</span>
+                <span style={{ fontSize: '9px', color: '#dfb76c', fontWeight: 600 }}>EXPERTISE</span>
               </div>
 
               {/* Scrolling Window with vertical fades */}
@@ -109,21 +109,27 @@ export default function HomePage() {
                   }}
                 >
                   {[
-                    { num: '01', title: 'Discovery & Audit', color: '#dfb76c' },
-                    { num: '02', title: 'Architecture Blueprint', color: '#c5a059' },
-                    { num: '03', title: 'High-Fidelity Execution', color: '#e5c185' },
-                    { num: '04', title: 'Stress Testing & Q/A', color: '#a37f3d' },
-                    { num: '05', title: 'Launch & Scale', color: '#dfb76c' },
+                    { num: '01', title: 'CGI & VFX Ads', color: '#dfb76c' },
+                    { num: '02', title: 'Web & App Dev', color: '#c5a059' },
+                    { num: '03', title: 'Branding & Logo', color: '#e5c185' },
+                    { num: '04', title: 'SEO & Marketing', color: '#a37f3d' },
+                    { num: '05', title: 'Video Editing', color: '#dfb76c' },
+                    { num: '06', title: 'Paid Ads', color: '#c5a059' },
+                    { num: '07', title: 'Resonance 2k25', color: '#e5c185' },
+                    { num: '08', title: 'Vibrant Gujarat', color: '#a37f3d' },
                   ].concat([
-                    { num: '01', title: 'Discovery & Audit', color: '#dfb76c' },
-                    { num: '02', title: 'Architecture Blueprint', color: '#c5a059' },
-                    { num: '03', title: 'High-Fidelity Execution', color: '#e5c185' },
-                    { num: '04', title: 'Stress Testing & Q/A', color: '#a37f3d' },
-                    { num: '05', title: 'Launch & Scale', color: '#dfb76c' },
+                    { num: '01', title: 'CGI & VFX Ads', color: '#dfb76c' },
+                    { num: '02', title: 'Web & App Dev', color: '#c5a059' },
+                    { num: '03', title: 'Branding & Logo', color: '#e5c185' },
+                    { num: '04', title: 'SEO & Marketing', color: '#a37f3d' },
+                    { num: '05', title: 'Video Editing', color: '#dfb76c' },
+                    { num: '06', title: 'Paid Ads', color: '#c5a059' },
+                    { num: '07', title: 'Resonance 2k25', color: '#e5c185' },
+                    { num: '08', title: 'Vibrant Gujarat', color: '#a37f3d' },
                   ]).map((item, idx) => (
                     <Link
                       key={idx}
-                      href="#process"
+                      href="/services"
                       className="scrolling-capsule"
                     >
                       <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
