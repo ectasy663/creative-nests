@@ -10,7 +10,7 @@ const WorkSection = dynamic(() => import('@/components/wexlogic/WorkSection').th
 const TestimonialsSection = dynamic(() => import('@/components/wexlogic/TestimonialsSection').then(mod => mod.TestimonialsSection))
 const CTABanner = dynamic(() => import('@/components/wexlogic/CTABanner').then(mod => mod.CTABanner))
 const Footer = dynamic(() => import('@/components/wexlogic/Footer').then(mod => mod.Footer))
-import { getProjects } from '@/lib/db'
+import { getProjects, getServices } from '@/lib/db'
 
 export const metadata = {
   title: 'WexLogic — CGI & VFX Ads, Web & App Development, Branding',
@@ -187,7 +187,7 @@ export default function HomePage() {
 
       <Ticker />
 
-      <ServicesSection featuredOnly={true} />
+      <ServicesSection services={getServices()} featuredOnly={true} />
       
       <WorkSection projects={getProjects()} featuredOnly={true} />
       

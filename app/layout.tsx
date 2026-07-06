@@ -45,7 +45,17 @@ export default function RootLayout({
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet" />
+        {/* Non-blocking font load: link loaded via JS-style media trick */}
+        <link
+          href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@400;500;600;700&family=Syne:wght@700;800&display=swap"
+          rel="stylesheet"
+          media="print"
+          // @ts-expect-error onload not in ts types for link
+          onLoad="this.media='all'"
+        />
+        <noscript>
+          <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet" />
+        </noscript>
       </head>
       <body className="antialiased text-[#f3f4f6]" style={{ fontFamily: "'Space Grotesk', sans-serif", background: 'transparent' }}>
         <div className="bg-grid-overlay" />

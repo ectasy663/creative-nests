@@ -3,6 +3,7 @@ import { Footer } from '@/components/wexlogic/Footer'
 import { ServicesSection } from '@/components/wexlogic/ServicesSection'
 import { CTABanner } from '@/components/wexlogic/CTABanner'
 import { ProcessSection } from '@/components/wexlogic/ProcessSection'
+import { getServices } from '@/lib/db'
 
 export const metadata = {
   title: 'Our Services — WexLogic',
@@ -19,7 +20,7 @@ export default function ServicesPage() {
       <Header />
 
       <section style={{ padding: '40px 0' }}>
-        <ServicesSection />
+        <ServicesSection services={getServices()} />
       </section>
 
       <ProcessSection />

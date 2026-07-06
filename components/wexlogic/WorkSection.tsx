@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useCallback } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { WorkProject } from '@/lib/db'
@@ -187,7 +187,8 @@ function ProjectModal({ project, onClose }: { project: WorkProject; onClose: () 
 // ── Main Component ────────────────────────────────────────────────────────────
 export function WorkSection({ projects, featuredOnly = false }: { projects: WorkProject[], featuredOnly?: boolean }) {
   const allProjects = projects
-  const [selectedCategory, setSelectedCategory] = useState<string>('All')
+  const selectedCategory = useUIStore(state => state.workCategory)
+  const setSelectedCategory = useUIStore(state => state.setWorkCategory)
   const activeProject = useUIStore(state => state.activeProject)
   const setActiveProject = useUIStore(state => state.setActiveProject)
 
