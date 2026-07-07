@@ -54,6 +54,8 @@ function ProjectModal({ project, onClose }: { project: WorkProject; onClose: () 
                   src={activeVideo || project.videos[0]}
                   controls
                   autoPlay={!!activeVideo}
+                  muted
+                  playsInline
                   style={{ width: '100%', display: 'block' }}
                 />
               </div>
