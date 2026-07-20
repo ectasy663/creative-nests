@@ -25,8 +25,16 @@ export function CafeClient({ cafe }: { cafe: Cafe }) {
   }
 
   const handleGoogleReviewClick = () => {
-    window.open(cafe.googleReviewUrl, '_blank')
+    // Open synchronously to prevent mobile browser popup blockers
+    window.open(cafe.googleReviewUrl, '_blank', 'noopener,noreferrer')
+    
+    // Transition UI state immediately
     setShowPayment(true)
+    
+    // Asynchronously log the review in the background
+    submitReview(cafe.id, rating, feedback).catch((error) => {
+      console.error('Failed to log positive review', error)
+    })
   }
 
   const handleFeedbackSubmit = async () => {
