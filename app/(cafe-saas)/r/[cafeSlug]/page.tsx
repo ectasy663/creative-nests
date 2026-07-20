@@ -2,9 +2,10 @@ import { notFound } from 'next/navigation'
 import { prisma } from '@/lib/prisma'
 import { CafeClient } from './CafeClient'
 
-export default async function CafePage({ params }: { params: { cafeSlug: string } }) {
+export default async function CafePage({ params }: { params: Promise<{ cafeSlug: string }> }) {
+  const { cafeSlug } = await params
   const cafe = await prisma.cafe.findUnique({
-    where: { slug: params.cafeSlug }
+    where: { slug: cafeSlug }
   })
 
   if (!cafe) {
