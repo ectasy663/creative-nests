@@ -13,7 +13,7 @@ export default function CafeSaasLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="min-h-screen bg-white text-black relative z-50">
+    <div className="min-h-screen relative z-40">
       {children}
     </div>
   );

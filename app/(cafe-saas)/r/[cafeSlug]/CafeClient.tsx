@@ -11,6 +11,8 @@ type Cafe = {
   googleReviewUrl: string
 }
 
+import { Logo } from '@/components/wexlogic/Logo'
+
 export function CafeClient({ cafe }: { cafe: Cafe }) {
   const [rating, setRating] = useState<number>(0)
   const [feedback, setFeedback] = useState('')
@@ -51,7 +53,10 @@ export function CafeClient({ cafe }: { cafe: Cafe }) {
     <div className="flex justify-center w-full min-h-screen bg-transparent p-4 relative z-10">
       <div className="w-full max-w-[375px] glass-card p-6 min-h-[90vh] flex flex-col relative mx-auto my-auto">
         
-        <header className="text-center mb-8 pt-4">
+        <header className="text-center mb-8 pt-4 flex flex-col items-center">
+          <div className="mb-4">
+            <Logo size={50} />
+          </div>
           <h1 className="text-3xl font-bold cn-syne text-[#dfb76c]">{cafe.name}</h1>
           <p className="text-sm text-gray-400 mt-2 cn-grotesk">How was your experience today?</p>
         </header>

@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { toggleCafeActive, createCafe } from '../../actions/cafe'
 import { QRCodeCanvas } from 'qrcode.react'
+import { Logo } from '@/components/wexlogic/Logo'
 
 type Cafe = {
   id: string
@@ -78,7 +79,10 @@ export function CafeManagerClient({ initialCafes }: { initialCafes: Cafe[] }) {
   if (!isAuthenticated) {
     return (
       <div className="flex h-screen items-center justify-center bg-transparent text-[#f3f4f6]">
-        <form onSubmit={handleLogin} className="glass-card p-8 max-w-sm w-full relative z-10">
+        <form onSubmit={handleLogin} className="glass-card p-8 max-w-sm w-full relative z-10 flex flex-col items-center">
+          <div className="mb-6">
+            <Logo size={60} />
+          </div>
           <h2 className="text-2xl font-bold mb-6 text-center cn-bebas tracking-wider text-[#dfb76c]">Admin Access</h2>
           <input
             type="password"
