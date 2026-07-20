@@ -3,7 +3,6 @@
 import { useState } from 'react'
 import { Star } from 'lucide-react'
 import { submitReview } from '../../actions/review'
-import { QRCodeCanvas } from 'qrcode.react'
 
 type Cafe = {
   id: string
@@ -142,20 +141,6 @@ export function CafeClient({ cafe }: { cafe: Cafe }) {
                   />
                 </div>
               </div>
-
-              {amount && parseFloat(amount) > 0 && (
-                <div className="flex flex-col items-center mt-2 animate-in fade-in zoom-in duration-300">
-                  <div className="p-3 bg-white border-2 border-[#dfb76c]/30 rounded-2xl shadow-[0_0_15px_rgba(223,183,108,0.2)] mb-4 inline-block">
-                    <QRCodeCanvas
-                      value={`upi://pay?pa=${cafe.upiId}&pn=${encodeURIComponent(cafe.name)}&am=${amount}&cu=INR`}
-                      size={180}
-                      level="H"
-                      includeMargin={false}
-                    />
-                  </div>
-                  <p className="text-xs text-gray-400 font-mono mb-2">Scan to Pay</p>
-                </div>
-              )}
 
               <button
                 onClick={handlePay}
