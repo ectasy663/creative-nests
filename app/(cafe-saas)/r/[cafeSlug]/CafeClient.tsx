@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { Star } from 'lucide-react'
 import { submitReview } from '../../actions/review'
+import { QRCodeCanvas } from 'qrcode.react'
 
 type Cafe = {
   id: string
@@ -136,16 +137,32 @@ export function CafeClient({ cafe }: { cafe: Cafe }) {
                     value={amount}
                     onChange={(e) => setAmount(e.target.value)}
                     placeholder="0.00"
-                    className="neon-input pl-10 text-lg font-bold"
+                    style={{ paddingLeft: '2.5rem' }}
+                    className="neon-input text-lg font-bold"
                   />
                 </div>
               </div>
+
+              {amount && parseFloat(amount) > 0 && (
+                <div className="flex flex-col items-center mt-2 animate-in fade-in zoom-in duration-300">
+                  <div className="p-3 bg-white border-2 border-[#dfb76c]/30 rounded-2xl shadow-[0_0_15px_rgba(223,183,108,0.2)] mb-4 inline-block">
+                    <QRCodeCanvas
+                      value={`upi://pay?pa=${cafe.upiId}&pn=${encodeURIComponent(cafe.name)}&am=${amount}&cu=INR`}
+                      size={180}
+                      level="H"
+                      includeMargin={false}
+                    />
+                  </div>
+                  <p className="text-xs text-gray-400 font-mono mb-2">Scan to Pay</p>
+                </div>
+              )}
+
               <button
                 onClick={handlePay}
                 disabled={!amount || parseFloat(amount) <= 0}
-                className="w-full gradient-btn-primary mt-2 text-center disabled:opacity-50"
+                className="w-full gradient-btn-primary mt-2 text-center disabled:opacity-50 flex items-center justify-center gap-2"
               >
-                Pay via UPI
+                <span>Pay via UPI App</span>
               </button>
             </div>
             

@@ -5,6 +5,8 @@ import { toggleCafeActive, createCafe } from '../../actions/cafe'
 import { QRCodeCanvas } from 'qrcode.react'
 import { Logo } from '@/components/wexlogic/Logo'
 
+import { useRouter } from 'next/navigation'
+
 type Cafe = {
   id: string
   name: string
@@ -16,6 +18,7 @@ type Cafe = {
 }
 
 export function CafeManagerClient({ initialCafes }: { initialCafes: Cafe[] }) {
+  const router = useRouter()
   const [isAuthenticated, setIsAuthenticated] = useState(false)
   const [pin, setPin] = useState('')
   const [showModal, setShowModal] = useState(false)
@@ -43,6 +46,7 @@ export function CafeManagerClient({ initialCafes }: { initialCafes: Cafe[] }) {
 
   const handleToggle = async (id: string, currentStatus: boolean) => {
     await toggleCafeActive(id, !currentStatus)
+    router.refresh()
   }
 
   const handleCreate = async (e: React.FormEvent) => {
@@ -55,6 +59,7 @@ export function CafeManagerClient({ initialCafes }: { initialCafes: Cafe[] }) {
       })
       setShowModal(false)
       setFormData({ name: '', slug: '', upiId: '', googleReviewUrl: '', subscriptionEnd: '' })
+      router.refresh()
     } catch (error) {
       console.error(error)
       alert('Failed to create cafe.')
