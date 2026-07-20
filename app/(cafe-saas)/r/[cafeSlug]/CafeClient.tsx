@@ -26,7 +26,9 @@ export function CafeClient({ cafe }: { cafe: Cafe }) {
 
   const handleGoogleReviewClick = () => {
     // Open synchronously to prevent mobile browser popup blockers
-    window.open(cafe.googleReviewUrl, '_blank', 'noopener,noreferrer')
+    if (cafe.googleReviewUrl) {
+      window.open(cafe.googleReviewUrl, '_blank', 'noopener,noreferrer')
+    }
     
     // Transition UI state immediately
     setShowPayment(true)
