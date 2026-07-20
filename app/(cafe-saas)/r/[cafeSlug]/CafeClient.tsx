@@ -48,12 +48,12 @@ export function CafeClient({ cafe }: { cafe: Cafe }) {
   }
 
   return (
-    <div className="flex justify-center w-full min-h-screen bg-gray-50">
-      <div className="w-full max-w-[375px] bg-white p-6 shadow-sm min-h-screen flex flex-col relative">
+    <div className="flex justify-center w-full min-h-screen bg-transparent p-4 relative z-10">
+      <div className="w-full max-w-[375px] glass-card p-6 min-h-[90vh] flex flex-col relative mx-auto my-auto">
         
         <header className="text-center mb-8 pt-4">
-          <h1 className="text-2xl font-bold text-gray-900">{cafe.name}</h1>
-          <p className="text-sm text-gray-500 mt-1">How was your experience today?</p>
+          <h1 className="text-3xl font-bold cn-syne text-[#dfb76c]">{cafe.name}</h1>
+          <p className="text-sm text-gray-400 mt-2 cn-grotesk">How was your experience today?</p>
         </header>
 
         {!showPayment ? (
@@ -69,8 +69,8 @@ export function CafeClient({ cafe }: { cafe: Cafe }) {
                   <Star
                     size={40}
                     className={`${
-                      rating >= star ? 'fill-yellow-400 text-yellow-400' : 'text-gray-300'
-                    }`}
+                      rating >= star ? 'fill-[#dfb76c] text-[#dfb76c]' : 'text-[rgba(255,255,255,0.15)]'
+                    } transition-colors`}
                   />
                 </button>
               ))}
@@ -78,30 +78,30 @@ export function CafeClient({ cafe }: { cafe: Cafe }) {
 
             {/* Dynamic Panels */}
             {rating === 4 || rating === 5 ? (
-              <div className="w-full animate-in fade-in slide-in-from-bottom-4 duration-300">
-                <p className="text-center text-sm text-gray-600 mb-4">We are so glad you loved it!</p>
+              <div className="w-full animate-in fade-in slide-in-from-bottom-4 duration-300 flex flex-col items-center">
+                <p className="text-center text-sm text-gray-400 mb-6 cn-grotesk">We are so glad you loved it!</p>
                 <button
                   onClick={handleGoogleReviewClick}
-                  className="w-full bg-blue-600 text-white font-semibold py-4 rounded-xl shadow-md hover:bg-blue-700 transition-colors"
+                  className="w-full gradient-btn-primary text-center"
                 >
                   Leave Review on Google & Pay
                 </button>
               </div>
             ) : rating > 0 && rating <= 3 ? (
-              <div className="w-full animate-in fade-in slide-in-from-bottom-4 duration-300 flex flex-col gap-3">
-                <p className="text-sm text-gray-600 font-medium">How can we improve?</p>
+              <div className="w-full animate-in fade-in slide-in-from-bottom-4 duration-300 flex flex-col gap-4">
+                <p className="text-sm text-[#dfb76c] font-medium cn-syne text-center">How can we improve?</p>
                 <textarea
                   value={feedback}
                   onChange={(e) => setFeedback(e.target.value)}
                   placeholder="Tell us about your experience..."
-                  className="w-full border border-gray-200 rounded-lg p-3 text-sm min-h-[100px] focus:outline-none focus:ring-2 focus:ring-black"
+                  className="neon-input min-h-[100px]"
                 />
                 <button
                   onClick={handleFeedbackSubmit}
                   disabled={isSubmitting}
-                  className="w-full bg-black text-white font-semibold py-4 rounded-xl shadow-md hover:bg-gray-800 transition-colors disabled:opacity-50"
+                  className="w-full gradient-btn-primary text-center disabled:opacity-50"
                 >
-                  {isSubmitting ? 'Submitting...' : 'Submit Feedback & Proceed to Pay'}
+                  {isSubmitting ? 'Submitting...' : 'Submit Feedback & Pay'}
                 </button>
               </div>
             ) : null}
@@ -110,7 +110,7 @@ export function CafeClient({ cafe }: { cafe: Cafe }) {
             <div className="mt-auto pb-4 pt-10">
               <button
                 onClick={() => setShowPayment(true)}
-                className="text-sm text-gray-400 underline underline-offset-4 hover:text-gray-600"
+                className="text-sm text-gray-400 underline underline-offset-4 hover:text-white transition-colors"
               >
                 Skip to Pay
               </button>
@@ -118,36 +118,36 @@ export function CafeClient({ cafe }: { cafe: Cafe }) {
           </div>
         ) : (
           <div className="flex-1 flex flex-col animate-in fade-in duration-500">
-            <h2 className="text-xl font-semibold mb-6">Payment Details</h2>
-            <div className="flex flex-col gap-4">
+            <h2 className="text-xl font-bold mb-6 text-center cn-syne text-[#dfb76c]">Payment Details</h2>
+            <div className="flex flex-col gap-5">
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
+                <label className="block text-sm font-semibold text-gray-400 mb-2">
                   Bill Amount (INR)
                 </label>
                 <div className="relative">
-                  <span className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-500 font-medium">₹</span>
+                  <span className="absolute left-4 top-1/2 -translate-y-1/2 text-[#dfb76c] font-bold text-lg">₹</span>
                   <input
                     type="number"
                     value={amount}
                     onChange={(e) => setAmount(e.target.value)}
                     placeholder="0.00"
-                    className="w-full border-2 border-gray-200 rounded-xl py-4 pl-10 pr-4 text-lg font-semibold focus:outline-none focus:border-black"
+                    className="neon-input pl-10 text-lg font-bold"
                   />
                 </div>
               </div>
               <button
                 onClick={handlePay}
                 disabled={!amount || parseFloat(amount) <= 0}
-                className="w-full bg-green-600 text-white font-bold py-4 rounded-xl shadow-md hover:bg-green-700 transition-colors disabled:opacity-50 mt-4"
+                className="w-full gradient-btn-primary mt-2 text-center disabled:opacity-50"
               >
                 Pay via UPI
               </button>
             </div>
             
-            <div className="mt-auto pb-4 text-center">
+            <div className="mt-auto pb-4 pt-8 text-center">
               <button
                 onClick={() => setShowPayment(false)}
-                className="text-sm text-gray-400 hover:text-gray-600"
+                className="text-sm text-gray-400 hover:text-white transition-colors"
               >
                 ← Back
               </button>

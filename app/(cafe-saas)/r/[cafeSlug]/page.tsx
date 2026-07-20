@@ -15,10 +15,10 @@ export default async function CafePage({ params }: { params: Promise<{ cafeSlug:
   const now = new Date()
   if (!cafe.isActive || cafe.subscriptionEnd < now) {
     return (
-      <div className="flex h-screen w-full items-center justify-center p-6 bg-white">
-        <div className="text-center">
-          <h1 className="text-xl font-semibold mb-2">Service Temporarily Inactive</h1>
-          <p className="text-gray-600">Please request the bill directly from staff.</p>
+      <div className="flex h-screen w-full items-center justify-center p-6 bg-transparent relative z-10 text-[#f3f4f6]">
+        <div className="text-center glass-card p-8">
+          <h1 className="text-2xl font-bold mb-2 cn-syne text-[#dfb76c]">Service Temporarily Inactive</h1>
+          <p className="text-gray-400 cn-grotesk">Please request the bill directly from staff.</p>
         </div>
       </div>
     )

@@ -77,17 +77,17 @@ export function CafeManagerClient({ initialCafes }: { initialCafes: Cafe[] }) {
 
   if (!isAuthenticated) {
     return (
-      <div className="flex h-screen items-center justify-center bg-gray-50 text-gray-900">
-        <form onSubmit={handleLogin} className="bg-white p-8 shadow-sm border border-gray-100 rounded-2xl max-w-sm w-full">
-          <h2 className="text-xl font-bold mb-6 text-center">Admin Access</h2>
+      <div className="flex h-screen items-center justify-center bg-transparent text-[#f3f4f6]">
+        <form onSubmit={handleLogin} className="glass-card p-8 max-w-sm w-full relative z-10">
+          <h2 className="text-2xl font-bold mb-6 text-center cn-bebas tracking-wider text-[#dfb76c]">Admin Access</h2>
           <input
             type="password"
             value={pin}
             onChange={(e) => setPin(e.target.value)}
-            placeholder="Enter PIN (try 7777)"
-            className="w-full border-2 border-gray-200 rounded-xl p-4 mb-6 focus:outline-none focus:border-black font-semibold text-center tracking-widest text-lg"
+            placeholder="Enter PIN"
+            className="neon-input mb-6 text-center tracking-widest text-lg font-bold"
           />
-          <button type="submit" className="w-full bg-black text-white font-bold py-4 rounded-xl hover:bg-gray-800 transition-colors">
+          <button type="submit" className="w-full gradient-btn-primary text-center">
             Login
           </button>
         </form>
@@ -96,48 +96,48 @@ export function CafeManagerClient({ initialCafes }: { initialCafes: Cafe[] }) {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 p-8 text-black font-sans">
+    <div className="min-h-screen p-8 text-[#f3f4f6] font-sans relative z-10">
       <div className="max-w-6xl mx-auto">
         <div className="flex justify-between items-center mb-8">
           <div>
-            <h1 className="text-3xl font-bold">Cafe Manager Portal</h1>
-            <p className="text-gray-500 mt-1">Manage onboarded cafes, statuses, and QR codes.</p>
+            <h1 className="text-3xl font-bold cn-syne text-[#dfb76c]">Cafe Manager Portal</h1>
+            <p className="text-gray-400 mt-1 cn-grotesk">Manage onboarded cafes, statuses, and QR codes.</p>
           </div>
           <button
             onClick={() => setShowModal(true)}
-            className="bg-black hover:bg-gray-800 text-white px-6 py-3 rounded-xl font-semibold shadow-sm transition-colors"
+            className="gradient-btn-primary"
           >
             + Add New Cafe
           </button>
         </div>
 
-        <div className="bg-white shadow-sm rounded-2xl overflow-hidden border border-gray-200">
+        <div className="glass-card overflow-hidden">
           <div className="overflow-x-auto">
             <table className="w-full text-left border-collapse min-w-[800px]">
               <thead>
-                <tr className="bg-gray-50 text-gray-500 text-xs uppercase tracking-wider">
-                  <th className="p-5 border-b font-semibold">Name</th>
-                  <th className="p-5 border-b font-semibold">Slug</th>
-                  <th className="p-5 border-b font-semibold">UPI ID</th>
-                  <th className="p-5 border-b font-semibold">Expiry</th>
-                  <th className="p-5 border-b font-semibold text-center">Active</th>
-                  <th className="p-5 border-b font-semibold text-right">Actions</th>
+                <tr className="text-gray-400 text-xs uppercase tracking-wider border-b border-[rgba(255,255,255,0.1)] bg-[rgba(255,255,255,0.02)]">
+                  <th className="p-5 font-semibold">Name</th>
+                  <th className="p-5 font-semibold">Slug</th>
+                  <th className="p-5 font-semibold">UPI ID</th>
+                  <th className="p-5 font-semibold">Expiry</th>
+                  <th className="p-5 font-semibold text-center">Active</th>
+                  <th className="p-5 font-semibold text-right">Actions</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-gray-100">
+              <tbody className="divide-y divide-[rgba(255,255,255,0.05)]">
                 {initialCafes.map((cafe) => (
-                  <tr key={cafe.id} className="hover:bg-gray-50/50 transition-colors">
-                    <td className="p-5 font-bold">{cafe.name}</td>
-                    <td className="p-5 text-gray-500 font-mono text-sm">{cafe.slug}</td>
-                    <td className="p-5 text-gray-500 text-sm">{cafe.upiId}</td>
-                    <td className="p-5 text-gray-500 text-sm">
+                  <tr key={cafe.id} className="hover:bg-[rgba(255,255,255,0.02)] transition-colors">
+                    <td className="p-5 font-bold text-[#dfb76c]">{cafe.name}</td>
+                    <td className="p-5 text-gray-400 font-mono text-sm">{cafe.slug}</td>
+                    <td className="p-5 text-gray-400 text-sm">{cafe.upiId}</td>
+                    <td className="p-5 text-gray-400 text-sm">
                       {new Date(cafe.subscriptionEnd).toLocaleDateString()}
                     </td>
                     <td className="p-5 text-center">
                       <button
                         onClick={() => handleToggle(cafe.id, cafe.isActive)}
-                        className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 ${
-                          cafe.isActive ? 'bg-black' : 'bg-gray-300'
+                        className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-[#dfb76c] focus:ring-offset-2 focus:ring-offset-[#08070d] ${
+                          cafe.isActive ? 'bg-[#dfb76c]' : 'bg-[rgba(255,255,255,0.1)]'
                         }`}
                       >
                         <span
@@ -150,7 +150,7 @@ export function CafeManagerClient({ initialCafes }: { initialCafes: Cafe[] }) {
                     <td className="p-5 text-right">
                       <button
                         onClick={() => setQrModal(cafe.slug)}
-                        className="text-sm font-semibold underline underline-offset-4 text-gray-600 hover:text-black"
+                        className="text-sm font-semibold underline underline-offset-4 text-gray-400 hover:text-[#dfb76c]"
                       >
                         Get QR Code
                       </button>
@@ -171,37 +171,37 @@ export function CafeManagerClient({ initialCafes }: { initialCafes: Cafe[] }) {
 
         {/* Create Modal */}
         {showModal && (
-          <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-50 p-4 animate-in fade-in duration-200">
-            <div className="bg-white rounded-2xl shadow-xl w-full max-w-md overflow-hidden flex flex-col max-h-[90vh]">
-              <div className="p-6 border-b border-gray-100 flex justify-between items-center bg-gray-50">
-                <h3 className="text-xl font-bold">Add New Cafe</h3>
-                <button onClick={() => setShowModal(false)} className="text-gray-400 hover:text-gray-900 transition-colors">
+          <div className="fixed inset-0 bg-black/80 backdrop-blur-md flex items-center justify-center z-50 p-4 animate-in fade-in duration-200">
+            <div className="glass-card w-full max-w-md overflow-hidden flex flex-col max-h-[90vh]">
+              <div className="p-6 border-b border-[rgba(255,255,255,0.1)] flex justify-between items-center bg-[rgba(255,255,255,0.02)]">
+                <h3 className="text-xl font-bold cn-syne text-[#dfb76c]">Add New Cafe</h3>
+                <button onClick={() => setShowModal(false)} className="text-gray-400 hover:text-white transition-colors">
                   <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" /></svg>
                 </button>
               </div>
               <div className="overflow-y-auto">
                 <form onSubmit={handleCreate} className="p-6 flex flex-col gap-5">
                   <div>
-                    <label className="block text-sm font-semibold text-gray-700 mb-1.5">Cafe Name</label>
-                    <input required className="w-full border-2 border-gray-200 p-3 rounded-xl focus:border-black focus:outline-none transition-colors" value={formData.name} onChange={e => setFormData({...formData, name: e.target.value})} placeholder="e.g. Blue Tokai" />
+                    <label className="block text-sm font-semibold text-gray-400 mb-1.5">Cafe Name</label>
+                    <input required className="neon-input" value={formData.name} onChange={e => setFormData({...formData, name: e.target.value})} placeholder="e.g. Blue Tokai" />
                   </div>
                   <div>
-                    <label className="block text-sm font-semibold text-gray-700 mb-1.5">Slug (URL)</label>
-                    <input required className="w-full border-2 border-gray-200 p-3 rounded-xl focus:border-black focus:outline-none transition-colors font-mono text-sm" value={formData.slug} onChange={e => setFormData({...formData, slug: e.target.value.toLowerCase().replace(/\s+/g, '-')})} placeholder="blue-tokai" />
+                    <label className="block text-sm font-semibold text-gray-400 mb-1.5">Slug (URL)</label>
+                    <input required className="neon-input font-mono text-sm" value={formData.slug} onChange={e => setFormData({...formData, slug: e.target.value.toLowerCase().replace(/\s+/g, '-')})} placeholder="blue-tokai" />
                   </div>
                   <div>
-                    <label className="block text-sm font-semibold text-gray-700 mb-1.5">UPI ID</label>
-                    <input required className="w-full border-2 border-gray-200 p-3 rounded-xl focus:border-black focus:outline-none transition-colors" value={formData.upiId} onChange={e => setFormData({...formData, upiId: e.target.value})} placeholder="merchant@upi" />
+                    <label className="block text-sm font-semibold text-gray-400 mb-1.5">UPI ID</label>
+                    <input required className="neon-input" value={formData.upiId} onChange={e => setFormData({...formData, upiId: e.target.value})} placeholder="merchant@upi" />
                   </div>
                   <div>
-                    <label className="block text-sm font-semibold text-gray-700 mb-1.5">Google Review URL</label>
-                    <input required type="url" className="w-full border-2 border-gray-200 p-3 rounded-xl focus:border-black focus:outline-none transition-colors" value={formData.googleReviewUrl} onChange={e => setFormData({...formData, googleReviewUrl: e.target.value})} placeholder="https://g.page/r/..." />
+                    <label className="block text-sm font-semibold text-gray-400 mb-1.5">Google Review URL</label>
+                    <input required type="url" className="neon-input" value={formData.googleReviewUrl} onChange={e => setFormData({...formData, googleReviewUrl: e.target.value})} placeholder="https://g.page/r/..." />
                   </div>
                   <div>
-                    <label className="block text-sm font-semibold text-gray-700 mb-1.5">Subscription End Date</label>
-                    <input required type="date" className="w-full border-2 border-gray-200 p-3 rounded-xl focus:border-black focus:outline-none transition-colors" value={formData.subscriptionEnd} onChange={e => setFormData({...formData, subscriptionEnd: e.target.value})} />
+                    <label className="block text-sm font-semibold text-gray-400 mb-1.5">Subscription End Date</label>
+                    <input required type="date" className="neon-input" value={formData.subscriptionEnd} onChange={e => setFormData({...formData, subscriptionEnd: e.target.value})} />
                   </div>
-                  <button disabled={isSubmitting} type="submit" className="w-full bg-black text-white py-4 rounded-xl font-bold mt-4 hover:bg-gray-800 transition-colors disabled:opacity-50">
+                  <button disabled={isSubmitting} type="submit" className="w-full gradient-btn-primary mt-4 disabled:opacity-50 text-center">
                     {isSubmitting ? 'Creating...' : 'Create Cafe'}
                   </button>
                 </form>
@@ -212,13 +212,13 @@ export function CafeManagerClient({ initialCafes }: { initialCafes: Cafe[] }) {
 
         {/* QR Code Modal */}
         {qrModal && (
-          <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-50 p-4 animate-in fade-in duration-200">
-            <div className="bg-white rounded-2xl shadow-xl p-8 max-w-sm w-full flex flex-col items-center">
-              <h3 className="text-xl font-bold mb-2 text-center">Cafe QR Code</h3>
-              <p className="text-sm text-gray-500 mb-8 text-center font-mono">
+          <div className="fixed inset-0 bg-black/80 backdrop-blur-md flex items-center justify-center z-50 p-4 animate-in fade-in duration-200">
+            <div className="glass-card p-8 max-w-sm w-full flex flex-col items-center">
+              <h3 className="text-xl font-bold mb-2 text-center cn-syne text-[#dfb76c]">Cafe QR Code</h3>
+              <p className="text-sm text-gray-400 mb-8 text-center font-mono">
                 wexlogic.com/r/{qrModal}
               </p>
-              <div className="p-4 bg-white border-2 border-gray-100 rounded-2xl shadow-sm mb-8 inline-block">
+              <div className="p-4 bg-white border border-gray-200 rounded-2xl shadow-sm mb-8 inline-block">
                 <QRCodeCanvas
                   id={`qr-${qrModal}`}
                   value={`https://wexlogic.com/r/${qrModal}`}
@@ -231,13 +231,13 @@ export function CafeManagerClient({ initialCafes }: { initialCafes: Cafe[] }) {
               <div className="flex w-full gap-3">
                 <button
                   onClick={() => setQrModal(null)}
-                  className="flex-1 border-2 border-gray-200 py-3 rounded-xl font-bold text-gray-700 hover:bg-gray-50 transition-colors"
+                  className="flex-1 glass-btn-secondary text-center"
                 >
                   Close
                 </button>
                 <button
                   onClick={() => downloadQR(qrModal)}
-                  className="flex-1 bg-black text-white py-3 rounded-xl font-bold hover:bg-gray-800 transition-colors"
+                  className="flex-1 gradient-btn-primary text-center"
                 >
                   Download
                 </button>
