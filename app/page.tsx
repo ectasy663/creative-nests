@@ -550,9 +550,7 @@ export default function HomePage() {
       </ScrollReveal>
 
       {/* WORK / PORTFOLIO SECTION */}
-      <ScrollReveal>
-        <WorkSection projects={getProjects()} featuredOnly={true} />
-      </ScrollReveal>
+      <WorkSection projects={getProjects()} featuredOnly={true} />
 
       {/* TESTIMONIALS SECTION */}
       <ScrollReveal>

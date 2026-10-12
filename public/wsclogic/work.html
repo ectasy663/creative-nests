@@ -506,15 +506,21 @@
       // Main Video Player Container
       const playerDiv = document.createElement('div');
       playerDiv.style.width = '100%';
+      playerDiv.style.height = '300px';
       playerDiv.style.border = '3px solid #0D0D0D';
       playerDiv.style.background = '#000';
       playerDiv.style.marginBottom = '14px';
       playerDiv.style.overflow = 'hidden';
+      playerDiv.style.display = 'flex';
+      playerDiv.style.alignItems = 'center';
+      playerDiv.style.justifyContent = 'center';
       
       const mainVid = document.createElement('video');
       mainVid.src = project.videos[0];
       mainVid.controls = true;
       mainVid.style.width = '100%';
+      mainVid.style.height = '100%';
+      mainVid.style.objectFit = 'contain';
       mainVid.style.display = 'block';
       mainVid.id = 'mainVideoPreview';
       playerDiv.appendChild(mainVid);

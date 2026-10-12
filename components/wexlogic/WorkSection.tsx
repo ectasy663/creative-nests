@@ -1,6 +1,7 @@
 'use client'
 
-import { useCallback } from 'react'
+import { useState, useEffect, useCallback } from 'react'
+import { createPortal } from 'react-dom'
 import Link from 'next/link'
 import Image from 'next/image'
 import { WorkProject } from '@/lib/db'
@@ -10,20 +11,42 @@ import { ScrollReveal } from './ScrollReveal'
 
 // ── Project Modal Detail View ──────────────────────────────────────────────────
 function ProjectModal({ project, onClose }: { project: WorkProject; onClose: () => void }) {
+  const [mounted, setMounted] = useState(false)
   const activeImage = useUIStore(state => state.activeImage)
   const setActiveImage = useUIStore(state => state.setActiveImage)
   const activeVideo = useUIStore(state => state.activeVideo)
   const setActiveVideo = useUIStore(state => state.setActiveVideo)
 
-  return (
+  useEffect(() => {
+    setMounted(true)
+    const originalOverflow = document.body.style.overflow
+    document.body.style.overflow = 'hidden'
+
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        onClose()
+      }
+    }
+    window.addEventListener('keydown', handleKeyDown)
+
+    return () => {
+      document.body.style.overflow = originalOverflow
+      window.removeEventListener('keydown', handleKeyDown)
+    }
+  }, [onClose])
+
+  if (!mounted) return null
+
+  return createPortal(
     <div
       onClick={onClose}
       style={{
         position: 'fixed',
         inset: 0,
-        zIndex: 1000,
+        zIndex: 99999,
         backgroundColor: 'rgba(30, 41, 59, 0.7)',
         backdropFilter: 'blur(8px)',
+        WebkitBackdropFilter: 'blur(8px)',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
@@ -69,12 +92,16 @@ function ProjectModal({ project, onClose }: { project: WorkProject; onClose: () 
               <div
                 style={{
                   width: '100%',
+                  height: '320px',
                   borderRadius: '16px',
                   overflow: 'hidden',
-                  backgroundColor: '#000',
+                  backgroundColor: '#000000',
                   marginBottom: '16px',
                   border: '2px solid #1E293B',
                   boxShadow: '4px 4px 0px #1E293B',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
                 }}
               >
                 <video
@@ -84,7 +111,13 @@ function ProjectModal({ project, onClose }: { project: WorkProject; onClose: () 
                   autoPlay={!!activeVideo}
                   muted
                   playsInline
-                  style={{ width: '100%', display: 'block' }}
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    maxHeight: '320px',
+                    objectFit: 'contain',
+                    display: 'block',
+                  }}
                 />
               </div>
 
@@ -332,7 +365,8 @@ function ProjectModal({ project, onClose }: { project: WorkProject; onClose: () 
           </div>
         </div>
       </div>
-    </div>
+    </div>,
+    document.body
   )
 }
 
