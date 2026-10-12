@@ -1,7 +1,6 @@
 import Link from 'next/link'
 import { Header } from '@/components/wexlogic/Header'
 import dynamic from 'next/dynamic'
-import { VideoBackground } from '@/components/wexlogic/VideoBackground'
 import { ArrowRight, Sparkles, CheckCircle2 } from 'lucide-react'
 import { ScrollReveal } from '@/components/wexlogic/ScrollReveal'
 
@@ -102,7 +101,17 @@ export default function HomePage() {
           boxSizing: 'border-box',
         }}
       >
-        <VideoBackground src="/Brutalist_IT_company_hero_video_202607032332_gwr_video_mvp.mp4" />
+        {/* Warm paper gradient overlay */}
+        <div
+          style={{
+            position: 'absolute',
+            inset: 0,
+            background: 'radial-gradient(ellipse at 70% 30%, rgba(251, 191, 36, 0.08) 0%, transparent 60%)',
+            pointerEvents: 'none',
+            zIndex: 0,
+          }}
+          aria-hidden="true"
+        />
 
         {/* ── Geometric Decorative Shapes & Confetti ── */}
         <div
@@ -261,8 +270,7 @@ export default function HomePage() {
                   margin: 0,
                 }}
               >
-                We craft scroll-stopping CGI campaigns, build ultra-fast Next.js platforms,
-                and design playful conversion funnels engineered for unmissable impact.
+                From scroll-stopping CGI & VFX campaigns to high-performance web applications, viral brand identities, performance marketing, and grand-scale event planning & management — we engineer unmissable experiences that drive real growth.
               </p>
             </div>
 
@@ -376,7 +384,7 @@ export default function HomePage() {
                     fontFamily: "'Outfit'",
                   }}
                 >
-                  8 SPECIALTIES
+                  9 SPECIALTIES
                 </span>
               </div>
 
@@ -409,6 +417,7 @@ export default function HomePage() {
                     { num: '06', title: 'Video Editing', bg: '#FFF1F2', border: '#F472B6', tag: 'EDIT' },
                     { num: '07', title: 'CRM Systems', bg: '#FEFCE8', border: '#FBBF24', tag: 'CRM' },
                     { num: '08', title: 'ERP Solutions', bg: '#ECFDF5', border: '#34D399', tag: 'ERP' },
+                    { num: '09', title: 'Event Planning & Mgmt', bg: '#FDF2F8', border: '#EC4899', tag: 'EVENTS' },
                   ].concat([
                     { num: '01', title: 'CGI & VFX Ads', bg: '#F5F3FF', border: '#8B5CF6', tag: 'CGI' },
                     { num: '02', title: 'Web & App Dev', bg: '#FFF1F2', border: '#F472B6', tag: 'CODE' },
@@ -418,6 +427,7 @@ export default function HomePage() {
                     { num: '06', title: 'Video Editing', bg: '#FFF1F2', border: '#F472B6', tag: 'EDIT' },
                     { num: '07', title: 'CRM Systems', bg: '#FEFCE8', border: '#FBBF24', tag: 'CRM' },
                     { num: '08', title: 'ERP Solutions', bg: '#ECFDF5', border: '#34D399', tag: 'ERP' },
+                    { num: '09', title: 'Event Planning & Mgmt', bg: '#FDF2F8', border: '#EC4899', tag: 'EVENTS' },
                   ]).map((item, idx) => (
                     <Link
                       key={idx}

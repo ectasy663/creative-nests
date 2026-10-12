@@ -358,5 +358,50 @@
     ],
     "numColor": "#d946ef",
     "bar": "linear-gradient(135deg, #d946ef, #06b6d4)"
+  },
+  {
+    "num": "09",
+    "slug": "event-planning-management",
+    "title": "Event Planning & Mgmt",
+    "subtitle": "Grand-scale festival, concert & corporate event production.",
+    "desc": "From massive cultural festivals like Garba Utsav to high-stakes corporate summits and concerts, we deliver end-to-end event planning, stage design, celebrity coordination, audiovisual engineering, and crowd management with zero-glitch precision.",
+    "image": "/garba-mega-utsav-fusion-3.jpg",
+    "videoUrl": "",
+    "features": [
+      "Mega Stage Design & LED Production",
+      "Celebrity, Artist & Live Band Management",
+      "High-Fidelity Audio-Visual & Laser Engineering",
+      "Crowd Flow, Security & Ticketing Operations"
+    ],
+    "process": [
+      "Event Blueprint & Concept Visuals",
+      "Venue Licensing & Vendor Logistics",
+      "On-Ground Technical & Stage Architecture",
+      "Live Production Execution & Safety Control"
+    ],
+    "pricing": [
+      {
+        "name": "Single Event Production",
+        "price": "₹99k+",
+        "features": [
+          "Stage & Truss Architecture",
+          "Sound & Lighting Engineering",
+          "Live Show Control",
+          "On-Ground Event Direction"
+        ]
+      },
+      {
+        "name": "Mega Festival Execution",
+        "price": "₹249k+",
+        "features": [
+          "End-to-End Production & Staging",
+          "Celebrity & Artist Coordination",
+          "Multi-Day Crowd & Safety Systems",
+          "Full Media & Drone Coverage"
+        ]
+      }
+    ],
+    "numColor": "#ec4899",
+    "bar": "linear-gradient(135deg, #ec4899, #f59e0b)"
   }
 ]

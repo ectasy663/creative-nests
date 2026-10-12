@@ -2,8 +2,9 @@
 
 const items = [
   'CGI & VFX Ads',
-  'Next.js Web Apps',
+  'Web & App Dev',
   'Brand Identity',
+  'Event Planning & Mgmt',
   'SEO Growth',
   'Paid Meta & TikTok',
   'Bespoke CRM / ERP',

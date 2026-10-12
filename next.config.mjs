@@ -4,8 +4,6 @@ const nextConfig = {
     ignoreBuildErrors: true,
   },
   images: {
-    // Disable server-side recompression for large files (avoids timeout on 50MB raw assets)
-    unoptimized: true,
     // Allow external image hosts used in project data
     remotePatterns: [
       {

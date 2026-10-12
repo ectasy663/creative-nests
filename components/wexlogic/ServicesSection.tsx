@@ -235,7 +235,7 @@ export function ServicesSection({
             <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', marginBottom: '16px' }}>
               <span className="badge-pill badge-pink">
                 <Sparkles size={13} className="text-white" />
-                {featuredOnly ? 'Core Capabilities' : 'All 8 Services'}
+                {featuredOnly ? 'Core Capabilities' : 'All 9 Services'}
               </span>
             </div>
             <h2

@@ -720,11 +720,18 @@ At WexLogic, we don't believe in one-size-fits-all. We audit your existing pipel
   }
 }
 
+// In-memory caches to eliminate redundant filesystem I/O on every request
+let cachedBlogs: BlogPost[] | null = null
+let cachedServices: ServiceDetail[] | null = null
+let cachedProjects: WorkProject[] | null = null
+
 // Data fetching helpers
 export function getBlogPosts(): BlogPost[] {
+  if (cachedBlogs) return cachedBlogs
   ensureDb()
   const data = fs.readFileSync(BLOG_PATH, 'utf-8')
-  return JSON.parse(data)
+  cachedBlogs = JSON.parse(data)
+  return cachedBlogs!
 }
 
 export function getBlogPostBySlug(slug: string): BlogPost | undefined {
@@ -733,15 +740,19 @@ export function getBlogPostBySlug(slug: string): BlogPost | undefined {
 }
 
 export function createBlogPost(post: BlogPost) {
+  cachedBlogs = null
   const posts = getBlogPosts()
   posts.push(post)
   fs.writeFileSync(BLOG_PATH, JSON.stringify(posts, null, 2))
+  cachedBlogs = posts
 }
 
 export function getServices(): ServiceDetail[] {
+  if (cachedServices) return cachedServices
   ensureDb()
   const data = fs.readFileSync(SERVICES_PATH, 'utf-8')
-  return JSON.parse(data)
+  cachedServices = JSON.parse(data)
+  return cachedServices!
 }
 
 export function getServiceBySlug(slug: string): ServiceDetail | undefined {
@@ -750,15 +761,19 @@ export function getServiceBySlug(slug: string): ServiceDetail | undefined {
 }
 
 export function createService(service: ServiceDetail) {
+  cachedServices = null
   const services = getServices()
   services.push(service)
   fs.writeFileSync(SERVICES_PATH, JSON.stringify(services, null, 2))
+  cachedServices = services
 }
 
 export function getProjects(): WorkProject[] {
+  if (cachedProjects) return cachedProjects
   ensureDb()
   const data = fs.readFileSync(WORK_PATH, 'utf-8')
-  return JSON.parse(data)
+  cachedProjects = JSON.parse(data)
+  return cachedProjects!
 }
 
 export function getProjectBySlug(slug: string): WorkProject | undefined {
@@ -767,9 +782,11 @@ export function getProjectBySlug(slug: string): WorkProject | undefined {
 }
 
 export function createProject(project: WorkProject) {
+  cachedProjects = null
   const projects = getProjects()
   projects.push(project)
   fs.writeFileSync(WORK_PATH, JSON.stringify(projects, null, 2))
+  cachedProjects = projects
 }
 
 export function saveSubmission(submission: Omit<ContactSubmission, 'id' | 'date'>) {

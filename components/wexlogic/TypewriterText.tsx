@@ -5,6 +5,7 @@ import { useState, useEffect } from 'react'
 const phrases = [
   'We Build Digital Experiences',
   'We Engineer Intelligent Solutions',
+  'We Plan & Produce Grand Events',
   'We Transform Ideas Into Reality',
   'We Create Powerful Web Platforms',
 ]
