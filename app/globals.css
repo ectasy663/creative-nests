@@ -141,18 +141,20 @@
   color: #FFFFFF !important;
   font-family: 'Outfit', system-ui, sans-serif;
   font-weight: 700;
-  font-size: 15px;
+  font-size: 14.5px;
+  line-height: 1;
   border-radius: 9999px;
   border: 2px solid #1E293B;
   box-shadow: 4px 4px 0px 0px #1E293B;
-  padding: 12px 28px;
+  padding: 12px 24px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 8px;
   text-decoration: none;
   cursor: pointer;
-  transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+  white-space: nowrap;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.2s ease;
 }
 
 .candy-btn-primary:hover {
@@ -171,18 +173,20 @@
   color: #1E293B !important;
   font-family: 'Outfit', system-ui, sans-serif;
   font-weight: 700;
-  font-size: 15px;
+  font-size: 14.5px;
+  line-height: 1;
   border-radius: 9999px;
   border: 2px solid #1E293B;
   box-shadow: 4px 4px 0px 0px #1E293B;
-  padding: 12px 28px;
+  padding: 12px 24px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 8px;
   text-decoration: none;
   cursor: pointer;
-  transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+  white-space: nowrap;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.2s ease;
 }
 
 .candy-btn-secondary:hover {
@@ -201,17 +205,20 @@
   color: #FFFFFF !important;
   font-family: 'Outfit', system-ui, sans-serif;
   font-weight: 700;
+  font-size: 14.5px;
+  line-height: 1;
   border-radius: 9999px;
   border: 2px solid #1E293B;
   box-shadow: 4px 4px 0px 0px #1E293B;
-  padding: 12px 28px;
+  padding: 12px 24px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 8px;
   text-decoration: none;
   cursor: pointer;
-  transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+  white-space: nowrap;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.2s ease;
 }
 
 .candy-btn-pink:hover {
@@ -235,12 +242,12 @@
   border-radius: 9999px !important;
   border: 2px solid #1E293B !important;
   box-shadow: 4px 4px 0px 0px #1E293B !important;
-  padding: 12px 26px !important;
+  padding: 12px 24px !important;
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
   text-decoration: none !important;
-  transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
 }
 .gradient-btn-primary:hover {
   transform: translate(-2px, -2px) !important;
@@ -266,7 +273,7 @@
   align-items: center !important;
   justify-content: center !important;
   text-decoration: none !important;
-  transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
 }
 .glass-btn-secondary:hover {
   background-color: #FBBF24 !important;
@@ -283,28 +290,28 @@
   background-color: #FFFFFF;
   border: 2px solid #1E293B;
   border-radius: 20px;
-  box-shadow: 6px 6px 0px 0px #1E293B;
-  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  box-shadow: 5px 5px 0px 0px #1E293B;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s cubic-bezier(0.16, 1, 0.3, 1);
   position: relative;
 }
 
 .sticker-card:hover {
-  transform: translateY(-4px) rotate(-0.75deg) scale(1.015);
-  box-shadow: 9px 9px 0px 0px #1E293B;
+  transform: translate(-2px, -2px);
+  box-shadow: 7px 7px 0px 0px #1E293B;
 }
 
 .sticker-card-soft {
   background-color: #FFFFFF;
   border: 2px solid #1E293B;
   border-radius: 20px;
-  box-shadow: 6px 6px 0px 0px #E2E8F0;
-  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  box-shadow: 5px 5px 0px 0px #E2E8F0;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .sticker-card-soft:hover {
-  box-shadow: 8px 8px 0px 0px #F472B6;
+  box-shadow: 7px 7px 0px 0px #F472B6;
   border-color: #1E293B;
-  transform: translateY(-3px) rotate(0.5deg);
+  transform: translate(-2px, -2px);
 }
 
 /* Alias glass-card to sticker-card so all pages seamlessly transform */
@@ -316,12 +323,12 @@
   backdrop-filter: none !important;
   -webkit-backdrop-filter: none !important;
   color: #1E293B !important;
-  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
 }
 
 .glass-card:hover {
-  transform: translateY(-3px) rotate(-0.5deg) scale(1.01) !important;
-  box-shadow: 8px 8px 0px 0px #1E293B !important;
+  transform: translate(-2px, -2px) !important;
+  box-shadow: 7px 7px 0px 0px #1E293B !important;
   border-color: #1E293B !important;
 }
 

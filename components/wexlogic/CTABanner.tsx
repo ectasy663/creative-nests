@@ -113,12 +113,13 @@ export function CTABanner({
           boxSizing: 'border-box',
         }}
       >
-        <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', marginBottom: '24px' }}>
-          <span className="badge-pill badge-yellow">
-            <Sparkles size={13} className="text-[#1E293B]" />
-            LET&apos;S WORK TOGETHER
-          </span>
-        </div>
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
+          <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', marginBottom: '24px' }}>
+            <span className="badge-pill badge-yellow">
+              <Sparkles size={13} className="text-[#1E293B]" />
+              LET&apos;S WORK TOGETHER
+            </span>
+          </div>
 
         <h2
           style={{
@@ -163,6 +164,7 @@ export function CTABanner({
         >
           One Free 20-Min Call. Zero Risk. Pure High-Performance Value.
         </p>
+        </div>
 
         {!introOnly && (
           <div style={{ display: 'flex', justifyContent: 'center', gap: '16px', flexWrap: 'wrap' }}>
@@ -186,6 +188,7 @@ export function CTABanner({
                   display: 'inline-flex',
                   alignItems: 'center',
                   justifyContent: 'center',
+                  flexShrink: 0,
                 }}
               >
                 <ArrowRight size={14} strokeWidth={3} />

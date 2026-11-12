@@ -97,7 +97,7 @@ export function ContactForm() {
       <section
         style={{
           backgroundColor: '#FFFDF5',
-          padding: '36px 16px 44px',
+          padding: '16px 16px 40px',
           borderBottom: '2px solid #1E293B',
         }}
       >
@@ -110,41 +110,40 @@ export function ContactForm() {
             boxSizing: 'border-box',
           }}
         >
-          <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', flexWrap: 'wrap', gap: '20px' }}>
-            <div>
-              <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', marginBottom: '16px' }}>
-                <span className="badge-pill badge-yellow">
-                  <Sparkles size={13} className="text-[#1E293B]" />
-                  GET IN TOUCH
-                </span>
-              </div>
-              <h1
+          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', marginBottom: '24px', gap: '12px' }}>
+            <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
+              <span className="badge-pill badge-yellow">
+                <Sparkles size={13} className="text-[#1E293B]" />
+                GET IN TOUCH
+              </span>
+            </div>
+            <h1
+              style={{
+                fontFamily: "'Outfit', system-ui, sans-serif",
+                fontSize: 'clamp(38px, 6vw, 64px)',
+                fontWeight: 900,
+                color: '#1E293B',
+                letterSpacing: '-1px',
+                lineHeight: 1.1,
+                margin: 0,
+              }}
+            >
+              Start Your{' '}
+              <span
                 style={{
-                  fontFamily: "'Outfit', system-ui, sans-serif",
-                  fontSize: 'clamp(38px, 6vw, 64px)',
-                  fontWeight: 900,
-                  color: '#1E293B',
-                  letterSpacing: '-1px',
-                  lineHeight: 1.1,
+                  backgroundColor: '#8B5CF6',
+                  color: '#FFFFFF',
+                  padding: '2px 14px',
+                  borderRadius: '14px',
+                  border: '2px solid #1E293B',
+                  boxShadow: '3px 3px 0px #1E293B',
+                  display: 'inline-block',
+                  transform: 'rotate(-1deg)',
                 }}
               >
-                Start Your{' '}
-                <span
-                  style={{
-                    backgroundColor: '#8B5CF6',
-                    color: '#FFFFFF',
-                    padding: '2px 14px',
-                    borderRadius: '14px',
-                    border: '2px solid #1E293B',
-                    boxShadow: '3px 3px 0px #1E293B',
-                    display: 'inline-block',
-                    transform: 'rotate(-1deg)',
-                  }}
-                >
-                  Journey
-                </span>
-              </h1>
-            </div>
+                Journey
+              </span>
+            </h1>
             <div
               style={{
                 fontFamily: "'Outfit', system-ui, sans-serif",
@@ -153,7 +152,6 @@ export function ContactForm() {
                 textTransform: 'uppercase',
                 color: '#64748B',
                 fontWeight: 700,
-                textAlign: 'right',
               }}
             >
               Zero Risk · Pragmatic Value

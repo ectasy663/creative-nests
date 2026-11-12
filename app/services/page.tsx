@@ -18,9 +18,7 @@ export default function ServicesPage() {
     <div style={{ position: 'relative', minHeight: '100vh', color: '#1E293B', backgroundColor: '#FFFDF5' }}>
       <Header />
 
-      <section style={{ padding: '20px 0 0' }}>
-        <ServicesSection services={getServices()} />
-      </section>
+      <ServicesSection services={getServices()} isFirstSection={true} />
 
       <ProcessSection />
 

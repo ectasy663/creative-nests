@@ -17,9 +17,7 @@ export default function WorkPage() {
     <div style={{ position: 'relative', minHeight: '100vh', color: '#1E293B', backgroundColor: '#FFFDF5' }}>
       <Header />
 
-      <section style={{ padding: '20px 0 0' }}>
-        <WorkSection projects={getProjects()} />
-      </section>
+      <WorkSection projects={getProjects()} isFirstSection={true} />
 
       <CTABanner
         primaryLabel="Book Free Call"

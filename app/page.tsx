@@ -94,7 +94,7 @@ export default function HomePage() {
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'space-between',
-          padding: '24px 16px 20px',
+          padding: '12px 16px 20px',
           borderBottom: '2px solid #1E293B',
           overflow: 'hidden',
           backgroundColor: '#FFFDF5',
@@ -171,7 +171,7 @@ export default function HomePage() {
         <div
           style={{
             maxWidth: '1560px',
-            margin: 'auto auto',
+            margin: '0 auto',
             width: '100%',
             padding: '0 6px',
             boxSizing: 'border-box',
@@ -288,6 +288,7 @@ export default function HomePage() {
                     display: 'inline-flex',
                     alignItems: 'center',
                     justifyContent: 'center',
+                    flexShrink: 0,
                   }}
                 >
                   <ArrowRight size={12} strokeWidth={3} />
@@ -334,8 +335,8 @@ export default function HomePage() {
               <div
                 style={{
                   position: 'absolute',
-                  top: '-14px',
-                  right: '-12px',
+                  top: '-12px',
+                  right: '12px',
                   backgroundColor: '#FBBF24',
                   border: '2px solid #1E293B',
                   borderRadius: '9999px',
@@ -503,16 +504,20 @@ export default function HomePage() {
             { value: '10X', label: 'Revenue Growth', color: '#FBBF24', bg: '#FEFCE8' },
             { value: '100%', label: 'Satisfaction Rate', color: '#34D399', bg: '#ECFDF5' },
           ].map(({ value, label, color, bg }, idx) => (
-            <ScrollReveal key={label} delay={idx * 90}>
+            <ScrollReveal key={label} delay={idx * 90} style={{ height: '100%' }}>
               <div
                 className="sticker-card kpi-animated-card"
                 style={{
-                  padding: '16px 16px',
+                  padding: '18px 16px',
                   textAlign: 'center',
                   backgroundColor: bg,
                   border: '2px solid #1E293B',
                   boxShadow: '4px 4px 0px #1E293B',
-                  animationDelay: `${idx * 100}ms`,
+                  height: '100%',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  justifyContent: 'center',
+                  boxSizing: 'border-box',
                 }}
               >
                 <div

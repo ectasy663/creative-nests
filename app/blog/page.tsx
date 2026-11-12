@@ -25,7 +25,7 @@ export default function BlogListingPage() {
       <section
         style={{
           backgroundColor: '#FFFFFF',
-          padding: '40px 16px 36px',
+          padding: '20px 16px 32px',
           borderBottom: '2px solid #1E293B',
           position: 'relative',
           overflow: 'hidden',

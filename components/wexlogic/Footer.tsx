@@ -26,8 +26,8 @@ export function Footer() {
   return (
     <footer
       style={{
-        backgroundColor: '#FFFDF5',
-        borderTop: '2px solid #1E293B',
+        backgroundColor: '#0F172A',
+        borderTop: '1px solid rgba(255, 255, 255, 0.1)',
         padding: '52px 16px 32px',
         position: 'relative',
         zIndex: 10,
@@ -58,10 +58,7 @@ export function Footer() {
                   fontFamily: "'Outfit', system-ui, sans-serif",
                   fontSize: '22px',
                   fontWeight: 900,
-                  background: 'linear-gradient(135deg, #dfb76c 0%, #d4af37 50%, #b89047 100%)',
-                  WebkitBackgroundClip: 'text',
-                  WebkitTextFillColor: 'transparent',
-                  color: '#d4af37',
+                  color: '#FFFFFF',
                   letterSpacing: '-0.5px',
                   lineHeight: 1.1,
                 }}
@@ -70,7 +67,7 @@ export function Footer() {
               </div>
             </div>
           </Link>
-          <p style={{ fontSize: '14px', lineHeight: 1.6, color: '#64748B', fontWeight: 500 }}>
+          <p style={{ fontSize: '14px', lineHeight: 1.6, color: '#94A3B8', fontWeight: 500 }}>
             Next-gen IT studio building high-performance digital platforms, CGI campaigns, and scalable custom enterprise systems.
           </p>
           <div style={{ display: 'flex', gap: '10px', marginTop: '4px', flexWrap: 'wrap' }}>
@@ -90,8 +87,8 @@ export function Footer() {
                     textDecoration: 'none',
                     color: social.color,
                     backgroundColor: social.bg,
-                    border: '2px solid #1E293B',
-                    boxShadow: '2px 2px 0px #1E293B',
+                    border: '1.5px solid rgba(255, 255, 255, 0.2)',
+                    boxShadow: '2px 2px 0px rgba(0, 0, 0, 0.4)',
                     padding: '6px 14px',
                     borderRadius: '9999px',
                     transition: 'all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1)',
@@ -112,7 +109,7 @@ export function Footer() {
               fontFamily: "'Outfit', system-ui, sans-serif",
               fontSize: '15px',
               fontWeight: 800,
-              color: '#1E293B',
+              color: '#F8FAFC',
               textTransform: 'uppercase',
               letterSpacing: '1px',
               marginBottom: '18px',
@@ -133,12 +130,12 @@ export function Footer() {
                   href={link.href}
                   style={{
                     fontSize: '14px',
-                    color: '#64748B',
+                    color: '#94A3B8',
                     fontWeight: 600,
                     textDecoration: 'none',
                     transition: 'color 0.2s',
                   }}
-                  className="hover:text-slate-900 hover:underline"
+                  className="hover:text-white hover:underline"
                 >
                   {link.label}
                 </Link>
@@ -154,7 +151,7 @@ export function Footer() {
               fontFamily: "'Outfit', system-ui, sans-serif",
               fontSize: '15px',
               fontWeight: 800,
-              color: '#1E293B',
+              color: '#F8FAFC',
               textTransform: 'uppercase',
               letterSpacing: '1px',
               marginBottom: '18px',
@@ -175,12 +172,12 @@ export function Footer() {
                   href={srv.href}
                   style={{
                     fontSize: '14px',
-                    color: '#64748B',
+                    color: '#94A3B8',
                     fontWeight: 600,
                     textDecoration: 'none',
                     transition: 'color 0.2s',
                   }}
-                  className="hover:text-slate-900 hover:underline"
+                  className="hover:text-white hover:underline"
                 >
                   {srv.label}
                 </Link>
@@ -196,7 +193,7 @@ export function Footer() {
               fontFamily: "'Outfit', system-ui, sans-serif",
               fontSize: '15px',
               fontWeight: 800,
-              color: '#1E293B',
+              color: '#F8FAFC',
               textTransform: 'uppercase',
               letterSpacing: '1px',
               marginBottom: '2px',
@@ -204,17 +201,16 @@ export function Footer() {
           >
             Contact & HQ
           </h3>
-          <div style={{ fontSize: '14px', color: '#64748B', lineHeight: 1.6, fontWeight: 500 }}>
-            <div>Email: <span style={{ color: '#1E293B', fontWeight: 700 }}>info@wexlogic.com</span></div>
-            <div style={{ marginTop: '4px' }}>Phone: <span style={{ color: '#1E293B', fontWeight: 700 }}>+91 77372 97548</span></div>
-            <div style={{ marginTop: '4px' }}>Office: <span style={{ color: '#1E293B', fontWeight: 700 }}>Rajasthan, India</span></div>
+          <div style={{ fontSize: '14px', color: '#94A3B8', lineHeight: 1.6, fontWeight: 500 }}>
+            <div>Email: <span style={{ color: '#F8FAFC', fontWeight: 700 }}>info@wexlogic.com</span></div>
+            <div style={{ marginTop: '4px' }}>Phone: <span style={{ color: '#F8FAFC', fontWeight: 700 }}>+91 77372 97548</span></div>
+            <div style={{ marginTop: '4px' }}>Office: <span style={{ color: '#F8FAFC', fontWeight: 700 }}>Rajasthan, India</span></div>
           </div>
           <div>
             <div
               style={{
-                backgroundColor: '#ECFDF5',
-                border: '2px solid #1E293B',
-                boxShadow: '3px 3px 0px #1E293B',
+                backgroundColor: 'rgba(16, 185, 129, 0.12)',
+                border: '1px solid rgba(16, 185, 129, 0.35)',
                 padding: '6px 12px',
                 borderRadius: '12px',
                 display: 'inline-flex',
@@ -223,7 +219,7 @@ export function Footer() {
               }}
             >
               <div style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: '#10B981' }} />
-              <span style={{ fontSize: '11px', fontWeight: 800, color: '#065F46', textTransform: 'uppercase', letterSpacing: '1px', fontFamily: "'Outfit'" }}>
+              <span style={{ fontSize: '11px', fontWeight: 800, color: '#34D399', textTransform: 'uppercase', letterSpacing: '1px', fontFamily: "'Outfit'" }}>
                 Accepting Q3 Enquiries
               </span>
             </div>
@@ -239,7 +235,7 @@ export function Footer() {
           margin: '0 auto',
           padding: '24px 6px 0',
           boxSizing: 'border-box',
-          borderTop: '2px solid #E2E8F0',
+          borderTop: '1px solid rgba(255, 255, 255, 0.1)',
           display: 'flex',
           justifyContent: 'space-between',
           alignItems: 'center',
@@ -251,10 +247,10 @@ export function Footer() {
           © WexLogic {new Date().getFullYear()} — We Create the Impossible
         </div>
         <div style={{ display: 'flex', gap: '20px', fontSize: '13px', fontWeight: 600 }}>
-          <a href="#" style={{ color: '#64748B', textDecoration: 'none' }} className="hover:text-slate-900">
+          <a href="#" style={{ color: '#64748B', textDecoration: 'none' }} className="hover:text-slate-300">
             Privacy Policy
           </a>
-          <a href="#" style={{ color: '#64748B', textDecoration: 'none' }} className="hover:text-slate-900">
+          <a href="#" style={{ color: '#64748B', textDecoration: 'none' }} className="hover:text-slate-300">
             Terms & Conditions
           </a>
         </div>

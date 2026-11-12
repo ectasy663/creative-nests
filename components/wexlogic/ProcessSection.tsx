@@ -55,7 +55,7 @@ export function ProcessSection() {
       id="process"
       style={{
         backgroundColor: '#FFFDF5',
-        padding: '40px 16px 56px',
+        padding: '56px 16px',
         borderBottom: '2px solid #1E293B',
         position: 'relative',
         overflow: 'hidden',
@@ -95,7 +95,7 @@ export function ProcessSection() {
 
       <div style={{ width: '100%', maxWidth: '1560px', margin: '0 auto', padding: '0 6px', boxSizing: 'border-box', position: 'relative', zIndex: 2 }}>
         {/* Title */}
-        <div style={{ textAlign: 'center', marginBottom: '72px' }}>
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', marginBottom: '64px' }}>
           <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', marginBottom: '16px' }}>
             <span className="badge-pill badge-violet">
               <Sparkles size={13} className="text-white" />
@@ -159,7 +159,7 @@ export function ProcessSection() {
             aria-hidden="true"
           />
 
-          <div className="process-steps-grid" style={{ paddingTop: '20px' }}>
+          <div className="process-steps-grid" style={{ paddingTop: '28px' }}>
             {steps.map((item, idx) => (
               <ScrollReveal key={idx} delay={idx * 110} style={{ height: '100%' }}>
                 <div

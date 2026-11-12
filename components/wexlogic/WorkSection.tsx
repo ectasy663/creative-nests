@@ -374,9 +374,11 @@ function ProjectModal({ project, onClose }: { project: WorkProject; onClose: () 
 export function WorkSection({
   projects,
   featuredOnly = false,
+  isFirstSection = false,
 }: {
   projects: WorkProject[]
   featuredOnly?: boolean
+  isFirstSection?: boolean
 }) {
   const allProjects = projects
   const selectedCategory = useUIStore(state => state.workCategory)
@@ -404,7 +406,7 @@ export function WorkSection({
         id="portfolio"
         style={{
           backgroundColor: '#FFFDF5',
-          padding: '36px 16px 56px',
+          padding: isFirstSection ? '4px 16px 56px' : '56px 16px',
           borderBottom: '2px solid #1E293B',
           width: '100%',
           boxSizing: 'border-box',
@@ -415,47 +417,46 @@ export function WorkSection({
           <div
             style={{
               display: 'flex',
-              alignItems: 'flex-end',
-              justifyContent: 'space-between',
+              flexDirection: 'column',
+              alignItems: 'center',
+              textAlign: 'center',
               marginBottom: '48px',
-              flexWrap: 'wrap',
-              gap: '20px',
+              gap: '12px',
             }}
           >
-            <div>
-              <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', marginBottom: '16px' }}>
-                <span className="badge-pill badge-yellow">
-                  <Sparkles size={13} className="text-[#1E293B]" />
-                  {featuredOnly ? 'Featured Portfolio' : 'Complete Showcase'}
-                </span>
-              </div>
-              <h2
+            <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
+              <span className="badge-pill badge-yellow">
+                <Sparkles size={13} className="text-[#1E293B]" />
+                {featuredOnly ? 'Featured Portfolio' : 'Complete Showcase'}
+              </span>
+            </div>
+            <h2
+              style={{
+                fontFamily: "'Outfit', system-ui, sans-serif",
+                fontSize: 'clamp(36px, 5.5vw, 60px)',
+                fontWeight: 900,
+                color: '#1E293B',
+                letterSpacing: '-1px',
+                lineHeight: 1.1,
+                margin: 0,
+              }}
+            >
+              Selected{' '}
+              <span
                 style={{
-                  fontFamily: "'Outfit', system-ui, sans-serif",
-                  fontSize: 'clamp(36px, 5.5vw, 60px)',
-                  fontWeight: 900,
-                  color: '#1E293B',
-                  letterSpacing: '-1px',
-                  lineHeight: 1.1,
+                  backgroundColor: '#F472B6',
+                  color: '#FFFFFF',
+                  padding: '2px 14px',
+                  borderRadius: '14px',
+                  border: '2px solid #1E293B',
+                  boxShadow: '3px 3px 0px #1E293B',
+                  display: 'inline-block',
+                  transform: 'rotate(1deg)',
                 }}
               >
-                Selected{' '}
-                <span
-                  style={{
-                    backgroundColor: '#F472B6',
-                    color: '#FFFFFF',
-                    padding: '2px 14px',
-                    borderRadius: '14px',
-                    border: '2px solid #1E293B',
-                    boxShadow: '3px 3px 0px #1E293B',
-                    display: 'inline-block',
-                    transform: 'rotate(1deg)',
-                  }}
-                >
-                  Work
-                </span>
-              </h2>
-            </div>
+                Work
+              </span>
+            </h2>
             <div
               style={{
                 fontFamily: "'Outfit', system-ui, sans-serif",
@@ -475,6 +476,7 @@ export function WorkSection({
             <div
               style={{
                 display: 'flex',
+                justifyContent: 'center',
                 gap: '12px',
                 marginBottom: '48px',
                 overflowX: 'auto',
@@ -702,6 +704,7 @@ export function WorkSection({
                     display: 'inline-flex',
                     alignItems: 'center',
                     justifyContent: 'center',
+                    flexShrink: 0,
                   }}
                 >
                   <ArrowRight size={13} strokeWidth={3} />

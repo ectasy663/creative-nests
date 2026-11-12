@@ -202,9 +202,11 @@ function ServiceCard({
 export function ServicesSection({
   services,
   featuredOnly = false,
+  isFirstSection = false,
 }: {
   services: any[]
   featuredOnly?: boolean
+  isFirstSection?: boolean
 }) {
   const displayedServices = featuredOnly ? services.slice(0, 3) : services
 
@@ -213,7 +215,7 @@ export function ServicesSection({
       id="services"
       style={{
         backgroundColor: '#FFFDF5',
-        padding: '40px 16px 56px',
+        padding: isFirstSection ? '4px 16px 56px' : '56px 16px',
         borderBottom: '2px solid #1E293B',
         width: '100%',
         boxSizing: 'border-box',
@@ -224,46 +226,45 @@ export function ServicesSection({
         <div
           style={{
             display: 'flex',
-            alignItems: 'flex-end',
-            justifyContent: 'space-between',
+            flexDirection: 'column',
+            alignItems: 'center',
+            textAlign: 'center',
             marginBottom: '56px',
-            flexWrap: 'wrap',
-            gap: '20px',
+            gap: '12px',
           }}
         >
-          <div>
-            <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', marginBottom: '16px' }}>
-              <span className="badge-pill badge-pink">
-                <Sparkles size={13} className="text-white" />
-                {featuredOnly ? 'Core Capabilities' : 'All 9 Services'}
-              </span>
-            </div>
-            <h2
+          <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
+            <span className="badge-pill badge-pink">
+              <Sparkles size={13} className="text-white" />
+              {featuredOnly ? 'Core Capabilities' : 'All 9 Services'}
+            </span>
+          </div>
+          <h2
+            style={{
+              fontFamily: "'Outfit', system-ui, sans-serif",
+              fontSize: 'clamp(36px, 5.5vw, 60px)',
+              fontWeight: 900,
+              color: '#1E293B',
+              letterSpacing: '-1px',
+              lineHeight: 1.1,
+              margin: 0,
+            }}
+          >
+            Our Next-Gen{' '}
+            <span
               style={{
-                fontFamily: "'Outfit', system-ui, sans-serif",
-                fontSize: 'clamp(36px, 5.5vw, 60px)',
-                fontWeight: 900,
-                color: '#1E293B',
-                letterSpacing: '-1px',
-                lineHeight: 1.1,
+                backgroundColor: '#8B5CF6',
+                color: '#FFFFFF',
+                padding: '2px 14px',
+                borderRadius: '14px',
+                border: '2px solid #1E293B',
+                boxShadow: '3px 3px 0px #1E293B',
+                display: 'inline-block',
               }}
             >
-              Our Next-Gen{' '}
-              <span
-                style={{
-                  backgroundColor: '#8B5CF6',
-                  color: '#FFFFFF',
-                  padding: '2px 14px',
-                  borderRadius: '14px',
-                  border: '2px solid #1E293B',
-                  boxShadow: '3px 3px 0px #1E293B',
-                  display: 'inline-block',
-                }}
-              >
-                Services
-              </span>
-            </h2>
-          </div>
+              Services
+            </span>
+          </h2>
           <div
             style={{
               fontFamily: "'Outfit', system-ui, sans-serif",
@@ -272,7 +273,6 @@ export function ServicesSection({
               textTransform: 'uppercase',
               color: '#64748B',
               fontWeight: 700,
-              textAlign: 'right',
             }}
           >
             {featuredOnly ? 'Scale-Ready Solutions' : 'Full Digital Production'}
@@ -285,6 +285,7 @@ export function ServicesSection({
             display: 'grid',
             gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
             gap: '32px',
+            paddingTop: '16px',
           }}
         >
           {displayedServices.map((service, index) => (
@@ -321,6 +322,7 @@ export function ServicesSection({
                   display: 'inline-flex',
                   alignItems: 'center',
                   justifyContent: 'center',
+                  flexShrink: 0,
                 }}
               >
                 <ArrowRight size={13} strokeWidth={3} />

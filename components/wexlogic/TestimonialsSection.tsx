@@ -55,7 +55,7 @@ export function TestimonialsSection() {
       id="testimonies"
       style={{
         backgroundColor: '#FFFDF5',
-        padding: '40px 16px 56px',
+        padding: '56px 16px',
         borderBottom: '2px solid #1E293B',
       }}
     >
@@ -72,46 +72,45 @@ export function TestimonialsSection() {
         <div
           style={{
             display: 'flex',
-            alignItems: 'flex-end',
-            justifyContent: 'space-between',
+            flexDirection: 'column',
+            alignItems: 'center',
+            textAlign: 'center',
             marginBottom: '56px',
-            flexWrap: 'wrap',
-            gap: '20px',
+            gap: '12px',
           }}
         >
-          <div>
-            <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', marginBottom: '16px' }}>
-              <span className="badge-pill badge-yellow">
-                <Sparkles size={13} className="text-[#1E293B]" />
-                CLIENT STORIES
-              </span>
-            </div>
-            <h2
+          <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
+            <span className="badge-pill badge-yellow">
+              <Sparkles size={13} className="text-[#1E293B]" />
+              CLIENT STORIES
+            </span>
+          </div>
+          <h2
+            style={{
+              fontFamily: "'Outfit', system-ui, sans-serif",
+              fontSize: 'clamp(36px, 5.5vw, 60px)',
+              fontWeight: 900,
+              color: '#1E293B',
+              letterSpacing: '-1px',
+              lineHeight: 1.1,
+              margin: 0,
+            }}
+          >
+            Client{' '}
+            <span
               style={{
-                fontFamily: "'Outfit', system-ui, sans-serif",
-                fontSize: 'clamp(36px, 5.5vw, 60px)',
-                fontWeight: 900,
+                backgroundColor: '#34D399',
                 color: '#1E293B',
-                letterSpacing: '-1px',
-                lineHeight: 1.1,
+                padding: '2px 14px',
+                borderRadius: '14px',
+                border: '2px solid #1E293B',
+                boxShadow: '3px 3px 0px #1E293B',
+                display: 'inline-block',
               }}
             >
-              Client{' '}
-              <span
-                style={{
-                  backgroundColor: '#34D399',
-                  color: '#1E293B',
-                  padding: '2px 14px',
-                  borderRadius: '14px',
-                  border: '2px solid #1E293B',
-                  boxShadow: '3px 3px 0px #1E293B',
-                  display: 'inline-block',
-                }}
-              >
-                Testimonies
-              </span>
-            </h2>
-          </div>
+              Testimonies
+            </span>
+          </h2>
           <div
             style={{
               fontFamily: "'Outfit', system-ui, sans-serif",
@@ -120,7 +119,6 @@ export function TestimonialsSection() {
               textTransform: 'uppercase',
               color: '#64748B',
               fontWeight: 700,
-              textAlign: 'right',
             }}
           >
             Verified Outcomes · Real Founders
