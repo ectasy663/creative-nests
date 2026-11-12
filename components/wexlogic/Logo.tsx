@@ -7,7 +7,9 @@ export function Logo({ size = 40 }: { size?: number }) {
         src="/company-logo.png" 
         alt="WexLogic Logo" 
         fill
+        sizes={`${size}px`}
         style={{ objectFit: 'contain' }}
+        priority
       />
     </div>
   )
@@ -20,6 +22,7 @@ export function LogoSmall() {
         src="/company-logo.png" 
         alt="WexLogic Logo" 
         fill
+        sizes="24px"
         style={{ objectFit: 'contain' }}
       />
     </div>
